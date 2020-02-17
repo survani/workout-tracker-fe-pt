@@ -54,7 +54,7 @@ Empowering users to take control of their workout schedules by planning and mana
 
 ### Front end built using:
 
-#### _Front end framework goes here_
+#### React.js with Redux
 
 🚫 Why did you choose this framework?
 
@@ -65,17 +65,15 @@ Empowering users to take control of their workout schedules by planning and mana
 
 🚫List the rest of the front end features and libraries in the same format as the framework above.
 
-#### Front end deployed to `🚫insert service here`
+#### Front end deployed to `heroku`
 
-#### [Back end](🚫link to back end repo here) built using:
+#### [Back end](https://github.com/Lambda-School-Labs/workout-tracker-be-pt7) built using:
 
-#### 🚫 back end framework goes here
+#### Knex, Express.js, Node.js
 
 -    point one
 -    point two
 -    point three
-
-🚫 List the rest of the back end end features and libraries in the same format as the framework above
 
 # APIs
 
