@@ -4,7 +4,7 @@
 
 🚫 Each student has a required minimum number of meaningful PRs each week per the rubric. Contributing to docs does NOT count as a PR to meet your weekly requirements.
 
-# 1️⃣ Workout Tracker
+# Workout Tracker
 
 1️⃣ You can find the deployed project at [🚫URL NAME GOES HERE](🚫copy and paste URL here).
 
@@ -12,11 +12,11 @@
 
 🚫Add contributor info below, make sure add images and edit the social links for each member. Add to or delete these place-holders as needed
 
-|                                       [Student 1](https://github.com/)                                        |                                       [Student 2](https://github.com/)                                        |                                       [Student 3](https://github.com/)                                        |                                       [Student 4](https://github.com/)                                        |                                       [Student 5](https://github.com/)                                        |
+|                                       [Diana Grams](https://github.com/deegrams221)                                        |                                       [Jennifer Hott](https://github.com/jennl97)                                        |                                       [Carl Padilla](https://github.com/Carlpadilla)                                        |                                       [Liam Edlinger](https://github.com/LiamColeE)                                        |                                       [Paul Abernathy](https://github.com/Paulabernathy7)                                        |
 | :-----------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------: |
-|                      [<img src="https://www.dalesjewelers.com/wp-content/uploads/2018/10/placeholder-silhouette-male.png" width = "200" />](https://github.com/)                       |                      [<img src="https://www.dalesjewelers.com/wp-content/uploads/2018/10/placeholder-silhouette-female.png" width = "200" />](https://github.com/)                       |                      [<img src="https://www.dalesjewelers.com/wp-content/uploads/2018/10/placeholder-silhouette-male.png" width = "200" />](https://github.com/)                       |                      [<img src="https://www.dalesjewelers.com/wp-content/uploads/2018/10/placeholder-silhouette-female.png" width = "200" />](https://github.com/)                       |                      [<img src="https://www.dalesjewelers.com/wp-content/uploads/2018/10/placeholder-silhouette-male.png" width = "200" />](https://github.com/)                       |
-|                 [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/)                 |            [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/honda0306)             |           [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/Mister-Corn)            |          [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/NandoTheessen)           |            [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/wvandolah)             |
-| [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/) | [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/) | [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/) | [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/) | [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/) |
+|                      [<img src="https://www.dalesjewelers.com/wp-content/uploads/2018/10/placeholder-silhouette-female.png" width = "200" />](https://github.com/deegrams221)                       |                      [<img src="https://www.dalesjewelers.com/wp-content/uploads/2018/10/placeholder-silhouette-female.png" width = "200" />](https://github.com/jennl97)                       |                      [<img src="https://www.dalesjewelers.com/wp-content/uploads/2018/10/placeholder-silhouette-male.png" width = "200" />](https://github.com/Carlpadilla)                       |                      [<img src="https://www.dalesjewelers.com/wp-content/uploads/2018/10/placeholder-silhouette-male.png" width = "200" />](https://github.com/LiamColeE)                       |                      [<img src="https://www.dalesjewelers.com/wp-content/uploads/2018/10/placeholder-silhouette-male.png" width = "200" />](https://github.com/Paulabernathy7)                       |
+|                 [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/)                 |            [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/deegrams221)             |           [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/jennl97)            |          [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/Carlpadilla)           |            [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/LiamColeE)             |            [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/Paulabernathy7)             
+| [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/in/diana-grams/) | [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/) | [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/) | [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/) | [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/) |
 
 <br>
 <br>
@@ -33,11 +33,11 @@
 
 ## Project Overview
 
-1️⃣ [Trello Board](https://trello.com/b/qWXOu3n5/labspt7-workout-tracker)
+ [Trello Board](https://trello.com/b/qWXOu3n5/labspt7-workout-tracker)
 
-1️⃣ [Product Canvas](https://www.notion.so/Workout-Tracker-0c8528a4db1042a396aadcdf0af40437)
+ [Product Canvas](https://www.notion.so/Workout-Tracker-0c8528a4db1042a396aadcdf0af40437)
 
-1️⃣ [UX Design files](https://www.figma.com/file/kEKgIN0bWriJGpIZ9hmGI2/Workout-Tracker-Mahiya-and-Adeolu?node-id=313%3A6)
+ [UX Design files](https://www.figma.com/file/kEKgIN0bWriJGpIZ9hmGI2/Workout-Tracker-Mahiya-and-Adeolu?node-id=313%3A6)
 
 Empowering users to take control of their workout schedules by planning and managing their routines and tracking key features such as performance and body composition.
 
@@ -50,7 +50,7 @@ Empowering users to take control of their workout schedules by planning and mana
 -    feature four
 -    feature five
 
-## 1️⃣ Tech Stack
+## Tech Stack
 
 ### Front end built using:
 
