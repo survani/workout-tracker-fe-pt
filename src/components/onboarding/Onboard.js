@@ -1,18 +1,24 @@
 import React from 'react';
 import { Formik, Field, Form } from 'formik';
+// import * as Yup from 'yup';
+import axios from 'axios';
 
-const sleep = ms => new Promise(r => setTimeout(r, ms));
-
-const Onboard = () => (
+const Onboard = ({ errors, touched, values, status }) => (
   <div>
     <h1>A couple steps to a healthier you!</h1>
     <Formik
       initialValues={{
-        checked: []
+        goals: []
       }}
-      onSubmit={async values => {
-        await sleep(500);
-        alert(JSON.stringify(values, null, 2));
+      onSubmit={async (values, { setStatus, resetForm }) => {
+        axios
+          .post('https://reqres.in/api/users', values)
+          .then(res => {
+            console.log('handleSubmit: then: res: ', res);
+            setStatus(res.data);
+            resetForm();
+          })
+          .catch(err => console.error('handleSubmit: catch: err: ', err));
       }}
     >
       {({ values }) => (
@@ -23,24 +29,29 @@ const Onboard = () => (
           </div>
           <div role='group' aria-labelledby='checkbox-group'>
             <label>
-              <Field type='checkbox' name='checked' value='One' />
+              <Field type='checkbox' name='checked' value='getInShape' />
               Get In Shape
+              <br />
             </label>
             <label>
-              <Field type='checkbox' name='checked' value='Two' />
+              <Field type='checkbox' name='checked' value='loseWeight' />
               Lose Weight
+              <br />
             </label>
             <label>
-              <Field type='checkbox' name='checked' value='Three' />
+              <Field type='checkbox' name='checked' value='buildMuscle' />
               Build Muscle
+              <br />
             </label>
             <label>
-              <Field type='checkbox' name='checked' value='Four' />
+              <Field type='checkbox' name='checked' value='getStronger' />
               Get Stronger
+              <br />
             </label>
             <label>
-              <Field type='checkbox' name='checked' value='Five' />
+              <Field type='checkbox' name='checked' value='wellness' />
               Overall Wellness
+              <br />
             </label>
           </div>
 
