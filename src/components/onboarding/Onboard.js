@@ -1,5 +1,5 @@
 import React from 'react';
-import './onbaord.css';
+import './onboard.css';
 import axios from 'axios';
 import { Formik, Field, Form } from 'formik';
 import * as Yup from 'yup';
