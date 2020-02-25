@@ -12,7 +12,7 @@ function App() {
   return (
     <div>
       <Formik
-        initialValues={{ firstName: ' ', goals: [] }}
+        initialValues={{ goals: [] }}
         validationSchema={GoalsSchema}
         onSubmit={async (values, { setStatus, resetForm, setSubmitting }) => {
           setSubmitting(true);
