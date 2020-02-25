@@ -1,65 +1,77 @@
 import React from 'react';
-import { Formik, Field, Form } from 'formik';
-// import * as Yup from 'yup';
+import './onbaord.css';
 import axios from 'axios';
+import { Formik, Field, Form } from 'formik';
+import * as Yup from 'yup';
 
-const Onboard = ({ errors, touched, values, status }) => (
-  <div>
-    <h1>A couple steps to a healthier you!</h1>
-    <Formik
-      initialValues={{
-        goals: []
-      }}
-      onSubmit={async (values, { setStatus, resetForm }) => {
-        axios
-          .post('https://reqres.in/api/users', values)
-          .then(res => {
-            console.log('handleSubmit: then: res: ', res);
-            setStatus(res.data);
-            resetForm();
-          })
-          .catch(err => console.error('handleSubmit: catch: err: ', err));
-      }}
-    >
-      {({ values }) => (
-        <Form>
-          <div id='checkbox-group'>
-            What are your fitness goals? <br />
-            (Select all that apply)
-          </div>
-          <div role='group' aria-labelledby='checkbox-group'>
-            <label>
-              <Field type='checkbox' name='checked' value='getInShape' />
-              Get In Shape
-              <br />
-            </label>
-            <label>
-              <Field type='checkbox' name='checked' value='loseWeight' />
-              Lose Weight
-              <br />
-            </label>
-            <label>
-              <Field type='checkbox' name='checked' value='buildMuscle' />
-              Build Muscle
-              <br />
-            </label>
-            <label>
-              <Field type='checkbox' name='checked' value='getStronger' />
-              Get Stronger
-              <br />
-            </label>
-            <label>
-              <Field type='checkbox' name='checked' value='wellness' />
-              Overall Wellness
-              <br />
-            </label>
-          </div>
+const GoalsSchema = Yup.object().shape({
+  goals: Yup.string().required('Please select a Goal.')
+});
 
-          <button type='submit'>Submit</button>
-        </Form>
-      )}
-    </Formik>
-  </div>
-);
+function App() {
+  return (
+    <div>
+      <Formik
+        initialValues={{ firstName: ' ', goals: [] }}
+        validationSchema={GoalsSchema}
+        onSubmit={async (values, { setStatus, resetForm, setSubmitting }) => {
+          setSubmitting(true);
+          axios
+            .post('https://reqres.in/api/users', values)
+            .then(res => {
+              console.log('handleSubmit: ', res);
+              setStatus(res.data);
+              resetForm();
+              setSubmitting(false);
+            })
+            .catch(err => console.error('handleSubmit: catch: err: ', err));
+        }}
+      >
+        {({ values, isSubmitting, errors }) => (
+          <Form>
+            <h1>
+              What are your fitness goals? <br />
+              (Select all that apply)
+            </h1>
+            <div>
+              <Field type='checkbox' name='goals' value='getInShape' />
+              <label>Get in Shape</label>
+              <br />
+              <label>
+                <Field type='checkbox' name='goals' value='loseWeight' />
+                Lose Weight
+              </label>
 
-export default Onboard;
+              <br />
+              <label>
+                <Field type='checkbox' name='goals' value='muscle' />
+                Build Muscle
+              </label>
+              <br />
+              <label>
+                <Field type='checkbox' name='goals' value='stronger' />
+                Get Stronger
+              </label>
+              <br />
+              <label>
+                <Field type='checkbox' name='goals' value='wellness' />
+                Wellness
+              </label>
+            </div>
+            <div>
+              <div className='validation-error'>{errors.goals}</div>
+              <button disabled={isSubmitting} type='submit'>
+                submit
+              </button>
+            </div>
+
+            <pre>{JSON.stringify(values, null, 2)}</pre>
+            <pre>{JSON.stringify(errors, null, 2)}</pre>
+          </Form>
+        )}
+      </Formik>
+    </div>
+  );
+}
+
+export default App;
