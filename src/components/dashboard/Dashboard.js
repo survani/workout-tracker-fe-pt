@@ -1,11 +1,11 @@
 import React from 'react';
-import Time from './Time';
+import Scheduler from './Scheduler';
 
 const Dashboard = () => {
   return (
     <div>
       <h1>Dashboard</h1>
-      <Time />
+      <Scheduler />
     </div>
   );
 };
