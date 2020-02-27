@@ -17,7 +17,7 @@ class Navigation extends React.Component {
   render() {
     return (
       <div style={{backgroundColor:"black"}}>
-        <button onClick={this.toggleNavMenu}/>
+        <div onClick={this.toggleNavMenu} style={{backgroundColor: 'white', userSelect: "none", width:'20px', height:'20px'}}>☰</div>
         <NavigationPopOut active={this.state.menuActive}/>
         <p style={{color:"white"}}>lorem ipsum</p>
       </div>
