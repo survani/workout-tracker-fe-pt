@@ -1,19 +1,15 @@
 import React from 'react';
-import Time from './Time';
-import { Formik, Field, Form } from 'formik';
+import './scheduler.css';
 
 const Scheduler = () => {
   return (
     <div>
-      <Formik>
-        <Form>
-          <h2>Coming Up Today</h2>
-          <Field as='select' value='bodyparts'>
-            <option value='upperBody'>Upper Body</option>
-          </Field>
-          <Time />
-        </Form>
-      </Formik>
+      <p>Coming up Today</p>
+      <div className='workout'>
+        <h3>Upper Body</h3>
+        <h3>12pm -12:30pm</h3>
+      </div>
+      <a href='google.com'>See Weekly Schedule</a>
     </div>
   );
 };
