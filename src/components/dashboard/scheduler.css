@@ -7,3 +7,12 @@
   width: 300px;
   margin: 0 auto;
 }
+
+a {
+  margin-left: 150px;
+}
+
+p {
+  margin-right: 180px;
+  margin-bottom: 2px;
+}
