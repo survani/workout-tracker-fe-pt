@@ -1,12 +1,18 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 
 class NavItem extends React.Component {
     constructor() {
         super();
     }
 
-    render() {
+    itemSelected(e){
+        this.props.selectItem(e);
+        this.props.history.push(this.props.destination);
+    }
+    
 
+    render() {
         const selected = {
             backgroundColor: "blue"
         }
@@ -16,10 +22,10 @@ class NavItem extends React.Component {
         }
 
         return (
-            <p id={this.props.id} onClick={this.props.SelectItem} style={this.props.selected ? selected : notSelected}>{this.props.text}</p>
+            <p id={this.props.id} onClick={this.itemSelected.bind(this)} destination={this.props.destination} style={this.props.selected ? selected : notSelected}>{this.props.text}</p>
         );
     }
 
 }
 
-export default NavItem;
+export default withRouter(NavItem);

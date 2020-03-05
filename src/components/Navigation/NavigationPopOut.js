@@ -1,5 +1,6 @@
 import React from 'react';
 import NavItem from './NavItem';
+import { withRouter } from 'react-router-dom';
 
 class NavigationPopOut extends React.Component {
     constructor() {
@@ -18,7 +19,7 @@ class NavigationPopOut extends React.Component {
           }
     }
 
-    SelectItem = (event) => {
+    selectItem = (event) => {
 
         var selectedItems = {
             0:false,
@@ -35,6 +36,7 @@ class NavigationPopOut extends React.Component {
         this.setState({
             selectedItems: selectedItems
           })
+          
     }
 
     render() {
@@ -61,17 +63,17 @@ class NavigationPopOut extends React.Component {
         
         return (
             <div style={this.props.active ? visible : invisible} class="NavigationPopOut">
-                <NavItem id="0" text="Weekly Schedule" SelectItem = {this.SelectItem} selected={this.state.selectedItems[0]}/>
-                <NavItem id="1" text="Dashboard" SelectItem = {this.SelectItem} selected={this.state.selectedItems[1]}/>
-                <NavItem id="2" text="See Current Progress" SelectItem = {this.SelectItem} selected={this.state.selectedItems[2]}/>
-                <NavItem id="3" text="Share Your Progress" SelectItem = {this.SelectItem} selected={this.state.selectedItems[3]}/>
-                <NavItem id="4" text="See Workout Library" SelectItem = {this.SelectItem} selected={this.state.selectedItems[4]}/>
-                <NavItem id="5" text="Settings" SelectItem = {this.SelectItem} selected={this.state.selectedItems[5]}/>
-                <NavItem id="6" text="Logout" SelectItem = {this.SelectItem} selected={this.state.selectedItems[6]}/>
+                <NavItem id="0" text="Weekly Schedule" destination="schedule" selectItem = {this.selectItem} selected={this.state.selectedItems[0]}/>
+                <NavItem id="1" text="Dashboard" destination="dashboard" selectItem = {this.selectItem} selected={this.state.selectedItems[1]}/>
+                <NavItem id="2" text="See Current Progress" destination="progress" selectItem = {this.selectItem} selected={this.state.selectedItems[2]}/>
+                <NavItem id="3" text="Share Your Progress" destination="share" selectItem = {this.selectItem} selected={this.state.selectedItems[3]}/>
+                <NavItem id="4" text="See Workout Library" destination="workouts" selectItem = {this.selectItem} selected={this.state.selectedItems[4]}/>
+                <NavItem id="5" text="Settings" destination="settings" selectItem = {this.selectItem} selected={this.state.selectedItems[5]}/>
+                <NavItem id="6" text="Logout" destination="dashboard" selectItem = {this.selectItem} selected={this.state.selectedItems[6]}/>
             </div>
         );
     }
 
 }
 
-export default NavigationPopOut;
+export default withRouter(NavigationPopOut);
