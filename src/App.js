@@ -1,17 +1,13 @@
 import React from 'react';
 import './App.css';
-import Navigation from './components/Navigation/Navigation'
 
 //components
-import Onboarding from './components/onboarding/Onboard';
-import Dashboard from './components/dashboard/Dashboard';
+import Routes from './components/Router/Routes'
 
 function App() {
   return (
     <div className='App'>
-    <Navigation/>
-      <Onboarding />
-      <Dashboard />
+      <Routes />
     </div>
   );
 }
