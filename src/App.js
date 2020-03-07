@@ -1,20 +1,9 @@
-import React from "react";
-import logo from "./logo.svg";
+import React, { Component } from "react";
 import "./App.css";
+import { render } from "@testing-library/react";
 
-function App(props) {
-  return (
-    <div className="App">
-      <button
-        onClick={e => {
-          e.preventDefault();
-          props.lock.show();
-        }}
-      >
-        Login
-      </button>
-    </div>
-  );
+function App() {
+  return <div></div>;
 }
 
 export default App;
