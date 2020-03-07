@@ -7,7 +7,6 @@ const clientID = process.env.REACT_APP_CLIENT_ID;
 class Auth {
   constructor() {
     this.auth0 = new auth0.WebAuth({
-      // the following three lines MUST be updated
       domain: domain,
       audience: "http://workouttracker.auth0.com/userinfo",
       clientID: clientID,
