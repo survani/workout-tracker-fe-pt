@@ -1,4 +1,4 @@
-import auth0 from "auth0";
+import auth0 from "auth0-js";
 require("dotenv").config(); // imports .env file
 
 const domain = process.env.REACT_APP_DOMAIN;
