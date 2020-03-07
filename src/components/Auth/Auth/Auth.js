@@ -22,6 +22,7 @@ class Auth {
     this.signIn = this.signIn.bind(this);
     this.signOut = this.signOut.bind(this);
   }
+  //invoking below
   //returns profile of authenticated user
   getProfile() {
     return this.profile;
