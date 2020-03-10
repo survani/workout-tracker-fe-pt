@@ -14,15 +14,19 @@ class NavItem extends React.Component {
 
     render() {
         const selected = {
-            backgroundColor: "blue"
+            backgroundColor: "blue",
+            marginBottom: "10px",
+            marginTop: "5px"
         }
 
         const notSelected = {
-            backgroundColor: "white"
+            backgroundColor: "white",
+            marginBottom: "10px",
+            marginTop: "5px"
         }
 
         return (
-            <p id={this.props.id} onClick={this.itemSelected.bind(this)} destination={this.props.destination} style={this.props.selected ? selected : notSelected}>{this.props.text}</p>
+            <div id={this.props.id} onClick={this.itemSelected.bind(this)} destination={this.props.destination} style={this.props.selected ? selected : notSelected}>{this.props.text}</div>
         );
     }
 

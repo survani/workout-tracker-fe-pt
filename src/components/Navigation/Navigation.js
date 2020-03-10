@@ -5,7 +5,7 @@ class Navigation extends React.Component {
   constructor() {
     super();
     this.state = {
-      menuActive: true,
+      menuActive: false,
     }
   }
 
