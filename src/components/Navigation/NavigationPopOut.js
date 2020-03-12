@@ -33,6 +33,8 @@ class NavigationPopOut extends React.Component {
 
         selectedItems[event.target.id] = true;
 
+        this.props.toggle();
+
         this.setState({
             selectedItems: selectedItems
           })
