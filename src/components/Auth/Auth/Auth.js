@@ -1,15 +1,14 @@
 import auth0 from "auth0-js";
-require("dotenv").config(); // imports .env file
 
-const domain = process.env.REACT_APP_DOMAIN;
-const clientID = process.env.REACT_APP_CLIENT_ID;
 // class that helps with Auth0 authentication functionality
+//domain and clientID re both considered information that does not need to be kept secret.
+//The client identifier is not a secret; it is exposed to the resource owner and MUST NOT be used alone for client authentication.
 class Auth {
   constructor() {
     this.auth0 = new auth0.WebAuth({
-      domain: domain,
-      audience: "http://workouttracker.auth0.com/userinfo",
-      clientID: clientID,
+      domain: "workouttracker.auth0.com",
+      audience: "https://workouttracker.auth0.com/userinfo",
+      clientID: "GQ67toqqYZMdF52d3L4gxHH2Vg2M8MH6",
       redirectUri: "http://localhost:3000/callback",
       responseType: "id_token",
       scope: "openid profile"
@@ -62,7 +61,7 @@ class Auth {
     this.expiresAt = null;
     this.auth0.logout({
       returnTo: "http://localhost:3000",
-      clientID: clientID
+      clientID: "GQ67toqqYZMdF52d3L4gxHH2Vg2M8MH6"
     });
   }
 }

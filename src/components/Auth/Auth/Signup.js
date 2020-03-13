@@ -1,10 +1,9 @@
 import React, { Component } from "react";
-import logo from "./logo.svg";
-import "./App.css";
+import logo from "../../../logo.svg";
+import "../../../App.css";
 import auth0Client from "./Auth";
 
 class Signup extends Component {
-  //validates if user is authenticated or not
   componentDidMount() {
     if (!auth0Client.isAuthenticated()) {
       auth0Client.signIn();
@@ -40,5 +39,4 @@ class Signup extends Component {
     );
   }
 }
-
 export default Signup;
