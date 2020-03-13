@@ -20,6 +20,7 @@ class Signup extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           {auth0Client.isAuthenticated() && (
             <div>
+              <p>Welcome!</p>
               <label className="mr-2 text-white">
                 {auth0Client.getProfile().name}
               </label>
@@ -39,4 +40,5 @@ class Signup extends Component {
     );
   }
 }
+
 export default Signup;

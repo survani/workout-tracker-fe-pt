@@ -13,5 +13,4 @@ class Callback extends React.Component {
   }
 }
 
-export { Callback };
 export default withRouter(Callback); // gives callback access to this.props.history

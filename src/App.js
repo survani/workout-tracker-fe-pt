@@ -8,7 +8,7 @@ import { Route } from "react-router-dom";
 function App() {
   return (
     <div className="App">
-      <Route path="/signup" component={Signup} />
+      <Route exact path="/" component={Signup} exact />
       <Route exact path="/callback" component={Callback} exact />
     </div>
   );
