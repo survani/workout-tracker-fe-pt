@@ -12,6 +12,8 @@ export default function Router(props) {
     <div>
       <Route exact path="/dashboard" component={Dashboard} />
       <Route exact path="/onboarding" component={Onboarding} />
+      <Route exact path="/" component={Signup} exact />
+      <Route exact path="/callback" component={Callback} exact />
     </div>
   )
 }
