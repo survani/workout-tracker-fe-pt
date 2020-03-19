@@ -8,7 +8,7 @@ const GoalsSchema = Yup.object().shape({
   goals: Yup.string().required('Please select a Goal.')
 });
 
-function Onboard() {
+function App() {
   return (
     <div>
       <Formik
@@ -74,4 +74,4 @@ function Onboard() {
   );
 }
 
-export default Onboard;
+export default App;

@@ -6,16 +6,14 @@ import Signup from "../src/components/Auth/Auth/Signup";
 import { Route } from "react-router-dom";
 
 //components
-
-import Dashboard from './components/dashboard/Dashboard';
+import Routes from './components/Router/Routes'
+import Navigation from './components/Navigation/Navigation'
 
 function App() {
   return (
     <div className='App'>
-      <Dashboard />
-      <Route exact path="/" component={Signup} exact />
-      <Route exact path="/callback" component={Callback} exact />
-      <Onboarding />
+      <Navigation />
+      <Routes />
     </div>
   );
 }
