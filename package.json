@@ -12,6 +12,8 @@
     "auth0-lock": "^11.22.2",
     "axios": "^0.19.2",
     "formik": "^2.1.4",
+    "moment": "^2.24.0",
+    "rc-time-picker": "^3.7.3",
     "codeclimate-test-reporter": "^0.5.1",
     "dotenv": "^8.2.0",
     "react": "^16.12.0",
