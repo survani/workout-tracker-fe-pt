@@ -9,11 +9,15 @@ class NavItem extends React.Component {
 
   itemSelected(e) {
     this.props.selectItem(e);
-    if (this.props.destination === "") {
+    if (this.props.destination === "/") {
       console.log("logout");
       auth0Client.signOut();
+      localStorage.removeItem("token");
+      localStorage.removeItem("authKey");
+      localStorage.removeItem("currentUser");
+      localStorage.removeItem("profile");
     }
-    this.props.history.push(this.props.destination);
+    this.props.history.replace(this.props.destination);
   }
 
   render() {
