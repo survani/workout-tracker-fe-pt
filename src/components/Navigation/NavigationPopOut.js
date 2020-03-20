@@ -1,7 +1,6 @@
 import React from "react";
 import NavItem from "./NavItem";
 import { withRouter } from "react-router-dom";
-
 class NavigationPopOut extends React.Component {
   constructor() {
     super();
@@ -110,7 +109,7 @@ class NavigationPopOut extends React.Component {
         <NavItem
           id="6"
           text="Logout"
-          destination="/"
+          destination=""
           selectItem={this.selectItem}
           selected={this.state.selectedItems[6]}
         />
