@@ -9,7 +9,7 @@ class Auth {
       domain: "workouttracker.auth0.com",
       audience: "https://workouttracker.auth0.com/userinfo",
       clientID: "GQ67toqqYZMdF52d3L4gxHH2Vg2M8MH6",
-      redirectUri: "http://localhost:3000/callback",
+      redirectUri: "http://localhost:3000/onboarding",
       responseType: "id_token",
       scope: "openid profile"
     });

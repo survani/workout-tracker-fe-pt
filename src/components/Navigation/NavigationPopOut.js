@@ -1,81 +1,136 @@
-import React from 'react';
-import NavItem from './NavItem';
-import { withRouter } from 'react-router-dom';
+import React from "react";
+import NavItem from "./NavItem";
+import { withRouter } from "react-router-dom";
+import auth0Client from "../Auth/Auth/Auth";
 
 class NavigationPopOut extends React.Component {
-    constructor() {
-        super();
+  constructor() {
+    super();
 
-        this.state = {
-            selectedItems: {
-                0:false,
-                1:false,
-                2:false,
-                3:false,
-                4:false,
-                5:false,
-                6:false
-            }
-          }
-    }
+    this.state = {
+      selectedItems: {
+        0: false,
+        1: false,
+        2: false,
+        3: false,
+        4: false,
+        5: false,
+        6: false
+      }
+    };
+  }
 
-    selectItem = (event) => {
+  selectItem = event => {
+    var selectedItems = {
+      0: false,
+      1: false,
+      2: false,
+      3: false,
+      4: false,
+      5: false,
+      6: false
+    };
 
-        var selectedItems = {
-            0:false,
-            1:false,
-            2:false,
-            3:false,
-            4:false,
-            5:false,
-            6:false
-        }
+    selectedItems[event.target.id] = true;
 
-        selectedItems[event.target.id] = true;
+    this.props.toggle();
 
-        this.props.toggle();
+    this.setState({
+      selectedItems: selectedItems
+    });
+  };
 
-        this.setState({
-            selectedItems: selectedItems
-          })
-          
-    }
+  signOut = () => {
+    auth0Client.signOut();
+    this.props.history.replace("/");
+  };
 
-    render() {
+  render() {
+    const visible = {
+      height: "100vh",
+      width: "50%",
+      maxWidth: "200px",
+      position: "fixed",
+      display: "flex",
+      flexDirection: "column",
+      backgroundColor: "white"
+    };
 
-        const visible = {
-            height: "100vh",
-            width: "50%",
-            maxWidth: "200px",
-            position: "fixed",
-            display: "flex",
-            flexDirection: "column",
-            backgroundColor: "white"
-        }
+    const invisible = {
+      height: "100vh",
+      width: "50%",
+      maxWidth: "200px",
+      position: "fixed",
+      display: "none",
+      flexDirection: "column",
+      backgroundColor: "white"
+    };
 
-        const invisible = {
-            height: "100vh",
-            width: "50%",
-            maxWidth: "200px",
-            position: "fixed",
-            display: "none",
-            flexDirection: "column",
-            backgroundColor: "white"
-        }
-        
-        return (
-            <div style={this.props.active ? visible : invisible} class="NavigationPopOut">
-                <NavItem id="0" text="Weekly Schedule" destination="schedule" selectItem = {this.selectItem} selected={this.state.selectedItems[0]}/>
-                <NavItem id="1" text="Dashboard" destination="dashboard" selectItem = {this.selectItem} selected={this.state.selectedItems[1]}/>
-                <NavItem id="2" text="See Current Progress" destination="progress" selectItem = {this.selectItem} selected={this.state.selectedItems[2]}/>
-                <NavItem id="3" text="Share Your Progress" destination="share" selectItem = {this.selectItem} selected={this.state.selectedItems[3]}/>
-                <NavItem id="4" text="See Workout Library" destination="workouts" selectItem = {this.selectItem} selected={this.state.selectedItems[4]}/>
-                <NavItem id="5" text="Settings" destination="settings" selectItem = {this.selectItem} selected={this.state.selectedItems[5]}/>
-                <NavItem id="6" text="Logout" destination="dashboard" selectItem = {this.selectItem} selected={this.state.selectedItems[6]}/>
-            </div>
-        );
-    }
-
+    return (
+      <div
+        style={this.props.active ? visible : invisible}
+        class="NavigationPopOut"
+      >
+        <NavItem
+          id="0"
+          text="Weekly Schedule"
+          destination="schedule"
+          selectItem={this.selectItem}
+          selected={this.state.selectedItems[0]}
+        />
+        <NavItem
+          id="1"
+          text="Dashboard"
+          destination="dashboard"
+          selectItem={this.selectItem}
+          selected={this.state.selectedItems[1]}
+        />
+        <NavItem
+          id="2"
+          text="See Current Progress"
+          destination="progress"
+          selectItem={this.selectItem}
+          selected={this.state.selectedItems[2]}
+        />
+        <NavItem
+          id="3"
+          text="Share Your Progress"
+          destination="share"
+          selectItem={this.selectItem}
+          selected={this.state.selectedItems[3]}
+        />
+        <NavItem
+          id="4"
+          text="See Workout Library"
+          destination="workouts"
+          selectItem={this.selectItem}
+          selected={this.state.selectedItems[4]}
+        />
+        <NavItem
+          id="5"
+          text="Settings"
+          destination="settings"
+          selectItem={this.selectItem}
+          selected={this.state.selectedItems[5]}
+        />
+        <NavItem
+          id="6"
+          text="Logout"
+          destination="/"
+          selectItem={this.selectItem}
+          selected={this.state.selectedItems[6]}
+        />
+         <button
+                className="btn btn-dark"
+                onClick={() => {
+                  this.signOut();
+                }}
+              >
+                Sign Out
+              </button>
+      </div>
+    );
+  }
 }
 
 export default withRouter(NavigationPopOut);
