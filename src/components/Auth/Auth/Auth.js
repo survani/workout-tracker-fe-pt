@@ -9,7 +9,7 @@ class Auth {
       domain: "workouttracker.auth0.com",
       audience: "https://workouttracker.auth0.com/userinfo",
       clientID: "GQ67toqqYZMdF52d3L4gxHH2Vg2M8MH6",
-      redirectUri: "http://localhost:3000/onboarding",
+      redirectUri: "https://labspt7-workout-tracker.herokuapp.com/onboarding",
       responseType: "id_token",
       scope: "openid profile"
     });
@@ -60,7 +60,7 @@ class Auth {
     this.profile = null;
     this.expiresAt = null;
     this.auth0.logout({
-      returnTo: "http://localhost:3000",
+      returnTo: "https://labspt7-workout-tracker.herokuapp.com/",
       clientID: "GQ67toqqYZMdF52d3L4gxHH2Vg2M8MH6"
     });
   }
