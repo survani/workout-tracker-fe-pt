@@ -96,7 +96,10 @@ Jest manages metadata about your source code so it can learn how to run only the
 
 # Installation Instructions
 
-Run using yarn.
+- Clone this repo
+- yarn install to install all required dependencies
+- yarn server to start the local server
+- yarn test to start server using testing environment
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
