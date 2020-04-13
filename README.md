@@ -1,17 +1,9 @@
-🚫 Note: All lines that start with 🚫 are instructions and should be deleted before this is posted to your portfolio. This is intended to be a guideline, feel free to add your own flare to it.
-
-🚫 The numbers 1️⃣ through 5️⃣ next to each item represent the week that part of the docs needs to be comepleted by.  Make sure to delete the numbers by the end of Labs.
-
-🚫 Each student has a required minimum number of meaningful PRs each week per the rubric. Contributing to docs does NOT count as a PR to meet your weekly requirements.
-
 # Workout Tracker
 
+You can find the deployed project at https://labspt7-workout-tracker.herokuapp.com/.
 
-1️⃣ You can find the deployed project at [🚫URL NAME GOES HERE](🚫copy and paste URL here).
+## Contributors
 
-## 4️⃣ Contributors
-
-🚫Add contributor info below, make sure add images and edit the social links for each member. Add to or delete these place-holders as needed
 
 |                                       [Diana Grams](https://github.com/deegrams221)                                        |                                       [Jennifer Hott](https://github.com/jennl97)                                        |                                       [Carl Padilla](https://github.com/Carlpadilla)                                        |                                       [Liam Edlinger](https://github.com/LiamColeE)                                        |                                       [Paul Abernathy](https://github.com/Paulabernathy7)                                        |
 | :-----------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------: |
@@ -22,18 +14,14 @@
 <br>
 <br>
 
-🚫 4️⃣ Optional examples of using images with links for your tech stack, make sure to change these to fit your project
 
 ![MIT](https://img.shields.io/packagist/l/doctrine/orm.svg)
 ![React](https://img.shields.io/badge/react-v16.7.0--alpha.2-blue.svg)
-![Typescript](https://img.shields.io/npm/types/typescript.svg?style=flat)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/f9fa2dea387a967a6c78/maintainability)](https://codeclimate.com/github/Lambda-School-Labs/workout-tracker-fe-pt7/maintainability)
 
 [![Test Coverage](https://api.codeclimate.com/v1/badges/f9fa2dea387a967a6c78/test_coverage)](https://codeclimate.com/github/Lambda-School-Labs/workout-tracker-fe-pt7/test_coverage)
-
-🚫 more info on using badges [here](https://github.com/badges/shields)
 
 ## Project Overview
 
@@ -46,13 +34,11 @@
 Empowering users to take control of their workout schedules by planning and managing their routines and tracking key features such as performance and body composition.
 
 
-### 4️⃣ Key Features
+### Key Features
 
--    feature one
--    feature two
--    feature three
--    feature four
--    feature five
+-    User Onboarding
+-    Manage Schedule
+-    Manage Daily Workout
 
 ## Tech Stack
 
@@ -60,14 +46,8 @@ Empowering users to take control of their workout schedules by planning and mana
 
 #### React.js with Redux
 
-🚫 Why did you choose this framework?
-
--    point one
--    point two
--    point three
--    point four
-
-🚫List the rest of the front end features and libraries in the same format as the framework above.
+-    Redux is benifitial for large scale projects, and will allow this project to grow.
+-    Redux allows us to avoid prop drilling.
 
 #### Front end deployed to `heroku`
 
@@ -75,58 +55,29 @@ Empowering users to take control of their workout schedules by planning and mana
 
 #### Knex, Express.js, Node.js
 
--    point one
--    point two
--    point three
+-    Model schema creation
+-    Table migrations
+-    Connection pooling and seeding
 
 # APIs
 
-## 2️⃣ Authentication API here
+## Authentication API
 
-🚫Replace text below with a description of the API
+### Auth0
 
-Water's like me. It's laaazy ... Boy, it always looks for the easiest way to do things A little happy sunlight shining through there. Let all these little things happen. Don't fight them. Learn to use them. Even the worst thing we can do here is good.
+Auth0 is a secure and universal service which ensures authentication and authorization functionality.
 
-## 2️⃣ Payment API here
+## wger - Workout Manager API
 
-🚫Replace text below with a description of the API
+https://wger.de/en/exercise/muscle/overview/
 
-This is the way you take out your flustrations. Get away from those little Christmas tree things we used to make in school. Isn't it fantastic that you can change your mind and create all these happy things? Everything's not great in life, but we can still find beauty in it.
+We are using this API so our users can select workouts and plan their daily workout routines.
+Free and open source, and it provides a lot of data for us.
 
-## 3️⃣ Misc API here
+# Environment Variables
 
-🚫Replace text below with a description of the API
-
-You can do anything your heart can imagine. In life you need colors. This is where you take out all your hostilities and frustrations. It's better than kicking the puppy dog around and all that so. I'm sort of a softy, I couldn't shoot Bambi except with a camera. Trees get lonely too, so we'll give him a little friend. We'll lay all these little funky little things in there.
-
-## 3️⃣ Misc API here
-
-🚫Replace text below with a description of the API
-
-When you do it your way you can go anywhere you choose. Let your heart take you to wherever you want to be. If I paint something, I don't want to have to explain what it is. A tree needs to be your friend if you're going to paint him. That's a son of a gun of a cloud. Even the worst thing we can do here is good.
-
-## 3️⃣ Misc API here
-
-🚫Replace text below with a description of the API
-
-Volunteering your time; it pays you and your whole community fantastic dividends. Maybe there's a happy little waterfall happening over here. You can spend all day playing with mountains. We don't have to be committed. We are just playing here. You have freedom here. The only guide is your heart. It's cold, but it's beautiful.
-
-# 3️⃣ Environment Variables
-
-In order for the app to function correctly, the user must set up their own environment variables. There should be a .env file containing the following:
-
-🚫These are just examples, replace them with the specifics for your app
-
-    *  REACT_APP_apiKey - this is your Google API key, which can be generated in the Google Cloud Console
-    *  REACT_APP_authDomain - when you set up your Firebase project, this information will be in the dashboard
-    *  REACT_APP_databaseURL - in the Firebase dashboard
-    *  REACT_APP_projectID - in the Firebase dashboard
-    *  REACT_APP_storageBucket - in the Firebase dashboard
-    *  REACT_APP_messagingSenderId - in the Firebase dashboard
-    *  REACT_APP_stripe_API - this is your public Stripe API key, generated in the Stripe dashboard
-    *  REACT_APP_backendURL - optional for your local development server
-    *  REACT_APP_clientid - this is the Stripe_connect clientID, generated in Stripe_connect settings
-    *  REACT_APP_stripe_plan - this is the ID for a second Stripe subscription plan, generated under Stripe products
+    *  REACT_APP_DOMAIN = workouttracker.auth0.com
+    *  REACT_APP_CLIENT_ID = GQ67toqqYZMdF52d3L4gxHH2Vg2M8MH6
 
 # 5️⃣ Content Licenses
 
@@ -137,22 +88,42 @@ In order for the app to function correctly, the user must set up their own envir
 | doodles.png    | Nicole Bennett   | [Creative Commons](https://www.toptal.com/designers/subtlepatterns/doodles/) |
 | rings.svg      | Sam Herbert      | [MIT](https://github.com/SamHerbert/SVG-Loaders)                             |
 
-# 4️⃣ Testing
+# Testing
 
-🚫Document what you used for testing and why
+## Jest
 
-# 4️⃣ Installation Instructions
+Jest manages metadata about your source code so it can learn how to run only the relevant test files when a source code file is changed. Jest's interactive watch mode will show you if you're filtering for any file types.
 
-🚫explain how to install the required dependencies to get this project up and running with yarn and NPM
+# Installation Instructions
 
-## Other Scripts
+Run using yarn.
 
-🚫replace these examples with your own
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-    * typecheck - runs the TypeScript compiler
-    * build - creates a build of the application
-    * start - starts the production server after a build is created
-    * test - runs tests in **tests** directory \* eject - copy the configuration files and dependencies into the project so you have full control over them
+## Available Scripts
+
+In the project directory, you can run:
+
+### `yarn start`
+
+Runs the app in the development mode.<br>
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+The page will reload if you make edits.<br>
+You will also see any lint errors in the console.
+
+### `yarn test`
+
+Launches the test runner in the interactive watch mode.<br>
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+
+### `yarn run build`
+
+Builds the app for production to the `build` folder.<br>
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.<br>
+Your app is ready to be deployed!
 
 # Contributing
 
@@ -192,4 +163,4 @@ These contribution guidelines have been adapted from [this good-Contributing.md-
 
 ## Documentation
 
-See [Backend Documentation](🚫_link to your backend readme here_) for details on the backend of our project.
+See [Backend Documentation](https://github.com/Lambda-School-Labs/workout-tracker-be-pt7) for details on the backend of our project.
