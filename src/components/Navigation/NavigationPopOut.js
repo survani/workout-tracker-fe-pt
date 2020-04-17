@@ -74,7 +74,7 @@ class NavigationPopOut extends React.Component {
         <NavItem
           id='0'
           text='Weekly Schedule'
-          destination='calendar'
+          destination='schedule'
           selectItem={this.selectItem}
           selected={this.state.selectedItems[0]}
         />
