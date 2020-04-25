@@ -167,3 +167,5 @@ These contribution guidelines have been adapted from [this good-Contributing.md-
 ## Documentation
 
 See [Backend Documentation](https://github.com/Lambda-School-Labs/workout-tracker-be-pt7) for details on the backend of our project.
+See [iOS App Documentation](https://github.com/Lambda-School-Labs/workout-tracker-ios-pt7) for details on the iOS portion of our project.
+See [UX Documentation](https://www.figma.com/file/kEKgIN0bWriJGpIZ9hmGI2/Workout-Tracker%2C-Mahiya-%26-Adeolu?node-id=313%3A6) for details on the UX design of our project.
