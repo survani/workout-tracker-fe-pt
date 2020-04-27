@@ -25,6 +25,8 @@
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.4.0",
     "react-use-auth": "^0.5.3",
+    "webfontloader": "^1.6.28",
+    "yarn": "^1.22.4",
     "yup": "^0.28.1"
   },
   "scripts": {

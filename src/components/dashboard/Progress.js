@@ -3,7 +3,7 @@ import './progress.css';
 
 const Progress = () => {
   return (
-    <div>
+    <div className="progress_main">
       <p>Overall Progress</p>
       <div className='progress'>
         <div className='activities'>

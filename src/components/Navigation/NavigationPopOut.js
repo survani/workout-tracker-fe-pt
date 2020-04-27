@@ -47,23 +47,24 @@ class NavigationPopOut extends React.Component {
 
   render() {
     const visible = {
-      height: '100vh',
-      width: '50%',
-      maxWidth: '200px',
-      position: 'fixed',
-      display: 'flex',
-      flexDirection: 'column',
-      backgroundColor: 'white',
+      height: "100vh",
+      width: "50%",
+      maxWidth: "200px",
+      position: "fixed",
+      display: "flex",
+      flexDirection: "column",
+      backgroundColor: "#FDF6F2"
     };
 
     const invisible = {
-      height: '100vh',
-      width: '50%',
-      maxWidth: '200px',
-      position: 'fixed',
-      display: 'none',
-      flexDirection: 'column',
-      backgroundColor: 'white',
+      height: "100vh",
+      width: "50%",
+      maxWidth: "200px",
+      position: "fixed",
+      display: "none",
+      flexDirection: "column",
+      backgroundColor: "#FDF6F2"
+
     };
 
     return (
@@ -120,14 +121,14 @@ class NavigationPopOut extends React.Component {
           selectItem={this.selectItem}
           selected={this.state.selectedItems[6]}
         />
-        <button
-          className='btn btn-dark'
-          onClick={() => {
-            this.signOut();
-          }}
-        >
-          Sign Out
-        </button>
+         <button
+                className="btn btn-dark logout_btn"
+                onClick={() => {
+                  this.signOut();
+                }}
+              >
+                Sign Out
+              </button>
       </div>
     );
   }

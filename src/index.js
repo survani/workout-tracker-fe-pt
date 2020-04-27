@@ -4,6 +4,13 @@ import "./index.css";
 import App from "./App.js";
 import { BrowserRouter as Router } from "react-router-dom";
 import * as serviceWorker from "./serviceWorker";
+import WebFont from 'webfontloader';
+
+WebFont.load({
+  google:{
+    families: ['Roboto: 500,700', 'sans-serif']
+  }
+});
 
 ReactDOM.render(
   <Router>

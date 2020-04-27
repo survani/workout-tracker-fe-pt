@@ -2,17 +2,20 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  border: 1px solid black;
+  border: 1px solid #804523;
   border-radius: 5px;
   width: 300px;
   margin: 0 auto;
-}
+  background-color: #FDF6F2;
+  margin-bottom: 10px;
+ }
 
 a {
   margin-left: 150px;
 }
 
 p {
+  font-family: 'Roboto';
   margin-right: 180px;
   margin-bottom: 2px;
 }

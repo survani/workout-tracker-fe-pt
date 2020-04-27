@@ -3,10 +3,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 1px solid black;
+  border: 1px solid #804523;
   border-radius: 5px;
   width: 300px;
   margin: 0 auto;
+  margin-bottom: 10px;
 }
 
 .activities {
@@ -16,4 +17,8 @@
   align-items: center;
   margin-right: auto;
   padding-left: 10px;
+}
+
+p{
+  font-family: 'Roboto';
 }

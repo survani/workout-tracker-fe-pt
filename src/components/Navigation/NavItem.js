@@ -22,15 +22,18 @@ class NavItem extends React.Component {
 
   render() {
     const selected = {
-      backgroundColor: "blue",
+      backgroundColor: "#804523",
+      color: "white",
       marginBottom: "10px",
-      marginTop: "5px"
+      marginTop: "5px",
+      padding: "10px"
     };
 
     const notSelected = {
-      backgroundColor: "white",
+      backgroundColor: "#FDF6F2",
       marginBottom: "10px",
-      marginTop: "5px"
+      marginTop: "5px",
+      padding: "10px"
     };
 
     return (
