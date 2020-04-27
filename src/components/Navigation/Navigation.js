@@ -1,5 +1,6 @@
 import React from 'react';
 import NavigationPopOut from './NavigationPopOut'
+import "./navigation.css"
 
 class Navigation extends React.Component {
   constructor() {
@@ -16,8 +17,8 @@ class Navigation extends React.Component {
 
   render() {
     return (
-      <div style={{backgroundColor:"black"}}>
-        <div onClick={this.toggleNavMenu} style={{backgroundColor: 'black', color:"white", userSelect: "none", width:'40px', height:'40px'}}>☰</div>
+      <div className="navigation_main">
+        <div onClick={this.toggleNavMenu} className="navMenu" style={{userSelect: "none"}}>☰</div>
         <NavigationPopOut active={this.state.menuActive} toggle={this.toggleNavMenu}/>
       </div>
     );

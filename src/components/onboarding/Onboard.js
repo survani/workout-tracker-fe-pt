@@ -19,7 +19,9 @@ class Onboarding extends React.Component {
 
   render() {
     return (
-    <div>
+    <div id='onboarding_body'>
+      <div className="header_border"><h1 className="onboarding_header">A Couple of Steps to a Healthier You!</h1></div>
+      <div>
       <Formik
         initialValues={{ goals: [] }}
         validationSchema={GoalsSchema}
@@ -39,11 +41,11 @@ class Onboarding extends React.Component {
       >
         {({ values, isSubmitting, errors }) => (
           <Form>
-            <h1>
+            <h3 className="onboarding_header">
               What are your fitness goals? <br />
               (Select all that apply)
-            </h1>
-            <div>
+            </h3>
+            <div className="onboarding_form">
               <Field type="checkbox" name="goals" value="getInShape" />
               <label>Get in Shape</label>
               <br />
@@ -70,13 +72,15 @@ class Onboarding extends React.Component {
             </div>
             <div>
               <div className="validation-error">{errors.goals}</div>
-              <button disabled={isSubmitting} type="submit">
-                submit
+              <button disabled={isSubmitting} type="submit" className="onboarding_btn">
+                Submit
               </button>
             </div>
           </Form>
         )}
       </Formik>
+      </div>
+      <div></div>
     </div>
     );
   }

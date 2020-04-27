@@ -53,7 +53,7 @@ class NavigationPopOut extends React.Component {
       position: "fixed",
       display: "flex",
       flexDirection: "column",
-      backgroundColor: "white"
+      backgroundColor: "#FDF6F2"
     };
 
     const invisible = {
@@ -63,7 +63,7 @@ class NavigationPopOut extends React.Component {
       position: "fixed",
       display: "none",
       flexDirection: "column",
-      backgroundColor: "white"
+      backgroundColor: "#FDF6F2"
     };
 
     return (
@@ -121,7 +121,7 @@ class NavigationPopOut extends React.Component {
           selected={this.state.selectedItems[6]}
         />
          <button
-                className="btn btn-dark"
+                className="btn btn-dark logout_btn"
                 onClick={() => {
                   this.signOut();
                 }}
