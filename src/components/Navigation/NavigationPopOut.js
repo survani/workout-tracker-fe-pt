@@ -1,7 +1,7 @@
-import React from "react";
-import NavItem from "./NavItem";
-import { withRouter } from "react-router-dom";
-import auth0Client from "../Auth/Auth/Auth";
+import React from 'react';
+import NavItem from './NavItem';
+import { withRouter } from 'react-router-dom';
+import auth0Client from '../Auth/Auth/Auth';
 
 class NavigationPopOut extends React.Component {
   constructor() {
@@ -15,12 +15,12 @@ class NavigationPopOut extends React.Component {
         3: false,
         4: false,
         5: false,
-        6: false
-      }
+        6: false,
+      },
     };
   }
 
-  selectItem = event => {
+  selectItem = (event) => {
     var selectedItems = {
       0: false,
       1: false,
@@ -28,7 +28,7 @@ class NavigationPopOut extends React.Component {
       3: false,
       4: false,
       5: false,
-      6: false
+      6: false,
     };
 
     selectedItems[event.target.id] = true;
@@ -36,13 +36,13 @@ class NavigationPopOut extends React.Component {
     this.props.toggle();
 
     this.setState({
-      selectedItems: selectedItems
+      selectedItems: selectedItems,
     });
   };
 
   signOut = () => {
     auth0Client.signOut();
-    this.props.history.replace("/");
+    this.props.history.replace('/');
   };
 
   render() {
@@ -64,59 +64,60 @@ class NavigationPopOut extends React.Component {
       display: "none",
       flexDirection: "column",
       backgroundColor: "#FDF6F2"
+
     };
 
     return (
       <div
         style={this.props.active ? visible : invisible}
-        class="NavigationPopOut"
+        class='NavigationPopOut'
       >
         <NavItem
-          id="0"
-          text="Weekly Schedule"
-          destination="schedule"
+          id='0'
+          text='Weekly Schedule'
+          destination='schedule'
           selectItem={this.selectItem}
           selected={this.state.selectedItems[0]}
         />
         <NavItem
-          id="1"
-          text="Dashboard"
-          destination="dashboard"
+          id='1'
+          text='Dashboard'
+          destination='dashboard'
           selectItem={this.selectItem}
           selected={this.state.selectedItems[1]}
         />
         <NavItem
-          id="2"
-          text="See Current Progress"
-          destination="progress"
+          id='2'
+          text='See Current Progress'
+          destination='progress'
           selectItem={this.selectItem}
           selected={this.state.selectedItems[2]}
         />
         <NavItem
-          id="3"
-          text="Share Your Progress"
-          destination="share"
+          id='3'
+          text='Share Your Progress'
+          destination='share'
           selectItem={this.selectItem}
           selected={this.state.selectedItems[3]}
         />
         <NavItem
-          id="4"
-          text="See Workout Library"
-          destination="workouts"
+          id='4'
+          text='See Workout Library'
+          destination='workouts'
           selectItem={this.selectItem}
           selected={this.state.selectedItems[4]}
         />
         <NavItem
-          id="5"
-          text="Settings"
-          destination="settings"
+          id='5'
+          text='Settings'
+          destination='settings'
           selectItem={this.selectItem}
           selected={this.state.selectedItems[5]}
         />
         <NavItem
-          id="6"
-          text="Logout"
-          destination="/"
+          id='6'
+          text='Logout'
+          destination='/'
           selectItem={this.selectItem}
           selected={this.state.selectedItems[6]}
         />
