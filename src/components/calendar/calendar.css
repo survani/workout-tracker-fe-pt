@@ -1,4 +1,36 @@
 .calendar-container {
-  width: 650px;
+  width: 723px;
   margin: 0 auto;
+}
+
+.calendar_headline{
+color: #804523;
+padding-bottom: 20px;
+font-family: 'Roboto';
+}
+
+.calendar_main{
+  display: inline-block;
+  width: 723px;
+  border-bottom: 4px solid #E18B58;
+  margin-bottom: 15px;
+}
+
+.fc-button-primary{
+  background-color: #804523;
+}
+
+.fc-button-primary:disabled{
+    color: #000;
+    background-color: #d3bdb1;
+    border-color: #d3bdb1;
+}
+
+.fc-toolbar h2, .fc th, .fc-day-number {
+  font-family: 'Roboto';
+  color: #804523;
+}
+
+.fc-unthemed td.fc-today {
+  background: #FDF6F2;
 }

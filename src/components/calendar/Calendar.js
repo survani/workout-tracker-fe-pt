@@ -9,7 +9,10 @@ import './calendar.css';
 const Calendar = () => {
   return (
     <div>
-      <h1>Schedule</h1>
+      <div className="calendar_main">
+        <h1 className="calendar_headline">Schedule</h1>
+    </div>
+      
       <div className='calendar-container'>
         <FullCalendar defaultView='dayGridMonth' plugins={[dayGridPlugin]} />
       </div>
