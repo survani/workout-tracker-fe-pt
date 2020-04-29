@@ -1,6 +1,6 @@
 import React from "react";
 import { withRouter } from "react-router-dom";
-import auth0Client from "../Auth/Auth/Auth";
+
 
 class NavItem extends React.Component {
   constructor() {
@@ -11,7 +11,6 @@ class NavItem extends React.Component {
     this.props.selectItem(e);
     if (this.props.destination === "/") {
       console.log("logout");
-      auth0Client.signOut();
       localStorage.removeItem("token");
       localStorage.removeItem("authKey");
       localStorage.removeItem("currentUser");
