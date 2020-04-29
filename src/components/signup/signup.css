@@ -1,0 +1,25 @@
+#signup_form{
+    display: inline-grid;
+}
+
+.signup_btn{
+    margin-top: 15px;
+    font-size: 15px;
+    padding: 5px;
+    color: white;
+    background-color: #E18B58;
+    font-family: 'Roboto';
+}
+
+.signup_btn:hover{
+    color: white;
+    background-color: #804523;
+    font-weight: 700;
+}
+
+.signup_input{
+    margin-bottom: 10px;
+    padding: 5px;
+    font-family: 'Roboto';
+    font-size: 14px;
+}

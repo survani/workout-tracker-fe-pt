@@ -1,7 +1,6 @@
 import React from 'react';
 import NavItem from './NavItem';
 import { withRouter } from 'react-router-dom';
-import auth0Client from '../Auth/Auth/Auth';
 
 class NavigationPopOut extends React.Component {
   constructor() {
@@ -41,7 +40,6 @@ class NavigationPopOut extends React.Component {
   };
 
   signOut = () => {
-    auth0Client.signOut();
     this.props.history.replace('/');
   };
 
@@ -70,7 +68,7 @@ class NavigationPopOut extends React.Component {
     return (
       <div
         style={this.props.active ? visible : invisible}
-        class='NavigationPopOut'
+        className='NavigationPopOut'
       >
         <NavItem
           id='0'
@@ -121,14 +119,6 @@ class NavigationPopOut extends React.Component {
           selectItem={this.selectItem}
           selected={this.state.selectedItems[6]}
         />
-         <button
-                className="btn btn-dark logout_btn"
-                onClick={() => {
-                  this.signOut();
-                }}
-              >
-                Sign Out
-              </button>
       </div>
     );
   }

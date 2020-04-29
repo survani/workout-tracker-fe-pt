@@ -1,0 +1,25 @@
+#login_form{
+    display: inline-grid;
+}
+
+.login_btn{
+    margin-top: 15px;
+    font-size: 15px;
+    padding: 5px;
+    color: white;
+    background-color: #E18B58;
+    font-family: 'Roboto';
+}
+
+.login_btn:hover{
+    color: white;
+    background-color: #804523;
+    font-weight: 700;
+}
+
+.login_input{
+    margin-bottom: 10px;
+    padding: 5px;
+    font-family: 'Roboto';
+    font-size: 14px;
+}

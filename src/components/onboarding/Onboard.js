@@ -3,7 +3,6 @@ import "./onboard.css";
 import axios from "axios";
 import { Formik, Field, Form } from "formik";
 import * as Yup from "yup";
-import auth0Client from "../Auth/Auth/Auth";
 import { withRouter } from "react-router-dom";
 
 const GoalsSchema = Yup.object().shape({
@@ -11,11 +10,6 @@ const GoalsSchema = Yup.object().shape({
 });
 
 class Onboarding extends React.Component {
-
-  async componentDidMount() {
-    await auth0Client.handleAuthentication();
-    //this.props.history.replace("/"); // redirects to home page
-  }
 
   render() {
     return (
@@ -28,7 +22,7 @@ class Onboarding extends React.Component {
         onSubmit={async (values, { setStatus, resetForm, setSubmitting }) => {
           setSubmitting(true);
           axios
-            .post("https://reqres.in/api/users", values)
+            .post("https://frozen-hamlet-18508.herokuapp.com/users", values)
             .then(res => {
               console.log("handleSubmit: ", res);
               setStatus(res.data);
