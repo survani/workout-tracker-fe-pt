@@ -3,8 +3,11 @@ import "./login.css"
 import { Form, Field, withFormik } from "formik";
 import * as Yup from "yup";
 import axios from "axios";
+import { useHistory } from "react-router-dom";
 
 function Login(errors, touched, status){
+    const history = useHistory();
+
     const [formState, setFormState] = useState([]);
 
     useEffect(status => {
@@ -32,7 +35,7 @@ function Login(errors, touched, status){
                 className="login_input"
                 />
                 {touched.password && errors.password && (<p>{errors.password}</p>)}
-                <button type="submit" className="login_btn">Login</button>
+                <button type="submit" className="login_btn" onClick={() => history.push("/dashboard")}>Login</button>
             </Form>
             {formState.map(form => (
                 <p key={form.id}>Welcome {form.email}</p>
@@ -42,7 +45,7 @@ function Login(errors, touched, status){
 
 };
 
-const formikHOC=withFormik({
+const formikHOC = withFormik({
     mapPropsToValues({email, password}){
         return{
             email: email || "",
@@ -58,7 +61,7 @@ const formikHOC=withFormik({
     }),
     handleSubmit(values, {setStatus, resetForm}){
         axios
-        .post("https://frozen-hamlet-18508.herokuapp.com/users/login")
+        .post("https://frozen-hamlet-18508.herokuapp.com/users/login", values)
         .then(res => {
             setStatus(res.data);
             resetForm()
