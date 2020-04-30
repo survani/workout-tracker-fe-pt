@@ -63,10 +63,6 @@ Empowering users to take control of their workout schedules by planning and mana
 
 ## Authentication API
 
-### Auth0
-
-Auth0 is a secure and universal service which ensures authentication and authorization functionality.
-
 ## wger - Workout Manager API
 
 https://wger.de/en/exercise/muscle/overview/
@@ -79,18 +75,9 @@ Free and open source, and it provides a lot of data for us.
     *  REACT_APP_DOMAIN = workouttracker.auth0.com
     *  REACT_APP_CLIENT_ID = GQ67toqqYZMdF52d3L4gxHH2Vg2M8MH6
 
-# 5️⃣ Content Licenses
-
-🚫For all content - images, icons, etc, use this table to document permission of use. Remove the two placeholders and add you content to this table
-
-| Image Filename | Source / Creator | License                                                                      |
-| -------------- | ---------------- | ---------------------------------------------------------------------------- |
-| doodles.png    | Nicole Bennett   | [Creative Commons](https://www.toptal.com/designers/subtlepatterns/doodles/) |
-| rings.svg      | Sam Herbert      | [MIT](https://github.com/SamHerbert/SVG-Loaders)                             |
-
 # Testing
 
-## Jest
+## Jest / React Test
 
 Jest manages metadata about your source code so it can learn how to run only the relevant test files when a source code file is changed. Jest's interactive watch mode will show you if you're filtering for any file types.
 
