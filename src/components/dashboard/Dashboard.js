@@ -1,7 +1,6 @@
 import React from 'react';
 import Scheduler from './Scheduler';
 import Progress from './Progress';
-import "./dashboard.css";
 import { useHistory } from "react-router-dom";
 
 

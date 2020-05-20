@@ -8,7 +8,7 @@ import WebFont from 'webfontloader';
 
 WebFont.load({
   google:{
-    families: ['Roboto: 500,700', 'sans-serif']
+    families: ['Montserrat: 300,500,700', 'sans-serif']
   }
 });
 
