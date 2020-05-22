@@ -1,6 +1,6 @@
 import React from 'react';
 import NavigationPopOut from './NavigationPopOut'
-import "./navigation.css"
+// import "./navigation.css"
 
 class Navigation extends React.Component {
   constructor() {
