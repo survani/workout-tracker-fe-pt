@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from './node_modules/react';
-import { Route, withRouter } from './node_modules/react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { Route, withRouter } from 'react-router-dom';
 
 const PrivateRouter = ({ component: Component, path, history, ...rest }) => {
   const [loading, setLoading] = useState(false);

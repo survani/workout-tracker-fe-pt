@@ -1,6 +1,6 @@
-import React from './node_modules/react';
+import React from 'react';
 import NavItem from './NavItem';
-import { withRouter } from './node_modules/react-router-dom';
+import { withRouter } from 'react-router-dom';
 
 class NavigationPopOut extends React.Component {
   constructor() {

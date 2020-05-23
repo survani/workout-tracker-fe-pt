@@ -1,4 +1,4 @@
-import React from './node_modules/react';
+import React from 'react';
 import NavigationPopOut from './NavigationPopOut';
 
 class Navigation extends React.Component {

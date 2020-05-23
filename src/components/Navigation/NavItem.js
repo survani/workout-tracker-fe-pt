@@ -1,11 +1,12 @@
-import React from './node_modules/react';
-import { withRouter } from './node_modules/react-router-dom';
+import React from 'react';
+import { withRouter } from 'react-router-dom';
 
 class NavItem extends React.Component {
   itemSelected(e) {
     this.props.selectItem(e);
     if (this.props.destination === '/') {
       console.log('logout');
+      localStorage.removeItem('token');
       localStorage.removeItem('authKey');
       localStorage.removeItem('currentUser');
       localStorage.removeItem('profile');
