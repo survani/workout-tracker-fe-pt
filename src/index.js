@@ -13,7 +13,7 @@ WebFont.load({
 
 ReactDOM.render(
   <Router>
-    <App />,
+    <App />
   </Router>,
   document.getElementById('root')
 );
