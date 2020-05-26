@@ -1,8 +1,12 @@
 import React, { useState } from 'react';
 import { axiosWithAuth } from '../Authentication/axiosWithAuth';
 import { Link } from 'react-router-dom';
+import { useForm } from "react-hook-form";
 
 export default function Register(props) {
+
+  const { register, errors } = useForm();
+
   const [user, getUser] = useState({
     email: '',
     username: '',
@@ -32,6 +36,7 @@ export default function Register(props) {
     <div className='form-container'>
       <h1>Sign Up</h1>
       <form onSubmit={handleSubmit} className='register-form'>
+     <label>Email</label>
       <input
           type='text'
           placeholder='Email'
@@ -39,7 +44,10 @@ export default function Register(props) {
           onChange={handleChanges}
           value={user.email}
           className='register-field'
+          ref= {register({required: true})}
         />
+        {errors.email && <p>This is required</p>}
+        <label>Username</label>
         <input
           type='text'
           placeholder='Username'
@@ -47,7 +55,10 @@ export default function Register(props) {
           onChange={handleChanges}
           value={user.username}
           className='register-field'
+          ref= {register({required: true})}
         />
+        {errors.username && <p>This is required</p>}
+        <label>Password</label>
         <input
           type='password'
           placeholder='Password'
@@ -55,7 +66,10 @@ export default function Register(props) {
           onChange={handleChanges}
           value={user.password}
           className='register-field'
+          ref= {register({required: true, minLength: 8})}
         />
+        {errors.password && errors.password.type === "required" && (<p>This is required</p>)}
+        {errors.password && errors.password.type === "minLength" && (<p>This field requires a minimum length of 8 characters</p>)}
         <p>
           Already have an account? Sign in <Link to='/login'>here</Link>
         </p>
