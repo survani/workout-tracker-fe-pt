@@ -1,8 +1,12 @@
 import React, { useState } from 'react';
 import { axiosWithAuth } from '../authentication/axiosWithAuth';
-
+import { useForm } from "react-hook-form";
+                                 
 export default function Login(props) {
+  const { errors } = useForm();
+  
   const [user, getUser] = useState({
+
     username: '',
     password: '',
   });
@@ -29,20 +33,23 @@ export default function Login(props) {
 
   return (
     <form onSubmit={handleSubmit}>
-      <input
-        type="text"
-        placeholder="username"
-        name="username"
-        onChange={handleChanges}
-        value={user.username}
+      <input 
+      type='text'
+       placeholder='username' 
+       name='username' 
+       onChange={handleChanges} 
+       value={user.username} 
+       />
+       {errors.username && <p>This is required</p>}
+
+      <input 
+      type='text' 
+      placeholder='password' 
+      name='password' 
+      onChange={handleChanges} 
+      value={user.password} 
       />
-      <input
-        type="text"
-        placeholder="password"
-        name="password"
-        onChange={handleChanges}
-        value={user.password}
-      />
+      {errors.password && <p>This is required</p>}
 
       <input type="submit" />
     </form>
