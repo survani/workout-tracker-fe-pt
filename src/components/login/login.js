@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {axiosWithAuth} from '../Authentication/axiosWithAuth'
+import {axiosWithAuth} from '../authentication/axiosWithAuth'
 import { useForm } from "react-hook-form";
 
 export default function Login(props) {
@@ -33,6 +33,7 @@ const handleChanges = e => {
 
   return (
     <form onSubmit={handleSubmit}>
+      <label>Username:&nbsp;
       <input 
       type='text'
        placeholder='username' 
@@ -40,8 +41,10 @@ const handleChanges = e => {
        onChange={handleChanges} 
        value={user.username} 
        />
+       </label>
        {errors.username && <p>This is required</p>}
-
+       
+      <label>Password:&nbsp;
       <input 
       type='text' 
       placeholder='password' 
@@ -49,6 +52,7 @@ const handleChanges = e => {
       onChange={handleChanges} 
       value={user.password} 
       />
+      </label>
       {errors.password && <p>This is required</p>}
 
       <input type='submit' />
