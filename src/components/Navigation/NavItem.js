@@ -1,38 +1,33 @@
-import React from "react";
-import { withRouter } from "react-router-dom";
-
+import React from 'react';
+import { withRouter } from 'react-router-dom';
 
 class NavItem extends React.Component {
-  constructor() {
-    super();
-  }
-
   itemSelected(e) {
     this.props.selectItem(e);
-    if (this.props.destination === "/") {
-      console.log("logout");
-      localStorage.removeItem("token");
-      localStorage.removeItem("authKey");
-      localStorage.removeItem("currentUser");
-      localStorage.removeItem("profile");
+    if (this.props.destination === '/') {
+      console.log('logout');
+      localStorage.removeItem('token');
+      localStorage.removeItem('authKey');
+      localStorage.removeItem('currentUser');
+      localStorage.removeItem('profile');
     }
     this.props.history.replace(this.props.destination);
   }
 
   render() {
     const selected = {
-      backgroundColor: "#804523",
-      color: "white",
-      marginBottom: "10px",
-      marginTop: "5px",
-      padding: "10px"
+      backgroundColor: '#804523',
+      color: 'white',
+      marginBottom: '10px',
+      marginTop: '5px',
+      padding: '10px',
     };
 
     const notSelected = {
-      backgroundColor: "#FDF6F2",
-      marginBottom: "10px",
-      marginTop: "5px",
-      padding: "10px"
+      backgroundColor: '#FDF6F2',
+      marginBottom: '10px',
+      marginTop: '5px',
+      padding: '10px',
     };
 
     return (

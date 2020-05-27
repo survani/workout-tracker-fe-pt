@@ -10,11 +10,30 @@ const Dashboard = () => {
   return (
     <div>
       <div className="dashboard_main"><h1 className="dashboard_header">Dashboard</h1></div>
-      <Scheduler />
-      <Progress />
-      <button style={{ marginTop: '50px' }} type='submit' className="dashboard_btn" onClick={() => history.push("/schedule")}>
-        Schedule
+      <div>
+      <button type='submit' className="dashboard_btn" onClick={() => history.push("/")}>
+        Create a custom workout plan
       </button>
+      <button type='submit' className="dashboard_btn" onClick={() => history.push("/")}>
+        Find a prefab workout plan
+      </button>
+      </div>
+      <div>
+      <button type='submit' className="dashboard_btn" onClick={() => history.push("/")}>
+        Create custom meal plan
+      </button>
+      <button type='submit' className="dashboard_btn" onClick={() => history.push("/")}>
+        Find a prefab meal plan
+      </button>
+      </div>
+      <div>
+      <button type='submit' className="dashboard_btn" onClick={() => history.push("/")}>
+        Create your Profile
+      </button>
+      <button type='submit' className="dashboard_btn" onClick={() => history.push("/")}>
+        Change settings
+      </button>
+      </div>
     </div>
   );
 };
