@@ -1,5 +1,5 @@
-import React from 'react';
-import NavigationPopOut from './NavigationPopOut';
+import React from './node_modules/react';
+
 
 class Navigation extends React.Component {
   constructor() {
@@ -15,23 +15,7 @@ class Navigation extends React.Component {
       : this.setState({ menuActive: true });
   };
 
-  render() {
-    return (
-      <div className="navigation_main">
-        <div
-          onClick={this.toggleNavMenu}
-          className="navMenu"
-          style={{ userSelect: 'none' }}
-        >
-          ☰
-        </div>
-        <NavigationPopOut
-          active={this.state.menuActive}
-          toggle={this.toggleNavMenu}
-        />
-      </div>
-    );
-  }
+  
 }
 
 export default Navigation;
