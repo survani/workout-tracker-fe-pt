@@ -1,4 +1,5 @@
-import React from './node_modules/react';
+import React from 'react';
+
 
 
 class Navigation extends React.Component {
@@ -14,7 +15,12 @@ class Navigation extends React.Component {
       ? this.setState({ menuActive: false })
       : this.setState({ menuActive: true });
   };
-
+  render() {
+    return (
+      <div className="navigation_main">
+      </div>
+    );
+  }
   
 }
 
