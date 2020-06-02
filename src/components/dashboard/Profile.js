@@ -1,44 +1,90 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
+import axios from 'axios';
 
-const initialUser = {
-    date: "",
+const initialUserInfo = {
+    image: "",
     location: "",
-    measurements: "",
-    weight: "",
-    height: "",
-    goals: "",
     bio: ""
 }
 
-const initialUserPost = [
-    {
-    id: 1,
-    date: "May 1, 2020",
-    location: "Santa Cruz",
-    measurements: " 30 45 55",
-    weight: "110",
-    height: "5'1",
-    goals: "Lose 5 lbs",
-    bio: "Love to work out"
-    }
-]
-
 export default function Profile () {
-    const [user, setUser] = useState(initialUser);
-    const [userPost, setUserPost] = useState(initialUserPost);
 
-    const onInputChange = evt => {
-        const {name} = evt.target;
-        const {value} = evt.target;
+    const [userInfo, setUserInfo] = useState(initialUserInfo);
 
-        setUser({...user, [name]: value})
+    const getUserInfo = () => {
+        axios.get('')
+        .then(res => {
+            setUserInfo(res.data)
+        })
+        .catch(err => {
+            console.log(err);
+        })
     }
+
+    const postUserInfo = user => {
+        axios.post('', user)
+        .then(res => {
+            setUserInfo(res.data, ...userInfo)
+        })
+        .catch(err => {
+            console.log(err)
+        })
+        .finally(() => {
+            setUserInfo(initialUserInfo);
+        })
+    }
+
+    const handleChanges = evt => {
+        const {name} = evt.target
+        const {value} = evt.target
+        
+        setUserInfo({
+            ...userInfo,
+            [name]: value
+        })
+    }
+
+    const onSubmit = evt => {
+        evt.preventDefault()
+
+        const user = {
+        image: userInfo.image.trim(),
+        location: userInfo.location.trim(),
+        bio: userInfo.bio.trim(),
+
+        }
+        postUserInfo(user);
+    }
+
+    useEffect(() => {
+        getUserInfo()
+    }, [])
+
 
     return(
-        <form>
-            <label>Username</label>
+        <form className='form-container' onSubmit={onSubmit}>
+            <label>Profile Picture</label>
             <imput
+            type='text'
+            name='image'
+            onChange={handleChanges}
+            value={userInfo.image}
             />
+            <label>Location</label>
+            <imput
+            type='text'
+            name='location'
+            onChange={handleChanges}
+            value={userInfo.location}
+            />
+            <label>Bio</label>
+            <imput
+            type='text'
+            name='bio'
+            onChange={handleChanges}
+            value={userInfo.bio}
+            />
+            <button>Post</button>
         </form>
 
     )
