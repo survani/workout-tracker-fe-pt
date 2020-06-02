@@ -4,16 +4,12 @@ You can find the deployed project at https://labspt7-workout-tracker.herokuapp.c
 
 ## Contributors
 
-
-|                                       [Diana Grams(TL)](https://github.com/deegrams221)                                        |                                       [Jennifer Hott](https://github.com/jennl97)                                        |                                       [Carl Padilla](https://github.com/Carlpadilla)                                        |                                       [Liam Edlinger](https://github.com/LiamColeE)                                        |                                       [Paul Abernathy](https://github.com/Paulabernathy7)                                        |
-| :-----------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------: |
-|                      [<img src="https://www.dalesjewelers.com/wp-content/uploads/2018/10/placeholder-silhouette-female.png" width = "200" />](https://github.com/deegrams221)                       |                      [<img src="https://www.dalesjewelers.com/wp-content/uploads/2018/10/placeholder-silhouette-female.png" width = "200" />](https://github.com/jennl97)                       |                      [<img src="https://www.dalesjewelers.com/wp-content/uploads/2018/10/placeholder-silhouette-male.png" width = "200" />](https://github.com/Carlpadilla)                       |                      [<img src="https://www.dalesjewelers.com/wp-content/uploads/2018/10/placeholder-silhouette-male.png" width = "200" />](https://github.com/LiamColeE)                       |                      [<img src="https://www.dalesjewelers.com/wp-content/uploads/2018/10/placeholder-silhouette-male.png" width = "200" />](https://github.com/Paulabernathy7)                       |
-|                 [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/deegrams221)                 |            [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/jennl97)             |           [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/Carlpadilla)            |          [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/LiamColeE)           |            [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/Paulabernathy7)             |            [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/Paulabernathy7)             
-| [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/in/diana-grams/) | [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/) | [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/) | [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/) | [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/) |
+| James Morris(TL)                                                                          | Giovani Garfias                                                                           | Jessica Lam                                                                               | Leza Jackson                                                                              |
+| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| <img src="https://ca.slack-edge.com/ESZCHB482-W0123RR2PEK-26dbfd89f42f-512" width="200"/> | <img src="https://ca.slack-edge.com/ESZCHB482-W0123RPE2MD-dbf744806054-512" width="200"/> | <img src="https://ca.slack-edge.com/ESZCHB482-W0138D5EX7A-bfe9e84094e0-512" width="200"/> | <img src="https://ca.slack-edge.com/ESZCHB482-W012X6U4XFB-f03156cf5995-512" width="200"/> |
 
 <br>
 <br>
-
 
 ![MIT](https://img.shields.io/packagist/l/doctrine/orm.svg)
 ![React](https://img.shields.io/badge/react-v16.7.0--alpha.2-blue.svg)
@@ -25,39 +21,37 @@ You can find the deployed project at https://labspt7-workout-tracker.herokuapp.c
 
 ## Project Overview
 
- [Trello Board](https://trello.com/b/qWXOu3n5/labspt7-workout-tracker)
+[Trello Board](https://trello.com/b/aKOWPam0/labspt11-workout-tracker)
 
- [Product Canvas](https://www.notion.so/Workout-Tracker-0c8528a4db1042a396aadcdf0af40437)
+[Product Canvas](https://www.notion.so/Workout-Tracker-0c8528a4db1042a396aadcdf0af40437)
 
- [UX Design files](https://www.figma.com/file/kEKgIN0bWriJGpIZ9hmGI2/Workout-Tracker-Mahiya-and-Adeolu?node-id=313%3A6)
+[UX Design files](https://bit.ly/wt-figma)
 
 Empowering users to take control of their workout schedules by planning and managing their routines and tracking key features such as performance and body composition.
 
-
 ### Key Features
 
--    User Onboarding
--    Manage Schedule
--    Manage Daily Workout
+- User Onboarding
+- Manage Schedule
+- Manage Daily Workout
 
 ## Tech Stack
 
 ### Front end built using:
 
-#### React.js with Redux
-
--    Redux is benifitial for large scale projects, and will allow this project to grow.
--    Redux allows us to avoid prop drilling.
+- #### React.js
+- #### Context API
+- #### Primer Design System
 
 #### Front end deployed to `heroku`
 
-#### [Back end](https://github.com/Lambda-School-Labs/workout-tracker-be-pt7) built using:
+#### [Back end](https://github.com/Lambda-School-Labs/workout-tracker-be-pt) built using:
 
 #### Knex, Express.js, Node.js
 
--    Model schema creation
--    Table migrations
--    Connection pooling and seeding
+- Model schema creation
+- Table migrations
+- Connection pooling and seeding
 
 # APIs
 
@@ -122,12 +116,13 @@ When contributing to this repository, please first discuss the change you wish t
 Please note we have a [code of conduct](./CODE_OF_CONDUCT.md). Please follow it in all your interactions with the project.
 
 ## Issue/Bug Request
-   
- **If you are having an issue with the existing project code, please submit a bug report under the following guidelines:**
- - Check first to see if your issue has already been reported.
- - Check to see if the issue has recently been fixed by attempting to reproduce the issue using the latest master branch in the repository.
- - Create a live example of the problem.
- - Submit a detailed bug report including your environment & browser, steps to reproduce the issue, actual and expected outcomes,  where you believe the issue is originating from, and any potential solutions you have considered.
+
+**If you are having an issue with the existing project code, please submit a bug report under the following guidelines:**
+
+- Check first to see if your issue has already been reported.
+- Check to see if the issue has recently been fixed by attempting to reproduce the issue using the latest master branch in the repository.
+- Create a live example of the problem.
+- Submit a detailed bug report including your environment & browser, steps to reproduce the issue, actual and expected outcomes, where you believe the issue is originating from, and any potential solutions you have considered.
 
 ### Feature Requests
 
