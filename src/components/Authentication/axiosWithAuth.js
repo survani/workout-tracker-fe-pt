@@ -7,6 +7,6 @@ export const axiosWithAuth = () => {
     headers: {
       Authorization: token,
     },
-    baseURL: '',
+    baseURL: 'https://frozen-hamlet-18508.herokuapp.com',
   });
 };

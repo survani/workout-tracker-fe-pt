@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { axiosWithAuth } from '../authentication/axiosWithAuth';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import { useForm } from "react-hook-form";
 
 export default function Register(props) {
@@ -20,10 +20,10 @@ export default function Register(props) {
   const handleSubmit = (event) => {
     event.preventDefault();
     axiosWithAuth()
-      .post('/auth/register', user)
+      .post('/api/register', user)
       .then((res) => {
         localStorage.setItem('token', res.data.token);
-        props.history.push('/protected');
+        useHistory.push('/login');
         console.log('register info form submitted');
       })
       .catch((err) => {

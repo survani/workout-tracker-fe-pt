@@ -1,13 +1,16 @@
 import React, {useState} from 'react';
 import {axiosWithAuth} from '../authentication/axiosWithAuth'
 import { useForm } from "react-hook-form";
+import {useHistory} from "react-router-dom";
 
 export default function Login(props) {
+
+const history = useHistory();
 
 const { errors } = useForm();
 
 const [user, getUser] = useState({
-    username: '',
+    email: '',
     password: ''
 })
 
@@ -18,11 +21,10 @@ const handleChanges = e => {
   const handleSubmit = event => {
     event.preventDefault();
     axiosWithAuth()
-    .post('/auth/login', user)
+    .post('/api/login', user)
     .then(res => {
-      console.log(res.data.token)
         localStorage.setItem('token', res.data.token);
-        props.history.push('/protected');
+        history.push('/dashboard');
         console.log('login form submitted');
     })
     .catch(err => {
@@ -33,16 +35,16 @@ const handleChanges = e => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <label>Username:&nbsp;
+      <label>Email:&nbsp;
       <input 
       type='text'
-       placeholder='username' 
-       name='username' 
+       placeholder='email' 
+       name='email' 
        onChange={handleChanges} 
-       value={user.username} 
+       value={user.email} 
        />
        </label>
-       {errors.username && <p>This is required</p>}
+       {errors.email && <p>This is required</p>}
        
       <label>Password:&nbsp;
       <input 
