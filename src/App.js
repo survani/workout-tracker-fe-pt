@@ -6,7 +6,6 @@ import Navigation from './components/navigation/Navigation';
 import Footer from './components/dashboard/Footer';
 
 function App() {
-  
   return (
     <div className="App">
       <Navigation />
