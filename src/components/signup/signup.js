@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { axiosWithAuth } from '../authentication/axiosWithAuth';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import { useForm } from "react-hook-form";
 
 export default function Register(props) {
@@ -20,10 +20,10 @@ export default function Register(props) {
   const handleSubmit = (event) => {
     event.preventDefault();
     axiosWithAuth()
-      .post('/auth/register', user)
+      .post('/api/register', user)
       .then((res) => {
         localStorage.setItem('token', res.data.token);
-        props.history.push('/protected');
+        useHistory.push('/login');
         console.log('register info form submitted');
       })
       .catch((err) => {
@@ -36,7 +36,7 @@ export default function Register(props) {
     <div className="form-container">
       <h1>Sign Up</h1>
       <form onSubmit={handleSubmit} className='register-form'>
-     <label>Email</label>
+     <label>Email:&nbsp;
       <input
           type='text'
           placeholder='Email'
@@ -45,10 +45,10 @@ export default function Register(props) {
           value={user.email}
           className='register-field'
           ref= {register({required: true})}
-
         />
+        </label>
         {errors.email && <p>This is required</p>}
-        <label>Username</label>
+        <label>Username:&nbsp;
         <input
           type="text"
           placeholder="Username"
@@ -58,8 +58,9 @@ export default function Register(props) {
           className='register-field'
           ref= {register({required: true})}
         />
+        </label>
         {errors.username && <p>This is required</p>}
-        <label>Password</label>
+        <label>Password:&nbsp;
         <input
           type="password"
           placeholder="Password"
@@ -69,6 +70,7 @@ export default function Register(props) {
           className='register-field'
           ref= {register({required: true, minLength: 8})}
         />
+        </label>
         {errors.password && errors.password.type === "required" && (<p>This is required</p>)}
         {errors.password && errors.password.type === "minLength" && (<p>This field requires a minimum length of 8 characters</p>)}
         <p>
