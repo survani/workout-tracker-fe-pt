@@ -29,13 +29,17 @@ const Intro = () => {
               Stay on track to achieve your fitness goals and build a community{' '}
             </SubText>
             <ButtonDesktopContainer>
-              <ButtonDesktopIntro>Get Started</ButtonDesktopIntro>
+              <a href="/account">
+                <ButtonDesktopIntro>Get Started</ButtonDesktopIntro>
+              </a>
             </ButtonDesktopContainer>
           </IntroText>
           <ImageContainer>
             <MainImage src={Image} alt="Workout"></MainImage>
             <ButtonMobileContainer>
-              <ButtonMobileIntro>Let's Start</ButtonMobileIntro>
+              <a href="/account">
+                <ButtonMobileIntro>Let's Start</ButtonMobileIntro>
+              </a>
             </ButtonMobileContainer>
           </ImageContainer>
         </Content>

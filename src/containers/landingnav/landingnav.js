@@ -8,7 +8,9 @@ const LandingNav = () => {
         <Logo>
           Fit<LogoText>Tracker</LogoText>
         </Logo>
-        <SignIn>Sign In</SignIn>
+        <a href="/account">
+          <SignIn>Sign In</SignIn>
+        </a>
       </NavSection>
     </>
   );
