@@ -1,27 +1,22 @@
 import React from 'react';
 
 
-
-class Navigation extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      menuActive: false,
-    };
-  }
-
-  toggleNavMenu = () => {
-    this.state.menuActive
-      ? this.setState({ menuActive: false })
-      : this.setState({ menuActive: true });
-  };
-  render() {
-    return (
-      <div className="navigation_main">
+const Navigation = () => {
+  return (
+    <div>
+      <div className="App">
+        <div>
+          <a href="">Home</a>
+        </div>
+        <div>
+          <a href="">About</a>
+        </div>
+        <div>
+          <a href="">Contact</a>
+        </div>
       </div>
-    );
-  }
-  
-}
+    </div>
+  );
+};
 
 export default Navigation;
