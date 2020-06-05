@@ -1,14 +1,16 @@
 import React from 'react';
-import { NavSection, LogoText, SignIn } from './style';
+import { NavSection, Logo, LogoText, SignIn } from './style';
 
 const LandingNav = () => {
   return (
     <>
       <NavSection>
-        <h2>
+        <Logo>
           Fit<LogoText>Tracker</LogoText>
-        </h2>
-        <SignIn>Sign In</SignIn>
+        </Logo>
+        <a href="/account">
+          <SignIn>Sign In</SignIn>
+        </a>
       </NavSection>
     </>
   );
