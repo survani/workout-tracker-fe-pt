@@ -1,5 +1,5 @@
-import React from './node_modules/react';
-import { Route } from './node_modules/react-router-dom';
+import React from 'react';
+import { Route } from 'react-router-dom';
 
 //components
 import Home from '../home/home';
