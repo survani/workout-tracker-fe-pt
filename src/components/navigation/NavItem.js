@@ -1,5 +1,5 @@
-import React from 'react';
-import { withRouter } from 'react-router-dom';
+import React from './node_modules/react';
+import { withRouter } from './node_modules/react-router-dom';
 
 class NavItem extends React.Component {
   itemSelected(e) {
