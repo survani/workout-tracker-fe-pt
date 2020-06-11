@@ -1,11 +1,39 @@
-import React from 'react';
+import React, {useState} from 'react';
 import FullCalendar from '@fullcalendar/react';
 import dayGridPlugin from '@fullcalendar/daygrid';
+import timeGridPlugin from "@fullcalendar/timegrid";
+import interactionPlugin from "@fullcalendar/interaction";
 
 import '@fullcalendar/core/main.css';
 import '@fullcalendar/daygrid/main.css';
+import "@fullcalendar/timegrid/main.css";
+import { startOfDay } from '@fullcalendar/core';
 
 const Calendar = () => {
+  const calendarComponentRef = React.createRef();
+
+  const [calendarEvent, setCalendarEvent] = useState([{
+    event: "Current Event",
+    start: new Date()
+  }]);
+
+  const handleDateClick = arg => {
+    if (window.confirm("Would you like to add an event to " + arg.dateStr + " ?")) {
+      
+        // add new event data
+        setCalendarEvent(
+          // creates a new array
+          calendarEvent.concat({
+          event: "New Event",
+          start: arg.date,
+          allDay: arg.allDay
+          })
+        )
+    }
+  
+}
+
+
   return (
     <div>
       <div className='calendar_main'>
@@ -13,21 +41,22 @@ const Calendar = () => {
       </div>
 
       <div className='calendar-container'>
-        <FullCalendar
-          defaultView='dayGridMonth'
-          plugins={[dayGridPlugin]}
-          events={[
-            { title: 'Biceps', date: '2020-04-28' },
-            { title: 'Legs', date: '2020-04-29' },
-            { title: 'Cardio', date: '2020-04-30' },
-            { title: 'Back', date: '2020-05-01' },
-            { title: 'Chest', date: '2020-05-04' },
-            { title: 'Arms', date: '2020-05-05' },
-          ]}
-        />
+      <FullCalendar
+            defaultView="dayGridMonth"
+            header={{
+              left: "prev,next today",
+              center: "title",
+              right: "dayGridMonth,timeGridWeek,timeGridDay,listWeek"
+            }}
+            plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
+            ref={calendarComponentRef}
+            events={calendarEvent}
+            dateClick={handleDateClick}
+          />
       </div>
     </div>
   );
-};
+}
+
 
 export default Calendar;
