@@ -1,7 +1,7 @@
-import React from "react";
-import Scheduler from "./Scheduler";
-import Progress from "./Progress";
-import { useHistory } from "react-router-dom";
+import React from 'react';
+import Scheduler from './Scheduler';
+import Progress from './Progress';
+import { useHistory } from 'react-router-dom';
 
 const Dashboard = () => {
   const history = useHistory();
@@ -15,14 +15,14 @@ const Dashboard = () => {
         <button
           type="submit"
           className="dashboard_btn"
-          onClick={() => history.push("/createworkout")}
+          onClick={() => history.push('/createworkout')}
         >
           Create a workout plan
         </button>
         <button
           type="submit"
           className="dashboard_btn"
-          onClick={() => history.push("/")}
+          onClick={() => history.push('/')}
         >
           Find a workout plan
         </button>
@@ -31,14 +31,14 @@ const Dashboard = () => {
         <button
           type="submit"
           className="dashboard_btn"
-          onClick={() => history.push("/")}
+          onClick={() => history.push('/')}
         >
           Create a meal plan
         </button>
         <button
           type="submit"
           className="dashboard_btn"
-          onClick={() => history.push("/")}
+          onClick={() => history.push('/')}
         >
           Find a meal plan
         </button>
@@ -47,16 +47,16 @@ const Dashboard = () => {
         <button
           type="submit"
           className="dashboard_btn"
-          onClick={() => history.push("/")}
+          onClick={() => history.push('/profile')}
         >
-          Create your Profile
+          View Your Profile
         </button>
         <button
           type="submit"
           className="dashboard_btn"
-          onClick={() => history.push("/")}
+          onClick={() => history.push('/editprofile')}
         >
-          Change settings
+          Edit Profile
         </button>
       </div>
     </div>
