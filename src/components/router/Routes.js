@@ -7,6 +7,7 @@ import Onboarding from "../onboarding/Onboard";
 import Dashboard from "../dashboard/Dashboard";
 import Calendar from "../calendar/Calendar";
 import LandingPage from "../landingpage/LandingPage";
+import Profile from "../profile/Profile";
 import { WorkoutForm } from "../dashboard/CreateWorkoutForm";
 import Login from "../login/login";
 import Signup from "../signup/signup";
@@ -19,7 +20,8 @@ export default function Router(props) {
       <ProtectedRoute exact path="/dashboard" component={Dashboard} />
       <Route exact path="/onboarding" component={Onboarding} />
       <Route exact path="/schedule" component={Calendar} />
-      {/* <Route exact path="/account" component={Home} /> */}
+      <Route exact path="/account" component={Home} />
+      <Route exact path="/profile" component={Profile} />
       <Route exact path="/createworkout" component={WorkoutForm} />
       <Route exact path="/login" componenet={Login} />
       <Route exact path="/register" componenet={Signup} />

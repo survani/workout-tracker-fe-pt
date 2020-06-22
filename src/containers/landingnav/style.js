@@ -7,8 +7,7 @@ export const NavSection = styled.section`
   font-family: Montserrat;
   font-weight: bold;
   font-size: 24px;
-  margin-bottom: 50px;
-  margin-top: 20px;
+  padding: 10px;
 `;
 
 export const Logo = styled.h2`
