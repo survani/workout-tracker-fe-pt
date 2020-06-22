@@ -12,10 +12,10 @@ checks:
 exclude_patterns:
   - 'tests/'
   - 'spec/'
-    - "**/*.spec.js"
-  - "**/*.spec.jsx"
-  - "**/*.spec.ts"
-  - "**/*.spec.tsx"
+  - '**/*.spec.js'
+  - '**/*.spec.jsx'
+  - '**/*.spec.ts'
+  - '**/*.spec.tsx'
   - '**/vendor/'
   - '**/node_modules/'
   - 'package-lock.json'
