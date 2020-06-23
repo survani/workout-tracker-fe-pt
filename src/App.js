@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Switch, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 
 //components
 import Signup from "./components/signup/signup";
@@ -14,35 +14,38 @@ import LandingPage from "./components/landingpage/LandingPage";
 function App() {
   return (
     <div className="App">
-      <Switch>
-        <Route exact path="/">
-          <LandingPage />
-        </Route>
+      {/* <h1>Learn React</h1> */}
+      <Router>
+        <Switch>
+          <Route exact path="/">
+            <LandingPage />
+          </Route>
 
-        <Route path="/register">
-          <Signup />
-        </Route>
+          <Route path="/register">
+            <Signup />
+          </Route>
 
-        <Route path="/login">
-          <Login />
-        </Route>
+          <Route path="/login">
+            <Login />
+          </Route>
 
-        <ProtectedRoute path="/dashboard">
-          <Dashboard />
-        </ProtectedRoute>
+          <ProtectedRoute path="/dashboard">
+            <Dashboard />
+          </ProtectedRoute>
 
-        <ProtectedRoute path="/createworkout">
-          <WorkoutForm />
-        </ProtectedRoute>
+          <ProtectedRoute path="/createworkout">
+            <WorkoutForm />
+          </ProtectedRoute>
 
-        <ProtectedRoute path="/profile">
-          <Profile />
-        </ProtectedRoute>
+          <ProtectedRoute path="/profile">
+            <Profile />
+          </ProtectedRoute>
 
-        <ProtectedRoute path="/calendar">
-          <Calendar />
-        </ProtectedRoute>
-      </Switch>
+          <ProtectedRoute path="/calendar">
+            <Calendar />
+          </ProtectedRoute>
+        </Switch>
+      </Router>
     </div>
   );
 }
