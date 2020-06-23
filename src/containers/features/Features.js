@@ -1,4 +1,5 @@
-import React from 'react';
+import React from "react";
+import { Link } from "react-router-dom";
 import {
   ImageContainer,
   ImageContainer2,
@@ -13,12 +14,12 @@ import {
   ButtonDesktopContainer,
   ButtonDesktopIntro,
   CtaSection,
-} from './style';
+} from "./style";
 
-import WomanExercise from '../../assets/landingpage/womanexercise.svg';
-import Schedule from '../../assets/landingpage/schedule.svg';
-import GuyCooking from '../../assets/landingpage/guycooking.svg';
-import CloudSync from '../../assets/landingpage/cloudsync.svg';
+import WomanExercise from "../../assets/landingpage/womanexercise.svg";
+import Schedule from "../../assets/landingpage/schedule.svg";
+import GuyCooking from "../../assets/landingpage/guycooking.svg";
+import CloudSync from "../../assets/landingpage/cloudsync.svg";
 
 const Features = () => {
   return (
@@ -33,7 +34,7 @@ const Features = () => {
             <TextDesktop>Create your own workout plans</TextDesktop>
             <TextSubDesktop>
               Choose from a variety of exercises, edit the intensity level and
-              set goals to track your progress{' '}
+              set goals to track your progress{" "}
             </TextSubDesktop>
           </FeatureTextContainer>
         </ImageContainer>
@@ -81,10 +82,14 @@ const Features = () => {
       <CtaSection>
         <ExitText>Ready to start your fitness journey?</ExitText>
         <ButtonMobileContainer>
-          <ButtonMobileIntro>Let's Start</ButtonMobileIntro>
+          <Link to="/register">
+            <ButtonMobileIntro>Let's Start</ButtonMobileIntro>
+          </Link>
         </ButtonMobileContainer>
         <ButtonDesktopContainer>
-          <ButtonDesktopIntro>Let's Start</ButtonDesktopIntro>
+          <Link to="/register">
+            <ButtonDesktopIntro>Let's Start</ButtonDesktopIntro>
+          </Link>
         </ButtonDesktopContainer>
       </CtaSection>
     </>

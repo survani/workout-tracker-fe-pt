@@ -1,83 +1,80 @@
-import React, { useState } from 'react';
-import { axiosWithAuth } from '../authentication/axiosWithAuth';
-import { Link, useHistory } from 'react-router-dom';
+import React, { useState } from "react";
+import { useHistory } from "react-router-dom";
 import { useForm } from "react-hook-form";
+import { axiosWithAuth } from "../authentication/axiosWithAuth";
 
-export default function Register(props) {
-
-  const { register, errors } = useForm();
+export default function Register() {
+  const history = useHistory();
 
   const [user, getUser] = useState({
-    email: '',
-    username: '',
-    password: '',
+    email: "",
+    username: "",
+    password: "",
   });
+  const { register, handleSubmit, errors } = useForm();
 
-  const handleChanges = (e) => {
-    getUser({ ...user, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
+  const onSubmit = (user, e) => {
+    e.preventDefault();
     axiosWithAuth()
-      .post('/api/register', user)
-      .then((res) => {
-        localStorage.setItem('token', res.data.token);
-        useHistory.push('/login');
-        console.log('register info form submitted');
+      .post("/api/register", {
+        email: user.email,
+        username: user.username,
+        password: user.password,
       })
-      .catch((err) => {
-        localStorage.removeItem('token');
-        console.log('Invalid!!!', err);
-      });
+      .then((res) => {
+        localStorage.setItem("token", res.data.token);
+        localStorage.setItem("id", res.data.id);
+        localStorage.setItem("message", res.data.message);
+        history.push("/login");
+      })
+      .catch((err) => console.log(err.message));
   };
 
   return (
-    <div className="form-container">
-      <h1>Sign Up</h1>
-      <form onSubmit={handleSubmit} className='register-form'>
-     <label>Email:&nbsp;
+    <form onSubmit={handleSubmit(onSubmit)}>
       <input
-          type='text'
-          placeholder='Email'
-          name='email'
-          onChange={handleChanges}
-          value={user.email}
-          className='register-field'
-          ref= {register({required: true})}
-        />
-        </label>
-        {errors.email && <p>This is required</p>}
-        <label>Username:&nbsp;
-        <input
-          type="text"
-          placeholder="Username"
-          name="username"
-          onChange={handleChanges}
-          value={user.username}
-          className='register-field'
-          ref= {register({required: true})}
-        />
-        </label>
-        {errors.username && <p>This is required</p>}
-        <label>Password:&nbsp;
-        <input
-          type="password"
-          placeholder="Password"
-          name="password"
-          onChange={handleChanges}
-          value={user.password}
-          className='register-field'
-          ref= {register({required: true, minLength: 8})}
-        />
-        </label>
-        {errors.password && errors.password.type === "required" && (<p>This is required</p>)}
-        {errors.password && errors.password.type === "minLength" && (<p>This field requires a minimum length of 8 characters</p>)}
-        <p>
-          Already have an account? Sign in <Link to="/login">here</Link>
-        </p>
-        <input type="submit" className="button" />
-      </form>
-    </div>
+        type="text"
+        placeholder="Email"
+        name="email"
+        ref={register({
+          required: "Required",
+          pattern: {
+            value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
+            message: "invalid email address",
+          },
+        })}
+      />
+      {errors.email && errors.email.message}
+
+      <input
+        type="text"
+        placeholder="Username"
+        name="username"
+        ref={register({
+          required: true,
+          minLength: {
+            value: 4,
+            message: "Minimum length is 4",
+          },
+        })}
+      />
+      {errors.username && errors.username.message}
+
+      <input
+        type="password"
+        placeholder="Password"
+        name="password"
+        ref={register({
+          required: true,
+          minLength: {
+            value: 6,
+            message: "Minimum length is 6",
+          },
+        })}
+      />
+      {errors.password && errors.password.message}
+
+      <input type="submit" />
+    </form>
   );
 }
