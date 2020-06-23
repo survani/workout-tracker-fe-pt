@@ -1,5 +1,6 @@
-import React from 'react';
-import { NavSection, Logo, LogoText, SignIn } from './style';
+import React from "react";
+import { NavSection, Logo, LogoText, SignIn } from "./style";
+import { Link } from "react-router-dom";
 
 const LandingNav = () => {
   return (
@@ -8,9 +9,9 @@ const LandingNav = () => {
         <Logo>
           Fit<LogoText>Tracker</LogoText>
         </Logo>
-        <a href="/account">
+        <Link to="/login">
           <SignIn>Sign In</SignIn>
-        </a>
+        </Link>
       </NavSection>
     </>
   );

@@ -39,7 +39,7 @@ const Dashboard = () => {
       <button
         type="submit"
         className="dashboard_btn"
-        onClick={() => history.push("/")}
+        onClick={() => history.push("/profile")}
       >
         Create your Profile
       </button>
