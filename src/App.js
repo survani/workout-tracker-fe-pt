@@ -10,6 +10,7 @@ import { WorkoutForm } from "./components/dashboard/CreateWorkoutForm";
 import Calendar from "./components/calendar/Calendar";
 import Profile from "./components/profile/Profile";
 import LandingPage from "./components/landingpage/LandingPage";
+import ViewableWorkouts from "./components/dashboard/ViewableWorkouts";
 
 function App() {
   return (
@@ -27,6 +28,10 @@ function App() {
 
           <Route path="/login">
             <Login />
+          </Route>
+
+          <Route path="/public">
+            <ViewableWorkouts />
           </Route>
 
           <ProtectedRoute path="/dashboard">

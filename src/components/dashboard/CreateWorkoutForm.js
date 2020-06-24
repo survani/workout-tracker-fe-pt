@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { axiosWithAuth } from "../authentication/axiosWithAuth";
+import "./style.css";
 
 const initialFormValue = {
   workout_category: "",
@@ -50,7 +51,7 @@ export const WorkoutForm = () => {
   };
 
   return (
-    <form onSubmit={onSubmit}>
+    <form className="form-style" onSubmit={onSubmit}>
       <label>Category</label>
       <input
         id="category"
@@ -96,7 +97,19 @@ export const WorkoutForm = () => {
         onChange={onChange}
         value={formValues.workout_description}
       />
-      <button type="submit">Submit</button>
+      <br />
+      <div className="share">
+        <input
+          className="share-input"
+          type="checkbox"
+          name="Share Workout"
+          onClick={() => console.log("Clicked!")}
+        />
+        <label>Share Workout</label>
+      </div>
+      <button className="manage-button" type="submit">
+        Submit
+      </button>
     </form>
   );
 };

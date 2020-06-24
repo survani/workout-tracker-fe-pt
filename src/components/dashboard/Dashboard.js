@@ -1,6 +1,4 @@
 import React from "react";
-import Scheduler from "./Scheduler";
-import Progress from "./Progress";
 import { useHistory } from "react-router-dom";
 
 const Dashboard = () => {
@@ -18,7 +16,7 @@ const Dashboard = () => {
       <button
         type="submit"
         className="dashboard_btn"
-        onClick={() => history.push("/")}
+        onClick={() => history.push("/public")}
       >
         Find a workout plan
       </button>
