@@ -1,63 +1,65 @@
-import React, {useState} from 'react';
-import {axiosWithAuth} from '../authentication/axiosWithAuth'
+import React, { useState } from "react";
+import { useHistory } from "react-router-dom";
 import { useForm } from "react-hook-form";
-import {useHistory} from "react-router-dom";
+import { axiosWithAuth } from "../authentication/axiosWithAuth";
 
-export default function Login(props) {
+export default function Login() {
+  const history = useHistory();
 
-const history = useHistory();
+  const [user, getUser] = useState({
+    email: "",
+    password: "",
+  });
 
-const { errors } = useForm();
+  const { register, handleSubmit, errors } = useForm();
 
-const [user, getUser] = useState({
-    email: '',
-    password: ''
-})
-
-const handleChanges = e => {
-    getUser({...user, [e.target.name]: e.target.value})
-}
-
-  const handleSubmit = event => {
-    event.preventDefault();
+  const onSubmit = (user, e) => {
+    e.preventDefault();
     axiosWithAuth()
-    .post('/api/login', user)
-    .then(res => {
-        localStorage.setItem('token', res.data.token);
-        history.push('/dashboard');
-        console.log('login form submitted');
-    })
-    .catch(err => {
-        localStorage.removeItem('token');
-        console.log('Invalid Login', err);
-    })
+      .post("/api/login", {
+        email: user.email,
+        password: user.password,
+      })
+      .then((res) => {
+        localStorage.setItem("token", res.data.token);
+        localStorage.setItem("id", res.data.id);
+        localStorage.setItem("message", res.data.message);
+        history.push("/dashboard");
+      })
+      .catch((err) => console.log(err.message));
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label>Email:&nbsp;
-      <input 
-      type='text'
-       placeholder='email' 
-       name='email' 
-       onChange={handleChanges} 
-       value={user.email} 
-       />
-       </label>
-       {errors.email && <p>This is required</p>}
-       
-      <label>Password:&nbsp;
-      <input 
-      type='text' 
-      placeholder='password' 
-      name='password' 
-      onChange={handleChanges} 
-      value={user.password} 
+    <form onSubmit={handleSubmit(onSubmit)}>
+      <input
+        type="text"
+        placeholder="Email"
+        name="email"
+        ref={register({
+          required: "Required",
+          pattern: {
+            value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
+            message: "invalid email address",
+          },
+        })}
       />
-      </label>
-      {errors.password && <p>This is required</p>}
+      {errors.email && errors.email.message}
 
-      <input type='submit' />
+      <input
+        type="password"
+        placeholder="Password"
+        name="password"
+        ref={register({
+          required: true,
+          minLength: {
+            value: 6,
+            message: "Minimum length is 6",
+          },
+        })}
+      />
+      {errors.password && errors.password.message}
+
+      <input type="submit" />
     </form>
   );
 }

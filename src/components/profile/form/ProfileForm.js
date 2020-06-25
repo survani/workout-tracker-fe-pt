@@ -1,9 +1,18 @@
-import React, { useState } from 'react';
-import { axiosWithAuth } from '../../authentication/axiosWithAuth';
-import { useHistory } from 'react-router-dom';
-import { useForm } from 'react-hook-form';
+import React, { useState } from "react";
+import { axiosWithAuth } from "../../authentication/axiosWithAuth";
+import { useHistory } from "react-router-dom";
+import { useForm } from "react-hook-form";
+import {
+  ButtonMobileContainer,
+  ButtonMobileIntro,
+  Form,
+  Input,
+  Label,
+  PageTitle,
+} from "./style";
 
-const ProfileForm = () => {
+const ProfileForm = (props) => {
+  console.log("props", props);
   const { register, errors, handleSubmit } = useForm();
   const [editProfile, setEditProfile] = useState({});
 
@@ -14,7 +23,7 @@ const ProfileForm = () => {
       .put(`https://frozen-hamlet-18508.herokuapp.com/api/users/`, editProfile)
       .then((res) => {
         setEditProfile(res.data);
-        console.log('res.data', res.data);
+        console.log("res.data", res.data);
       })
       .catch((err) => {
         console.log(err);
@@ -29,15 +38,16 @@ const ProfileForm = () => {
   const onSubmit = (e) => {
     console.log(e);
     editProfileInfo(editProfile);
-    setEditProfile({ bio: '' });
-    history.push('/profile');
+    setEditProfile({ bio: "" });
+    history.push("/profile");
   };
 
   return (
     <>
-      <h2> Edit Profile </h2>
-      <form onSubmit={handleSubmit(onSubmit)}>
-        <input
+      <PageTitle> Edit Profile </PageTitle>
+      <Form onSubmit={handleSubmit(onSubmit)}>
+        <Label htmlFor="email">Bio</Label>
+        <Input
           type="text"
           value={editProfile.bio}
           id="bio"
@@ -49,15 +59,14 @@ const ProfileForm = () => {
           ref={register({
             minLength: {
               value: 3,
-              message: 'Bio is to short',
+              message: "Bio is to short",
             },
           })}
         />
         {/* NOTE: Responsible for displaying the errors */}
         {errors.bio && errors.bio.message}
-        <button type="submit">edit</button>
-
-        <input
+        <Label htmlFor="email">Username</Label>
+        <Input
           type="text"
           value={editProfile.username}
           id="username"
@@ -69,16 +78,14 @@ const ProfileForm = () => {
           ref={register({
             minLength: {
               value: 3,
-              message: 'Username is to short',
+              message: "Username is to short",
             },
           })}
         />
         {/* NOTE: Responsible for displaying the errors */}
         {errors.username && errors.username.message}
-
-        <button type="submit">edit</button>
-
-        <input
+        <Label for="email">Email</Label>
+        <Input
           type="text"
           value={editProfile.email}
           id="email"
@@ -90,14 +97,16 @@ const ProfileForm = () => {
           ref={register({
             minLength: {
               value: 3,
-              message: 'Email is to short',
+              message: "Email is to short",
             },
           })}
         />
         {/* NOTE: Responsible for displaying the errors */}
         {errors.email && errors.email.message}
-        <button type="submit">edit</button>
-      </form>
+        <ButtonMobileContainer>
+          <ButtonMobileIntro type="submit">Save</ButtonMobileIntro>
+        </ButtonMobileContainer>
+      </Form>
     </>
   );
 };

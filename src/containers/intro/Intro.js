@@ -1,5 +1,6 @@
-import React from 'react';
-import Image from '../../assets/landingpage/image1.svg';
+import React from "react";
+import Image from "../../assets/landingpage/image1.svg";
+import { Link } from "react-router-dom";
 
 import {
   Content,
@@ -14,7 +15,7 @@ import {
   ButtonMobileIntro,
   ButtonDesktopContainer,
   ButtonDesktopIntro,
-} from './style';
+} from "./style";
 
 const Intro = () => {
   return (
@@ -26,20 +27,20 @@ const Intro = () => {
               Stay on top of your health with <SpanText>ease</SpanText>
             </BoldText>
             <SubText>
-              Stay on track to achieve your fitness goals and build a community{' '}
+              Stay on track to achieve your fitness goals and build a community{" "}
             </SubText>
             <ButtonDesktopContainer>
-              <a href="/account">
+              <Link to="/register">
                 <ButtonDesktopIntro>Get Started</ButtonDesktopIntro>
-              </a>
+              </Link>
             </ButtonDesktopContainer>
           </IntroText>
           <ImageContainer>
             <MainImage src={Image} alt="Workout"></MainImage>
             <ButtonMobileContainer>
-              <a href="/account">
+              <Link to="/register">
                 <ButtonMobileIntro>Let's Start</ButtonMobileIntro>
-              </a>
+              </Link>
             </ButtonMobileContainer>
           </ImageContainer>
         </Content>
