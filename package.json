@@ -25,6 +25,7 @@
     "moment": "^2.24.0",
     "node-sass": "^4.14.1",
     "nodemon": "^2.0.4",
+    "prettier": "^2.0.5",
     "rc-time-picker": "^3.7.3",
     "react": "^16.13.1",
     "react-calendar": "^3.1.0",

@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { axiosWithAuth } from "../authentication/axiosWithAuth";
-import "./style.css";
 
 const ViewableWorkouts = () => {
   const [workout, setWorkout] = useState([]);
