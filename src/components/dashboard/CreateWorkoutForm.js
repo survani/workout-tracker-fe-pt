@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { axiosWithAuth } from "../authentication/axiosWithAuth";
-import "./style.css";
 
 const initialFormValue = {
   workout_category: "",

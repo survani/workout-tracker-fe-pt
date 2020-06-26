@@ -13,7 +13,6 @@ import LandingPage from "./components/landingpage/LandingPage";
 import ViewableWorkouts from "./components/dashboard/ViewableWorkouts";
 import ProfileForm from "./components/profile/form/ProfileForm";
 
-
 function App() {
   return (
     <div className="App">
@@ -46,7 +45,7 @@ function App() {
           <ProtectedRoute path="/profile">
             <Profile />
           </ProtectedRoute>
-    
+
           <ProtectedRoute path="/editprofile">
             <ProfileForm />
           </ProtectedRoute>
