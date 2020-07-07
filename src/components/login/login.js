@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { axiosWithAuth } from "../authentication/axiosWithAuth";
 import {
@@ -21,14 +21,12 @@ import {
   LoginImage,
   Form,
   SmallCircle,
-  LargeCircle,
 } from "./style";
 
 import Circle from "../../assets/loginpage/circle.svg";
 import CircleSmall from "../../assets/loginpage/circlesmall.svg";
 import PasswordImage from "../../assets/loginpage/password.svg";
 import SmFullCircle from "../../assets/loginpage/smfullsircle.svg";
-import LgFullCircle from "../../assets/loginpage/smfullsircle.svg";
 
 export default function Login() {
   const history = useHistory();
