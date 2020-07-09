@@ -80,7 +80,7 @@ export default function Login() {
               },
             })}
           />
-          <Label for="password"> Password </Label>
+          <Label htmlFor="password"> Password </Label>
           <Input
             type="password"
             name="password"

@@ -67,7 +67,7 @@ export default function Register() {
         <SignUpImage src={Activity} />
         <Form onSubmit={handleSubmit(onSubmit)}>
           <Title> Sign Up </Title>
-          <Label for="password"> Username </Label>
+          <Label htmlFor="password" > Username </Label>
           <Input
             type="text"
             name="username"
@@ -80,7 +80,7 @@ export default function Register() {
             })}
           />
           {errors.username && errors.username.message}
-          <Label for="password"> Email </Label>
+          <Label htmlFor="password"> Email </Label>
           <Input
             type="text"
             name="email"
@@ -93,7 +93,7 @@ export default function Register() {
             })}
           />
           {errors.email && errors.email.message}
-          <Label for="password"> Password </Label>
+          <Label htmlFor="password"> Password </Label>
           <Input
             type="password"
             name="password"
