@@ -13,9 +13,6 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
-    "auth0": "^2.23.0",
-    "auth0-js": "^9.12.2",
-    "auth0-lock": "^11.22.2",
     "axios": "^0.19.2",
     "babel-core": "7.0.0-bridge.0",
     "codeclimate-test-reporter": "^0.5.1",
@@ -37,16 +34,14 @@
     "react-use-auth": "^0.5.3",
     "styled-components": "^5.1.0",
     "webfontloader": "^1.6.28",
-    "yarn": "^1.22.4",
     "yup": "^0.29.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "jest --watchAll",
+    "test": "react-scripts test --watchAll --coverage",
     "eject": "react-scripts eject",
-    "coverage": "CI=true yarn test --coverage || true",
-    "server": "nodemon index.js"
+    "coverage": "CI=true yarn test --coverage || true"
   },
   "eslintConfig": {
     "extends": "react-app"
