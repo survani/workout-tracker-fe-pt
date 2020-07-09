@@ -1,6 +1,4 @@
 import React from "react";
-import Scheduler from "./scheduler/Scheduler";
-import Progress from "./scheduler/Progress";
 import { useHistory } from "react-router-dom";
 import {
   DashboardAlignment,
@@ -30,7 +28,7 @@ const Dashboard = () => {
       <DashboardButtonText
         type="submit"
         className="dashboard_btn"
-        onClick={() => history.push("/")}
+        onClick={() => history.push("/public")}
       >
         Find a workout plan
       </DashboardButtonText>
