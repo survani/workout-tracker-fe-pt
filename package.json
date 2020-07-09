@@ -42,16 +42,10 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "jest --watchAll",
     "eject": "react-scripts eject",
     "coverage": "CI=true yarn test --coverage || true",
     "server": "nodemon index.js"
-  },
-  "jest": {
-    "presets": [
-      "env",
-      "react"
-    ]
   },
   "eslintConfig": {
     "extends": "react-app"

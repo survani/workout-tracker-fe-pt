@@ -2,11 +2,11 @@ import React from "react";
 import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 
 //components
-import Signup from "./components/signup/signup";
+import Signup from "./components/signup/Signup";
 import Login from "./components/login/login";
 import ProtectedRoute from "./components/authentication/ProtectedRoute";
 import Dashboard from "./components/dashboard/Dashboard";
-import { WorkoutForm } from "./components/dashboard/CreateWorkoutForm";
+import { WorkoutForm } from "./components/dashboard/createworkout/CreateWorkoutForm";
 import Calendar from "./components/calendar/Calendar";
 import Profile from "./components/profile/Profile";
 import LandingPage from "./components/landingpage/LandingPage";
@@ -14,7 +14,6 @@ import LandingPage from "./components/landingpage/LandingPage";
 function App() {
   return (
     <div className="App">
-      {/* <h1>Learn React</h1> */}
       <Router>
         <Switch>
           <Route exact path="/">

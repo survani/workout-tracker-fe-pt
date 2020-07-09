@@ -1,56 +1,68 @@
 import React from "react";
-import Scheduler from "./Scheduler";
-import Progress from "./Progress";
+import Scheduler from "./scheduler/Scheduler";
+import Progress from "./scheduler/Progress";
 import { useHistory } from "react-router-dom";
+import {
+  DashboardAlignment,
+  DashboardButtonText,
+  LogoContainer,
+  Logo,
+  Title,
+} from "./style";
 
 const Dashboard = () => {
   const history = useHistory();
 
   return (
-    <div>
-      <button
+    <DashboardAlignment>
+      <LogoContainer>
+        <Logo>Fit Tracker</Logo>
+        <Title>Home</Title>
+      </LogoContainer>
+
+      <DashboardButtonText
         type="submit"
         className="dashboard_btn"
         onClick={() => history.push("/createworkout")}
       >
         Create a workout plan
-      </button>
-      <button
+      </DashboardButtonText>
+      <DashboardButtonText
         type="submit"
         className="dashboard_btn"
         onClick={() => history.push("/")}
       >
         Find a workout plan
-      </button>
-      <button
+      </DashboardButtonText>
+      <DashboardButtonText
         type="submit"
         className="dashboard_btn"
         onClick={() => history.push("/")}
       >
         Create a meal plan
-      </button>
-      <button
+      </DashboardButtonText>
+      <DashboardButtonText
         type="submit"
         className="dashboard_btn"
         onClick={() => history.push("/")}
       >
         Find a meal plan
-      </button>
-      <button
+      </DashboardButtonText>
+      <DashboardButtonText
         type="submit"
         className="dashboard_btn"
         onClick={() => history.push("/profile")}
       >
         Create your Profile
-      </button>
-      <button
+      </DashboardButtonText>
+      <DashboardButtonText
         type="submit"
         className="dashboard_btn"
         onClick={() => history.push("/")}
       >
         Change settings
-      </button>
-    </div>
+      </DashboardButtonText>
+    </DashboardAlignment>
   );
 };
 
