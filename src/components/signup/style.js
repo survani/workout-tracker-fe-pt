@@ -50,16 +50,23 @@ export const FormContainer = styled.section`
 `;
 
 export const Form = styled.form`
+  z-index: 0;
   @media (min-width: 768px) {
+    width: 40%;
   }
 `;
 export const Input = styled.input`
   margin-bottom: 3rem;
   border: 0;
   width: 100%;
-  padding: 0.3rem;
+  padding: 1rem;
   border-bottom: 1px solid black;
   background: none;
+  &:hover {
+    background: #dde8f4;
+    border-radius: 3px;
+    border: none;
+  }
 `;
 
 export const Label = styled.label`

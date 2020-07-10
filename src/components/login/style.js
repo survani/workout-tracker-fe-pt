@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 export const LogoContainer = styled.section`
   text-align: center;
   margin: 2rem 0 7.5rem 0;
+  z-index: 0;
   @media (min-width: 768px) {
     text-align: start;
     margin: 5rem;
@@ -32,6 +33,7 @@ export const Title = styled.p`
   margin: 15rem 0 2rem 0;
   @media (min-width: 768px) {
     margin: 1rem 0 2rem;
+    font-size: 48px;
   }
 `;
 
@@ -49,16 +51,23 @@ export const FormContainer = styled.section`
 `;
 
 export const Form = styled.form`
+  z-index: 0;
   @media (min-width: 768px) {
+    width: 40%;
   }
 `;
 export const Input = styled.input`
   margin-bottom: 3rem;
   border: 0;
   width: 100%;
-  padding: 0.3rem;
+  padding: 1rem;
   border-bottom: 1px solid black;
   background: none;
+  &:hover {
+    background: #dde8f4;
+    border-radius: 3px;
+    border: none;
+  }
 `;
 
 export const Label = styled.label`
@@ -133,6 +142,7 @@ export const Span = styled.span`
 export const StyledLink = styled(Link)`
   text-decoration: none;
   margin-left: 0.2rem;
+  color: black;
 `;
 
 export const SmallCircle = styled.img`

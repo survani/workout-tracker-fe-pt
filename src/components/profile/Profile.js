@@ -32,7 +32,7 @@ export default function Profile() {
     <ProfileContext.Provider value={{ userInfo }}>
       <HeaderSection>
         <Header>
-            <ProfileForm/>
+          <ProfileForm />
         </Header>
       </HeaderSection>
     </ProfileContext.Provider>

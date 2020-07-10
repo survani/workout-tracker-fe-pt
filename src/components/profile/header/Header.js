@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
 import ProfileContext from '../../../contexts/ProfileContext';
-import LandingNav from '../../../containers/landingnav/landingnav';
 import {
   InfoSection,
   TextContainer,
@@ -10,16 +9,17 @@ import {
   ImageText,
 } from './style';
 import Avatar from '../../../assets/avatarmale.svg';
+import ProfileNav from "../../../containers/profilenav/ProfileNav";
 
 const Header = () => {
   const { userInfo } = useContext(ProfileContext);
   return (
     <>
-      <LandingNav />
+      <ProfileNav />
       <InfoSection>
         <TextContainer>
           <ImageContainer>
-            <Image src={Avatar}></Image>
+            <Image src={Avatar} alt="profile-avatar"></Image>
             <ImageText href="/editprofile">Edit Profile</ImageText>
           </ImageContainer>
           <Text> {userInfo.username} </Text>
