@@ -3,7 +3,7 @@ import "./home.css";
 
 //import forms
 import Login from "../login/login";
-import Signup from "../signup/signup";
+import Signup from "../register/register";
 
 function Home() {
   return (

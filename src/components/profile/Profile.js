@@ -4,13 +4,13 @@ import ProfileContext from "../../contexts/ProfileContext";
 import { axiosWithAuth } from "../authentication/axiosWithAuth";
 import { HeaderSection } from "./style";
 import { decode } from "jsonwebtoken";
+import NavigationBar from "../navigationbar/navigationbar";
 import ProfileForm from "./form/ProfileForm";
 
 export default function Profile() {
   const [userInfo, setUserInfo] = useState({});
 
   const getUserInfo = () => {
-
     //provides the info for the specific user that is logged in.
     const { subject } = decode(localStorage.getItem("token"));
     axiosWithAuth()
@@ -30,6 +30,7 @@ export default function Profile() {
 
   return (
     <ProfileContext.Provider value={{ userInfo }}>
+      <NavigationBar />
       <HeaderSection>
         <Header>
           <ProfileForm />

@@ -1,5 +1,5 @@
-import React, { useContext } from 'react';
-import ProfileContext from '../../../contexts/ProfileContext';
+import React, { useContext } from "react";
+import ProfileContext from "../../../contexts/ProfileContext";
 import {
   InfoSection,
   TextContainer,
@@ -7,8 +7,8 @@ import {
   ImageContainer,
   Image,
   ImageText,
-} from './style';
-import Avatar from '../../../assets/avatarmale.svg';
+} from "./style";
+import Avatar from "../../../assets/avatarmale.svg";
 import ProfileNav from "../../../containers/profilenav/ProfileNav";
 
 const Header = () => {
