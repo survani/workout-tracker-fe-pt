@@ -41,7 +41,7 @@ Empowering users to take control of their workout schedules by planning and mana
 
 - #### React.js
 - #### Context API
-- #### Primer Design System
+- #### Styled-Components
 
 #### Front end deployed to `heroku`
 

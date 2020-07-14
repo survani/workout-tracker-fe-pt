@@ -56,14 +56,18 @@ export default function Login() {
 
   return (
     <>
+      <div>
+        <Circles src={Circle} />
+        <Circles2 src={CircleSmall} />
+        <SmallCircle src={SmFullCircle} />
+      </div>
+
       <LogoContainer>
         <Logo>
           Fit<LogoText>Tracker</LogoText>
-          <Circles src={Circle} />
-          <Circles2 src={CircleSmall} />
-          <SmallCircle src={SmFullCircle} />
         </Logo>
       </LogoContainer>
+
       <FormContainer>
         <LoginImage src={PasswordImage} />
         <Form onSubmit={handleSubmit(onSubmit)}>
