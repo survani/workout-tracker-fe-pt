@@ -4,6 +4,7 @@ import ProfileContext from "../../contexts/ProfileContext";
 import { axiosWithAuth } from "../authentication/axiosWithAuth";
 import { HeaderSection } from "./style";
 import { decode } from "jsonwebtoken";
+import NavigationBar from "../navigationbar/navigationbar";
 
 export default function Profile() {
   const [userInfo, setUserInfo] = useState({});
@@ -28,6 +29,7 @@ export default function Profile() {
 
   return (
     <ProfileContext.Provider value={{ userInfo }}>
+      <NavigationBar/>
       <HeaderSection>
         <Header />
       </HeaderSection>

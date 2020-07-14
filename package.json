@@ -43,6 +43,15 @@
     "eject": "react-scripts eject",
     "coverage": "CI=true yarn test --coverage || true"
   },
+  "jest": {
+    "collectCoverageFrom": [
+      "**/*.js",
+      "!**/node_modules/**",
+      "!**/vendor/**",
+      "!**/__tests__/**",
+      "!**/coverage/**"
+    ]
+  },
   "eslintConfig": {
     "extends": "react-app"
   },

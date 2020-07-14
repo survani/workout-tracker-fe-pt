@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { axiosWithAuth } from "../../authentication/axiosWithAuth";
+import NavigationBar from "../../navigationbar/navigationbar";
 
 const initialFormValue = {
   workout_category: "",
@@ -50,65 +51,73 @@ export const WorkoutForm = () => {
   };
 
   return (
-    <form className="form-style" onSubmit={onSubmit}>
-      <label>Category</label>
-      <input
-        id="category"
-        type="text"
-        name="workout_category"
-        placeholder="Category"
-        onChange={onChange}
-        value={formValues.workout_category}
-      />
-      <label>Title</label>
-      <input
-        id="title"
-        type="text"
-        name="workout_title"
-        placeholder="Title"
-        onChange={onChange}
-        value={formValues.workout_title}
-      />
-      <label>Date</label>
-      <input
-        id="date"
-        type="date"
-        name="workout_date"
-        placeholder="Date"
-        onChange={onChange}
-        value={formValues.workout_date}
-      />
-      <label>Duration</label>
-      <input
-        id="length"
-        type="text"
-        name="workout_length"
-        placeholder="Duration"
-        onChange={onChange}
-        value={formValues.workout_length}
-      />
-      <label>Description</label>
-      <textarea
-        id="description"
-        type="text"
-        name="workout_description"
-        placeholder="Description"
-        onChange={onChange}
-        value={formValues.workout_description}
-      />
-      <br />
-      <div className="share">
-        <input
-          className="share-input"
-          type="checkbox"
-          name="Share Workout"
-          onClick={() => console.log("Clicked!")}
-        />
-        <label>Share Workout</label>
+    <div>
+      <div className="navbar">
+        <NavigationBar />
       </div>
-      <button className="manage-button" type="submit">
-        Submit
-      </button>
-    </form>
+      <div>
+        <form className="form-style" onSubmit={onSubmit}>
+        <label>Category</label>
+        <input
+          id="category"
+          type="text"
+          name="workout_category"
+          placeholder="Category"
+          onChange={onChange}
+          value={formValues.workout_category}
+        />
+        <label>Title</label>
+        <input
+          id="title"
+          type="text"
+          name="workout_title"
+          placeholder="Title"
+          onChange={onChange}
+          value={formValues.workout_title}
+        />
+        <label>Date</label>
+        <input
+          id="date"
+          type="date"
+          name="workout_date"
+          placeholder="Date"
+          onChange={onChange}
+          value={formValues.workout_date}
+        />
+        <label>Duration</label>
+        <input
+          id="length"
+          type="text"
+          name="workout_length"
+          placeholder="Duration"
+          onChange={onChange}
+          value={formValues.workout_length}
+        />
+        <label>Description</label>
+        <textarea
+          id="description"
+          type="text"
+          name="workout_description"
+          placeholder="Description"
+          onChange={onChange}
+          value={formValues.workout_description}
+        />
+        <br />
+        <div className="share">
+          <input
+            className="share-input"
+            type="checkbox"
+            name="Share Workout"
+            onClick={() => console.log("Clicked!")}
+          />
+          <label>Share Workout</label>
+        </div>
+        <button className="manage-button" type="submit">
+          Submit
+        </button>
+      </form>
+
+      </div>
+    </div>
   );
 };

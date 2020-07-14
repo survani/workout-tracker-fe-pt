@@ -47,7 +47,7 @@ export default function Login() {
       })
       .then((res) => {
         localStorage.setItem("token", res.data.token);
-        localStorage.setItem("id", res.data.id);
+        // localStorage.setItem("id", res.data.id);
         localStorage.setItem("message", res.data.message);
         history.push("/dashboard");
       })
@@ -80,7 +80,7 @@ export default function Login() {
               },
             })}
           />
-          <Label for="password"> Password </Label>
+          <Label htmlFor="password"> Password </Label>
           <Input
             type="password"
             name="password"

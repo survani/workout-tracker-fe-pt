@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import ProfileContext from '../../../contexts/ProfileContext';
 import LandingNav from '../../../containers/landingnav/landingnav';
+
 import {
   InfoSection,
   TextContainer,
