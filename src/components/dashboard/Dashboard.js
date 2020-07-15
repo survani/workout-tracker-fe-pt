@@ -6,7 +6,8 @@ import {
   DashboardButtonText,
   LogoContainer,
   Logo,
-  Title,
+  LogoText,
+  MobileButton,
 } from "./style";
 
 const Dashboard = () => {
@@ -19,53 +20,54 @@ const Dashboard = () => {
       </div>
       <DashboardAlignment>
         <LogoContainer>
-          <Logo>Fit</Logo>
-          <Logo>Tracker</Logo>
-          <Title>Home</Title>
+          <Logo>
+            Fit<LogoText>Tracker</LogoText>
+          </Logo>
         </LogoContainer>
-
-        <DashboardButtonText
-          type="submit"
-          className="dashboard_btn"
-          onClick={() => history.push("/createworkout")}
-        >
-          Create a workout plan
-        </DashboardButtonText>
-        <DashboardButtonText
-          type="submit"
-          className="dashboard_btn"
-          onClick={() => history.push("/public")}
-        >
-          Find a workout plan
-        </DashboardButtonText>
-        <DashboardButtonText
-          type="submit"
-          className="dashboard_btn"
-          onClick={() => history.push("/")}
-        >
-          Create a meal plan
-        </DashboardButtonText>
-        <DashboardButtonText
-          type="submit"
-          className="dashboard_btn"
-          onClick={() => history.push("/")}
-        >
-          Find a meal plan
-        </DashboardButtonText>
-        <DashboardButtonText
-          type="submit"
-          className="dashboard_btn"
-          onClick={() => history.push("/profile")}
-        >
-          Create your Profile
-        </DashboardButtonText>
-        <DashboardButtonText
-          type="submit"
-          className="dashboard_btn"
-          onClick={() => history.push("/")}
-        >
-          Change settings
-        </DashboardButtonText>
+        <MobileButton>
+          <DashboardButtonText
+            type="submit"
+            className="dashboard_btn"
+            onClick={() => history.push("/createworkout")}
+          >
+            Create a workout plan
+          </DashboardButtonText>
+          <DashboardButtonText
+            type="submit"
+            className="dashboard_btn"
+            onClick={() => history.push("/public")}
+          >
+            Find a workout plan
+          </DashboardButtonText>
+          <DashboardButtonText
+            type="submit"
+            className="dashboard_btn"
+            onClick={() => history.push("/")}
+          >
+            Create a meal plan
+          </DashboardButtonText>
+          <DashboardButtonText
+            type="submit"
+            className="dashboard_btn"
+            onClick={() => history.push("/")}
+          >
+            Find a meal plan
+          </DashboardButtonText>
+          <DashboardButtonText
+            type="submit"
+            className="dashboard_btn"
+            onClick={() => history.push("/profile")}
+          >
+            Create your Profile
+          </DashboardButtonText>
+          <DashboardButtonText
+            type="submit"
+            className="dashboard_btn"
+            onClick={() => history.push("/")}
+          >
+            Change settings
+          </DashboardButtonText>
+        </MobileButton>
       </DashboardAlignment>
     </div>
   );

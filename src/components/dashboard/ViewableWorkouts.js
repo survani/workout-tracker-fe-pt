@@ -20,7 +20,7 @@ const ViewableWorkouts = () => {
   return (
     <div>
       <div>
-        <NavigationBar/>
+        <NavigationBar />
       </div>
       <div>
         <h1 className="card-row card-body">All Public Workouts</h1>

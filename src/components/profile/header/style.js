@@ -1,11 +1,10 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const InfoSection = styled.section`
   border-bottom: 6px solid white;
 `;
 export const TextContainer = styled.div`
   background: #277fe5;
-  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
