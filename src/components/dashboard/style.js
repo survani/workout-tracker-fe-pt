@@ -6,6 +6,9 @@ export const DashboardAlignment = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  @media (min-width: 768px) {
+    display: none;
+  }
 `;
 export const DashboardButtonText = styled.button`
   border: none;
@@ -21,11 +24,17 @@ export const DashboardButtonText = styled.button`
 `;
 
 export const LogoContainer = styled.div`
-  margin-bottom: 10%;
+  border: 1px solid black;
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  @media (mid-width: 768px) {
+    margin-bottom: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 `;
 
 export const Logo = styled.h1`

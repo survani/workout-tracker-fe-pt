@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const IntroSection = styled.section`
   font-family: Montserrat;
@@ -17,7 +17,7 @@ export const IntroText = styled.div`
     margin-left: 4rem;
     margin-top: 2rem;
     font-weight: 500;
-    align-content; center;
+    align-content: center;
   }
 `;
 
