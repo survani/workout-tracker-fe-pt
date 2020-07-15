@@ -11,14 +11,45 @@ const NavigationBar = () => {
         </Logo>
       </LogoContainer>
       <Nav>
-        <NavLink style={{ textDecoration: "none" }} to="/createworkout">
-          Create Workout
+        <NavLink
+          to="/profile"
+          style={{ textDecoration: "none", paddingBottom: "1%" }}
+        >
+          Profile
         </NavLink>
-        <NavLink style={{ textDecoration: "none" }} to="/public">
-          Viewable Workouts
+        <NavLink
+          to="/createworkout"
+          style={{ textDecoration: "none", paddingBottom: "1%" }}
+        >
+          Create a Workout
         </NavLink>
-        <NavLink style={{ textDecoration: "none" }} to="/calendar">
+        <NavLink
+          to="/public"
+          style={{ textDecoration: "none", paddingBottom: "1%" }}
+        >
+          View Workouts
+        </NavLink>
+        <NavLink
+          to="/calendar"
+          style={{ textDecoration: "none", paddingBottom: "1%" }}
+        >
           Calendar
+        </NavLink>
+        <NavLink
+          to="/diets"
+          style={{ textDecoration: "none", paddingBottom: "1%" }}
+        >
+          Meals
+        </NavLink>
+        <NavLink
+          to="/dashboard"
+          style={{
+            textDecoration: "none",
+            paddingTop: "50%",
+            paddingBottom: "1%",
+          }}
+        >
+          Back to Dashboard
         </NavLink>
       </Nav>
     </div>
