@@ -1,5 +1,43 @@
 import styled from "styled-components";
 
+export const NavigationContainer = styled.div`
+  @media (max-width: 769px) {
+    display: none;
+  }
+`;
+export const Nav = styled.div`
+  font-family: Montserrat;
+  display: flex;
+  height: 100vh;
+  width: 15%;
+  flex-direction: column;
+  background: #e8e8e8;
+  padding-left: 3.5%;
+  padding-top: 2%;
+  text-align: left;
+`;
+
+export const LogoContainer2 = styled.div`
+  display: flex;
+  justify-content: center;
+  font-family: Montserrat;
+  background: #e8e8e8;
+  width: 15%;
+  padding-right: 3.5%;
+  padding-top: 2%;
+`;
+
+export const Logo2 = styled.h2`
+  margin-left: 10px;
+  font-weight: 800;
+  font-size: 24px;
+  color: #000;
+`;
+
+export const LogoText = styled.span`
+  color: #277fe5;
+`;
+
 export const DashboardAlignment = styled.div`
   margin-top: 1rem;
   display: flex;
@@ -10,6 +48,7 @@ export const DashboardAlignment = styled.div`
     display: none;
   }
 `;
+
 export const DashboardButtonText = styled.button`
   border: none;
   background: #277fe5;

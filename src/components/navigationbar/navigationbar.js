@@ -1,46 +1,53 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import { Nav, Logo, LogoText, LogoContainer } from "./style";
+import {
+  NavigationContainer,
+  Nav,
+  LogoContainer2,
+  LogoText,
+  Logo2,
+} from "../dashboard/style";
 
 const NavigationBar = () => {
   return (
-    <div>
-      <LogoContainer>
-        <Logo>
+    <NavigationContainer>
+      <LogoContainer2>
+        <Logo2>
           Fit<LogoText>Tracker</LogoText>
-        </Logo>
-      </LogoContainer>
+        </Logo2>
+      </LogoContainer2>
       <Nav>
         <NavLink
           to="/profile"
-          style={{ textDecoration: "none", paddingBottom: "1%" }}
+          style={{ textDecoration: "none", paddingBottom: "10%" }}
         >
           Profile
         </NavLink>
         <NavLink
           to="/createworkout"
-          style={{ textDecoration: "none", paddingBottom: "1%" }}
+          style={{ textDecoration: "none", paddingBottom: "10%" }}
         >
           Create a Workout
         </NavLink>
         <NavLink
           to="/public"
-          style={{ textDecoration: "none", paddingBottom: "1%" }}
+          style={{ textDecoration: "none", paddingBottom: "10%" }}
         >
           View Workouts
         </NavLink>
         <NavLink
           to="/calendar"
-          style={{ textDecoration: "none", paddingBottom: "1%" }}
+          style={{ textDecoration: "none", paddingBottom: "10%" }}
         >
           Calendar
         </NavLink>
         <NavLink
           to="/diets"
-          style={{ textDecoration: "none", paddingBottom: "1%" }}
+          style={{ textDecoration: "none", paddingBottom: "10%" }}
         >
           Meals
         </NavLink>
+
         <NavLink
           to="/dashboard"
           style={{
@@ -52,7 +59,7 @@ const NavigationBar = () => {
           Back to Dashboard
         </NavLink>
       </Nav>
-    </div>
+    </NavigationContainer>
   );
 };
 
