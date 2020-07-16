@@ -12,6 +12,7 @@ import {
   Title,
   WorkoutLength,
 } from "./style";
+import NavigationBar from "../../navigationbar/navigationbar";
 
 const ViewableWorkouts = () => {
   const [workout, setWorkout] = useState([]);
@@ -29,27 +30,27 @@ const ViewableWorkouts = () => {
   }, [setWorkout]);
 
   return (
-    <MainContent>
-      <Header>
-        <Title className="card-row card-body">Workouts</Title>
-      </Header>
-      <CardContent>
-        {workout.map((item) => {
-          return (
-            <CardBody key="id">
-              <CardTitle>{item.workout_title}</CardTitle>
-              <MediaContent>
-                <CardCategory>{item.workout_category}</CardCategory>
-              </MediaContent>
-              <CardDescription>
-                <p>{item.workout_description}</p>
-                <WorkoutLength> {item.workout_length}</WorkoutLength>
-              </CardDescription>
-            </CardBody>
-          );
-        })}
-      </CardContent>
-    </MainContent>
+    <>
+      <NavigationBar />
+      <MainContent>
+        <CardContent>
+          {workout.map((item) => {
+            return (
+              <CardBody key="id">
+                <CardTitle>{item.workout_title}</CardTitle>
+                <MediaContent>
+                  <CardCategory>{item.workout_category}</CardCategory>
+                </MediaContent>
+                <CardDescription>
+                  <p>{item.workout_description}</p>
+                  <WorkoutLength> {item.workout_length}</WorkoutLength>
+                </CardDescription>
+              </CardBody>
+            );
+          })}
+        </CardContent>
+      </MainContent>
+    </>
   );
 };
 

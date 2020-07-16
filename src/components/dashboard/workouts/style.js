@@ -7,6 +7,7 @@ export const MainContent = styled.div`
 // Header styles
 export const Header = styled.div`
 margin-bottom: 3rem;
+margin-left: 321px;
 `;
 
 export const Title = styled.h1`
@@ -23,6 +24,7 @@ export const CardContent = styled.section`
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    padding: 2rem;
   }
 `;
 
