@@ -8,6 +8,7 @@ import {
   Logo,
   LogoText,
   MobileButton,
+  WelcomeTitle,
 } from "./style";
 
 const Dashboard = () => {
@@ -18,6 +19,8 @@ const Dashboard = () => {
       <div>
         <NavigationBar />
       </div>
+      <WelcomeTitle>Welcome to your dashboard!</WelcomeTitle>
+
       <DashboardAlignment>
         <LogoContainer>
           <Logo>

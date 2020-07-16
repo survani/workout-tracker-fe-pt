@@ -1,6 +1,13 @@
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 
+export const WelcomeTitle = styled.h1`
+  font-size: 3rem;
+  display: flex;
+  justify-content: center;
+  padding-top: 5%;
+`;
+
 export const NavigationContainer = styled.aside`
   padding-top: 3%;
   float: left;
