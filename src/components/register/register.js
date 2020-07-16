@@ -36,7 +36,7 @@ export default function Register() {
   });
   const { register, handleSubmit, errors } = useForm();
 
-  const onSubmit = (user, e) => {
+  const onSubmit = (e) => {
     e.preventDefault();
     axiosWithAuth()
       .post("/api/register", {
