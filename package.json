@@ -40,13 +40,13 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --watchAll --coverage",
+    "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "coverage": "CI=true npm test --coverage || true"
+    "coverage": "npm test --coverage --watchAll=false || true"
   },
   "jest": {
     "collectCoverageFrom": [
-      "**/*.js",
+      "**/*.{js,jsx}",
       "!**/node_modules/**",
       "!**/vendor/**",
       "!**/__tests__/**",
