@@ -10,7 +10,7 @@ import { WorkoutForm } from "./components/dashboard/createworkout/CreateWorkoutF
 import Calendar from "./components/calendar/Calendar";
 import Profile from "./components/profile/Profile";
 import LandingPage from "./components/landingpage/LandingPage";
-import ViewableWorkouts from "./components/dashboard/ViewableWorkouts";
+import ViewableWorkouts from "./components/dashboard/workouts/ViewableWorkouts";
 import ProfileForm from "./components/profile/form/ProfileForm";
 
 function App() {
