@@ -1,13 +1,19 @@
 import React from "react";
 import ReactDOM from 'react-dom';
 import Signup from "./register";
-import { BrowserRouter } from "react-router-dom";
+import {
+    BrowserRouter
+} from "react-router-dom";
 import '@testing-library/jest-dom/extend-expect';
 import * as rtl from "@testing-library/react";
+import App from '../../App';
 
-test("Render the Sign Up text", async() => {
-    const wrapper = rtl.render(<BrowserRouter><Signup /></BrowserRouter>);
+import MutationObserver from 'mutation-observer'
+global.MutationObserver = MutationObserver;
 
-    const previousButton = await wrapper.getByText(/sign up/i);
-    expect(previousButton).toBeVisible();
+test("Render the Sign Up text", () => {
+    const wrapper = rtl.render( <BrowserRouter> <Signup/> </BrowserRouter>);
+
+    const expecttitle = wrapper.getAllByText(/Sign Up/i); 
+    expect(expecttitle.length).toEqual(2);
 });
