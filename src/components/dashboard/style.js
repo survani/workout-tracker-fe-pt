@@ -2,10 +2,8 @@ import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 
 export const Dashboard = styled.section`
-width: 63%;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
+  width: 80%;
+  margin: 0 auto;
   @media (max-width: 769px) {
     display: none;
   }
