@@ -8,6 +8,9 @@ import {
 } from "../dashboard/style";
 
 const NavigationBar = () => {
+  const Logout = () => {
+    localStorage.clear();
+  };
   return (
     <NavigationContainer>
       <Logo2>
@@ -20,6 +23,9 @@ const NavigationBar = () => {
         <NavLinks to="/createworkout">Create a Workout</NavLinks>
         <NavLinks to="/public">View Workouts</NavLinks>
         <NavLinks to="/calendar">Calendar</NavLinks>
+        <NavLinks on onClick={Logout} to="/">
+          Logout
+        </NavLinks>
         {/* <NavLinks to="/diets">Meals</NavLinks> */}
 
         {/* Add a Back icon/button */}

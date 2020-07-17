@@ -10,7 +10,7 @@ export const Dashboard = styled.section`
 `;
 
 export const WelcomeTitle = styled.p`
-  font-size: 3rem;
+  font-size: 1.5rem;
   padding-top: 5%;
 `;
 
