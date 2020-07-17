@@ -1,4 +1,5 @@
 import React from "react";
+import Logout from "../logout/Logout";
 import {
   NavigationContainer,
   Nav,
@@ -8,9 +9,9 @@ import {
 } from "../dashboard/style";
 
 const NavigationBar = () => {
-  const Logout = () => {
-    localStorage.clear();
-  };
+  // const Logout = () => {
+  //   localStorage.clear();
+  // };
   return (
     <NavigationContainer>
       <Logo2>

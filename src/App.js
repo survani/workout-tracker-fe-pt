@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Route, Switch } from "react-router-dom";
 
 //components
@@ -12,53 +12,51 @@ import Profile from "./components/profile/Profile";
 import LandingPage from "./components/landingpage/LandingPage";
 import ViewableWorkouts from "./components/dashboard/workouts/ViewableWorkouts";
 import ProfileForm from "./components/profile/form/ProfileForm";
+import WorkoutTrack from "./contexts/WorkoutTrack";
 
 function App() {
-
   return (
-    <div className= "App">
-        <div className="childRoutes">
-          <Switch>
-              <Route exact path="/">
-                <LandingPage />
-              </Route>
+    <div className="App">
+      <div className="childRoutes">
+        <Switch>
+          <Route exact path="/">
+            <LandingPage />
+          </Route>
 
-              <Route path="/register">
-              <Register />
-              </Route>
+          <Route path="/register">
+            <Register />
+          </Route>
 
-              <Route path="/login">
-                <Login />
-              </Route>
+          <Route path="/login">
+            <Login />
+          </Route>
 
-              <ProtectedRoute path="/dashboard">
-                <Dashboard />
-              </ProtectedRoute>
+          <ProtectedRoute path="/dashboard">
+            <Dashboard />
+          </ProtectedRoute>
 
-              <ProtectedRoute path="/public">
-                <ViewableWorkouts />
-              </ProtectedRoute>
+          <ProtectedRoute path="/public">
+            <ViewableWorkouts />
+          </ProtectedRoute>
 
-              <ProtectedRoute path="/createworkout">
-                <WorkoutForm />
-              </ProtectedRoute>
+          <ProtectedRoute path="/createworkout">
+            <WorkoutForm />
+          </ProtectedRoute>
 
-              <ProtectedRoute path="/profile">
-                <Profile />
-              </ProtectedRoute>
+          <ProtectedRoute path="/profile">
+            <Profile />
+          </ProtectedRoute>
 
-              <ProtectedRoute path="/editprofile">
-                <ProfileForm />
-              </ProtectedRoute>
+          <ProtectedRoute path="/editprofile">
+            <ProfileForm />
+          </ProtectedRoute>
 
-              <ProtectedRoute path="/calendar">
-                <Calendar />
-              </ProtectedRoute>
-            </Switch>
-
-            </div>
-          
+          <ProtectedRoute path="/calendar">
+            <Calendar />
+          </ProtectedRoute>
+        </Switch>
       </div>
+    </div>
   );
 }
 

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { useHistory } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { axiosWithAuth } from "../authentication/axiosWithAuth";
@@ -26,9 +26,9 @@ import Circle from "../../assets/loginpage/circle.svg";
 import CircleSmall from "../../assets/loginpage/circlesmall.svg";
 import PasswordImage from "../../assets/loginpage/password.svg";
 import SmFullCircle from "../../assets/loginpage/smfullsircle.svg";
+
 export default function Login() {
   const history = useHistory();
-
   const { register, handleSubmit, errors } = useForm();
   const onSubmit = (user, e) => {
     e.preventDefault();
