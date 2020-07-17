@@ -65,10 +65,8 @@ export const WorkoutForm = () => {
   };
 
   return (
-    <div>
-      <div className="navbar">
+    <>
         <NavigationBar />
-      </div>
       <Form>
         <form onSubmit={onSubmit}>
           <TitleContainer>
@@ -160,6 +158,6 @@ export const WorkoutForm = () => {
           </ButtonContainer>
         </form>
       </Form>
-    </div>
+    </>
   );
 };

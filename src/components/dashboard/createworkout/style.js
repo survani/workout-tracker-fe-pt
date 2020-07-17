@@ -8,9 +8,8 @@ export const Form = styled.form`
   justify-content: center;
   align-items: center;
   @media (min-width: 768px) {
-    flex-direction: start;
-    position: absolute;
-    margin-left: 9%;
+    width: 50%;
+    margin: 0 auto;
   }
 `;
 

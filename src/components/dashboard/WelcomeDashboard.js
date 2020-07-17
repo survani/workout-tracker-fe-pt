@@ -23,7 +23,7 @@ const WelcomeDashboard = () => {
       <Image src={Workout} alt="Man and woman exercising"></Image>
       <QuoteContainer>
         <p> Random Quote: {quote.content}</p>
-        <p> - {quote.author}</p>
+        <p>  - {quote.author}</p>
       </QuoteContainer>
     </Dashboard>
   );
