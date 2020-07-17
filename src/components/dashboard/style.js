@@ -12,7 +12,7 @@ export const Dashboard = styled.section`
 `;
 
 export const WelcomeTitle = styled.p`
-  font-size: 3rem;
+  font-size: 1.6rem;
   padding-top: 5%;
 `;
 
@@ -113,3 +113,11 @@ export const LogoText = styled.h1`
   font-weight: 800;
   color: #277fe5;
 `;
+
+// Quotes Styling
+
+export const QuoteContainer = styled.section`
+display: flex;
+justify-content:center;
+margin-top: 10rem;
+`

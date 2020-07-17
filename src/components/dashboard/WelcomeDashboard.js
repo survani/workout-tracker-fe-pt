@@ -1,8 +1,19 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Workout from "../../assets/workout.svg";
-import { WelcomeTitle, Image, Dashboard } from "./style";
-
+import { WelcomeTitle, Image, Dashboard, QuoteContainer } from "./style";
+import axios from "axios";
 const WelcomeDashboard = () => {
+  const [quote, setQuote] = useState({});
+  const getQuote = () => {
+    axios.get("https://api.quotable.io/random").then((res) => {
+      setQuote(res.data);
+      console.log(res.data);
+    });
+  };
+
+  useEffect(() => {
+    getQuote();
+  }, []);
   return (
     <Dashboard>
       <WelcomeTitle>
@@ -10,6 +21,10 @@ const WelcomeDashboard = () => {
         the left side will help you find your way around.
       </WelcomeTitle>
       <Image src={Workout} alt="Man and woman exercising"></Image>
+      <QuoteContainer>
+        <p> Random Quote: {quote.content}</p>
+        <p> - {quote.author}</p>
+      </QuoteContainer>
     </Dashboard>
   );
 };
