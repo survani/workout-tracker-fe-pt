@@ -22,23 +22,15 @@ import {
   Form,
   SmallCircle,
 } from "./style";
-
 import Circle from "../../assets/loginpage/circle.svg";
 import CircleSmall from "../../assets/loginpage/circlesmall.svg";
 import PasswordImage from "../../assets/loginpage/password.svg";
 import SmFullCircle from "../../assets/loginpage/smfullsircle.svg";
-
 export default function Login() {
   const history = useHistory();
 
-  const [user, getUser] = useState({
-    email: "",
-    password: "",
-  });
-
   const { register, handleSubmit, errors } = useForm();
-
-  const onSubmit = (e) => {
+  const onSubmit = (user, e) => {
     e.preventDefault();
     axiosWithAuth()
       .post("/api/login", {
@@ -47,13 +39,11 @@ export default function Login() {
       })
       .then((res) => {
         localStorage.setItem("token", res.data.token);
-        // localStorage.setItem("id", res.data.id);
         localStorage.setItem("message", res.data.message);
         history.push("/dashboard");
       })
       .catch((err) => console.log(err.message));
   };
-
   return (
     <>
       <div>
@@ -61,13 +51,11 @@ export default function Login() {
         <Circles2 src={CircleSmall} />
         <SmallCircle src={SmFullCircle} />
       </div>
-
       <LogoContainer>
         <Logo>
           Fit<LogoText>Tracker</LogoText>
         </Logo>
       </LogoContainer>
-
       <FormContainer>
         <LoginImage src={PasswordImage} />
         <Form onSubmit={handleSubmit(onSubmit)}>
@@ -100,7 +88,7 @@ export default function Login() {
             <SignInButtonText type="submit"> Sign In </SignInButtonText>
           </SignInButton>
           <RegisterText>
-            Don’t have an account?
+            Don't have an account?
             <StyledLink to="/register">
               <Span>Sign up</Span>
             </StyledLink>

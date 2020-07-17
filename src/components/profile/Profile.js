@@ -32,7 +32,6 @@ export default function Profile() {
     <ProfileContext.Provider value={{ userInfo }}>
       <NavigationBar />
       <HeaderSection>
-        <NavigationBar />
         <Header>
           <ProfileForm />
         </Header>

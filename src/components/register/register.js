@@ -29,14 +29,9 @@ import Activity from "../../assets/signuppage/activity.svg";
 export default function Register() {
   const history = useHistory();
 
-  const [user, getUser] = useState({
-    email: "",
-    username: "",
-    password: "",
-  });
   const { register, handleSubmit, errors } = useForm();
 
-  const onSubmit = (e) => {
+  const onSubmit = (user, e) => {
     e.preventDefault();
     axiosWithAuth()
       .post("/api/register", {
@@ -46,7 +41,6 @@ export default function Register() {
       })
       .then((res) => {
         localStorage.setItem("token", res.data.token);
-        localStorage.setItem("id", res.data.id);
         localStorage.setItem("message", res.data.message);
         history.push("/login");
       })

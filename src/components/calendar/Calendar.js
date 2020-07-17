@@ -1,62 +1,67 @@
-import React, {useState} from 'react';
-import FullCalendar from '@fullcalendar/react';
-import dayGridPlugin from '@fullcalendar/daygrid';
+import React, { useState } from "react";
+import FullCalendar from "@fullcalendar/react";
+import dayGridPlugin from "@fullcalendar/daygrid";
 import timeGridPlugin from "@fullcalendar/timegrid";
 import interactionPlugin from "@fullcalendar/interaction";
-
-import '@fullcalendar/core/main.css';
-import '@fullcalendar/daygrid/main.css';
+import NavigationBar from "../navigationbar/navigationbar";
+import "@fullcalendar/core/main.css";
+import "@fullcalendar/daygrid/main.css";
 import "@fullcalendar/timegrid/main.css";
-import { startOfDay } from '@fullcalendar/core';
+import { CalendarContainer } from "./style";
 
 const Calendar = () => {
   const calendarComponentRef = React.createRef();
 
-  const [calendarEvent, setCalendarEvent] = useState([{
-    event: "Current Event",
-    start: new Date()
-  }]);
+  const [calendarEvent, setCalendarEvent] = useState([
+    {
+      event: "Current Event",
+      start: new Date(),
+    },
+  ]);
 
-  const handleDateClick = arg => {
-    if (window.confirm("Would you like to add an event to " + arg.dateStr + " ?")) {
-      
-        // add new event data
-        setCalendarEvent(
-          // creates a new array
-          calendarEvent.concat({
+  const handleDateClick = (arg) => {
+    if (
+      window.confirm("Would you like to add an event to " + arg.dateStr + " ?")
+    ) {
+      // add new event data
+      setCalendarEvent(
+        // creates a new array
+        calendarEvent.concat({
           event: "New Event",
           start: arg.date,
-          allDay: arg.allDay
-          })
-        )
+          allDay: arg.allDay,
+        })
+      );
     }
-  
-}
-
+  };
 
   return (
     <div>
-      <div className='calendar_main'>
-        <h1 className='calendar_headline'>Schedule</h1>
+      <div>
+        <NavigationBar />
       </div>
+      <CalendarContainer>
+        <div className="calendar_main">
+          <h1 className="calendar_headline">Schedule</h1>
+        </div>
 
-      <div className='calendar-container'>
-      <FullCalendar
+        <div className="calendar-container">
+          <FullCalendar
             defaultView="dayGridMonth"
             header={{
               left: "prev,next today",
               center: "title",
-              right: "dayGridMonth,timeGridWeek,timeGridDay,listWeek"
+              right: "dayGridMonth,timeGridWeek,timeGridDay,listWeek",
             }}
             plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
             ref={calendarComponentRef}
             events={calendarEvent}
             dateClick={handleDateClick}
           />
-      </div>
+        </div>
+      </CalendarContainer>
     </div>
   );
-}
-
+};
 
 export default Calendar;
