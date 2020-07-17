@@ -1,7 +1,7 @@
   # The name of the workflow
   name: Code Coverage
 
-  # What conditions trigger the workflow
+  
   #  In this case, all pushes and pull requests
   on:
     pull_request:
