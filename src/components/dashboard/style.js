@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 // --------------  Mobile  --------------
 
 export const DashboardAlignment = styled.div`
-  @media (min-width: 769px) {
+  @media (min-width: 768px) {
     display: none;
   }
 `;
