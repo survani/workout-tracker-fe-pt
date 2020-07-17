@@ -8,8 +8,8 @@ import {
   Logo,
   LogoText,
   MobileButton,
-  WelcomeTitle,
 } from "./style";
+import WelcomeDashboard from "./WelcomeDashboard";
 
 const Dashboard = () => {
   const history = useHistory();
@@ -18,8 +18,8 @@ const Dashboard = () => {
     <div>
       <div>
         <NavigationBar />
+        <WelcomeDashboard />
       </div>
-      <WelcomeTitle>Welcome to your dashboard!</WelcomeTitle>
 
       <DashboardAlignment>
         <LogoContainer>
