@@ -15,6 +15,7 @@ const NavigationBar = () => {
       </Logo2>
 
       <Nav>
+        <NavLinks to="/dashboard">Dashboard</NavLinks>
         <NavLinks to="/profile">Profile</NavLinks>
         <NavLinks to="/createworkout">Create a Workout</NavLinks>
         <NavLinks to="/public">View Workouts</NavLinks>
@@ -22,7 +23,6 @@ const NavigationBar = () => {
         {/* <NavLinks to="/diets">Meals</NavLinks> */}
 
         {/* Add a Back icon/button */}
-        <NavLinks to="/dashboard">Go Back</NavLinks>
       </Nav>
     </NavigationContainer>
   );

@@ -9,6 +9,7 @@ import {
   LogoText,
   MobileButton,
 } from "./style";
+import WelcomeDashboard from "./WelcomeDashboard";
 
 const Dashboard = () => {
   const history = useHistory();
@@ -17,7 +18,9 @@ const Dashboard = () => {
     <div>
       <div>
         <NavigationBar />
+        <WelcomeDashboard />
       </div>
+
       <DashboardAlignment>
         <LogoContainer>
           <Logo>

@@ -1,5 +1,5 @@
 import React from "react";
-import Signup from "./register";
+import Register from "./register";
 import { BrowserRouter } from "react-router-dom";
 import "@testing-library/jest-dom/extend-expect";
 import * as rtl from "@testing-library/react";
@@ -7,13 +7,15 @@ import MutationObserver from "mutation-observer";
 
 global.MutationObserver = MutationObserver;
 
-test("Render the Sign Up text", () => {
+it("Checks if the text Sign up is present", () => {
   const wrapper = rtl.render(
-    <BrowserRouter>
-      <Signup />
-    </BrowserRouter>
+    <>
+      <BrowserRouter>
+        <Register />
+      </BrowserRouter>
+    </>
   );
 
-  const expecttitle = wrapper.getAllByText(/Sign Up/i);
-  expect(expecttitle.length).toEqual(2);
+  const element = wrapper.getAllByText(/Sign Up/i);
+  expect(element).lengthToBe(2);
 });

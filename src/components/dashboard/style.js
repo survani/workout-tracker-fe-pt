@@ -1,6 +1,24 @@
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 
+export const Dashboard = styled.section`
+  width: 80%;
+  margin: 0 auto;
+  @media (max-width: 769px) {
+    display: none;
+  }
+`;
+
+export const WelcomeTitle = styled.p`
+  font-size: 3rem;
+  padding-top: 5%;
+`;
+
+export const Image = styled.img`
+  width: 80%;
+  margin: 0 auto;
+`;
+
 export const NavigationContainer = styled.aside`
   padding-top: 3%;
   float: left;
@@ -17,6 +35,15 @@ export const NavLinks = styled(NavLink)`
   padding-bottom: 10%;
   color: black;
   margin-left: 5rem;
+  :hover {
+    font-weight: 800;
+    color: #277fe5;
+    transition: 0.3s;
+  }
+  &.active {
+    color: #277fe5;
+    font-weight: 800;
+  }
 `;
 
 export const Nav = styled.div`
