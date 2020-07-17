@@ -27,8 +27,6 @@ const NavigationBar = () => {
           Logout
         </NavLinks>
         {/* <NavLinks to="/diets">Meals</NavLinks> */}
-
-        {/* Add a Back icon/button */}
       </Nav>
     </NavigationContainer>
   );
