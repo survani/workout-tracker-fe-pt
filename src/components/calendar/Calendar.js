@@ -37,25 +37,25 @@ const Calendar = () => {
 
   return (
     <>
-        <NavigationBar />
+      <NavigationBar />
       <CalendarContainer>
         <div className="calendar_main">
-          <h1 className="calendar_headline">Schedule</h1>
-        </div>
+            <h1 className="calendar_headline">Schedule</h1>
 
-        <div className="calendar-container">
-          <FullCalendar
-            defaultView="dayGridMonth"
-            header={{
-              left: "prev,next today",
-              center: "title",
-              right: "dayGridMonth,timeGridWeek,timeGridDay,listWeek",
-            }}
-            plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
-            ref={calendarComponentRef}
-            events={calendarEvent}
-            dateClick={handleDateClick}
-          />
+          <div className="calendar-container">
+            <FullCalendar
+              defaultView="dayGridMonth"
+              header={{
+                left: "prev,next today",
+                center: "title",
+                right: "dayGridMonth,timeGridWeek,timeGridDay,listWeek",
+              }}
+              plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
+              ref={calendarComponentRef}
+              events={calendarEvent}
+              dateClick={handleDateClick}
+            />
+          </div>
         </div>
       </CalendarContainer>
     </>

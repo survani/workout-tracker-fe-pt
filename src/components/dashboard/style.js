@@ -73,14 +73,15 @@ export const Image = styled.img`
 export const NavigationContainer = styled.aside`
   display: none;
   @media (min-width: 768px) {
-    padding-top: 3%;
+    padding-top: 4em;
     float: left;
     height: 100vh;
-    width: 18rem;
     background: #e8e8e8;
-    display: block;
+    width: 18em;
+    display: flex;
     position: sticky;
     top: 0;
+    flex-direction: column;
   }
 `;
 
@@ -104,9 +105,8 @@ export const NavLinks = styled(NavLink)`
 export const Nav = styled.div`
   font-family: Montserrat;
   display: flex;
-  padding-top: 2%;
+  padding-top:10em;
   justify-content: center;
-  display: flex;
   flex-direction: column;
   color: #000;
 `;
@@ -114,7 +114,6 @@ export const Nav = styled.div`
 export const Logo2 = styled.a`
   display: flex;
   justify-content: center;
-  margin-bottom: 50%;
   font-weight: 800;
   font-size: 2rem;
   color: #000;
