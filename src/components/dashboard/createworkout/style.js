@@ -8,9 +8,8 @@ export const Form = styled.form`
   justify-content: center;
   align-items: center;
   @media (min-width: 768px) {
-    flex-direction: start;
-    position: absolute;
-    margin-left: 9%;
+    width: 50%;
+    margin: 0 auto;
   }
 `;
 
@@ -25,12 +24,9 @@ export const Title = styled.h1`
   font-family: Montserrat;
   font-style: normal;
   font-weight: normal;
-  font-size: 1.5rem;
+  font-size: 2rem;
   line-height: 24px;
   color: #1d2026;
-  @media (min-width: 768px) {
-    font-size: 1.2rem;
-  }
 `;
 
 export const TitleContainer = styled.div`
@@ -48,17 +44,11 @@ export const InputContainer = styled.div`
 export const Input = styled.input`
   width: 100%;
   height: 25px;
-  @media (min-width: 768px) {
-    height: 20px;
-  }
 `;
 
 export const TextArea = styled.textarea`
   width: 100%;
   height: 50px;
-  @media (min-width: 768px) {
-    height: 40px;
-  }
 `;
 
 export const Label = styled.label`
@@ -68,9 +58,6 @@ export const Label = styled.label`
   font-size: 16px;
   line-height: 20px;
   color: #1d2026;
-  @media (min-width: 768px) {
-    font-size: 0.8rem;
-  }
 `;
 
 export const InputFont = styled.h3`
@@ -81,9 +68,6 @@ export const InputFont = styled.h3`
   line-height: 20px;
   color: #1d2026;
   width: 100%;
-  @media (min-width: 768px) {
-    font-size: 0.8rem;
-  }
 `;
 
 export const ShareBox = styled.div`
@@ -96,9 +80,6 @@ margin-bottom: 40%;
 `;
 
 export const ShareLabel = styled.label`
-  @media (min-width: 768px) {
-    font-size: 0.9rem;
-  }
 `;
 
 export const ButtonContainer = styled.div`
