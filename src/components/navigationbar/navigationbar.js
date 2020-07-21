@@ -14,7 +14,7 @@ const NavigationBar = () => {
   // };
   return (
     <NavigationContainer>
-      <Logo2>
+      <Logo2 href="/dashboard">
         Fit<LogoText2>Tracker</LogoText2>
       </Logo2>
 
