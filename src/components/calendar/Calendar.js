@@ -36,10 +36,8 @@ const Calendar = () => {
   };
 
   return (
-    <div>
-      <div>
+    <>
         <NavigationBar />
-      </div>
       <CalendarContainer>
         <div className="calendar_main">
           <h1 className="calendar_headline">Schedule</h1>
@@ -60,7 +58,7 @@ const Calendar = () => {
           />
         </div>
       </CalendarContainer>
-    </div>
+    </>
   );
 };
 
