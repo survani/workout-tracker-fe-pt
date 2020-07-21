@@ -24,7 +24,7 @@ const NavigationBar = () => {
         <NavLinks to="/createworkout">Create a Workout</NavLinks>
         <NavLinks to="/public">View Workouts</NavLinks>
         <NavLinks to="/calendar">Calendar</NavLinks>
-        <NavLinks on onClick={Logout} to="/">
+        <NavLinks on onClick={Logout} to="/" style={{ paddingTop: "48%" }}>
           Logout
         </NavLinks>
         {/* <NavLinks to="/diets">Meals</NavLinks> */}

@@ -36,7 +36,8 @@ export const NavLinks = styled(NavLink)`
   text-decoration: none;
   padding-bottom: 10%;
   color: black;
-  margin-left: 5rem;
+  margin-left: 3.5rem;
+  font-size: 1.2rem;
   :hover {
     font-weight: 800;
     color: #277fe5;
@@ -62,11 +63,12 @@ export const Logo2 = styled.h2`
   text-align: center;
   margin-bottom: 50%;
   font-weight: 800;
-  font-size: 24px;
+  font-size: 2rem;
   color: #000;
 `;
 
 export const LogoText2 = styled.span`
+  font-size: 2rem;
   color: #277fe5;
 `;
 
