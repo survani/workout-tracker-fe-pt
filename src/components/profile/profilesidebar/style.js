@@ -1,4 +1,3 @@
-import Styled from "styled-components";
 import styled from "styled-components";
 
 // Profile Info Section
@@ -14,6 +13,11 @@ export const FormContainer = styled.div`
   width: 50%;
   margin: 0 auto;
   margin-top: 1.5rem;
+`;
+
+export const UsernameContainer = styled.div`
+display: flex;
+align-items: baseline;
 `;
 
 export const ProfileAside = styled.aside`
@@ -50,7 +54,7 @@ export const ChangePhotoButton = styled.button`
 export const UserName = styled.p`
   font-size: 18px;
   font-weight: 500;
-  margin-top: 1rem;
+  margin: 1rem 0.5rem 0.7rem 0;
 `;
 
 export const Bio = styled.p`

@@ -16,7 +16,7 @@ const ProfileNav = () => {
           <Input type="text" placeholder="Type something..."/>
             <SearchIcons src={SearchIcon}/>
 
-          <img src={DefaultAvatar} />
+          <img src={DefaultAvatar} alt="Profile Avatar" />
         </RightSide>
       </Navigation>
       <SubNav>

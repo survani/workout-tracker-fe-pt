@@ -7,7 +7,7 @@ const Logout = () => {
       <button
         className="logout-button"
         type="submit"
-        onClick={() => localStorage.removeItem("token")}
+        onClick={() => localStorage.clear}
       >
         Logout
       </button>

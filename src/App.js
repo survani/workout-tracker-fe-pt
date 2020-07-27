@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Route, Switch } from "react-router-dom";
 
 //components
@@ -12,7 +12,6 @@ import Profile from "./components/profile/Profile";
 import LandingPage from "./components/landingpage/LandingPage";
 import ViewableWorkouts from "./components/dashboard/workouts/ViewableWorkouts";
 import ProfileForm from "./components/profile/form/ProfileForm";
-import WorkoutTrack from "./contexts/WorkoutTrack";
 
 function App() {
   return (

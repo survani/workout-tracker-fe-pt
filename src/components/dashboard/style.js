@@ -86,26 +86,31 @@ export const NavigationContainer = styled.aside`
 `;
 
 export const NavLinks = styled(NavLink)`
-  text-decoration: none;
-  padding-bottom: 10%;
-  color: black;
-  margin-left: 3.5rem;
-  font-size: 1.2rem;
-  :hover {
-    font-weight: 800;
-    color: #277fe5;
-    transition: 0.3s;
-  }
-  &.active {
-    color: #277fe5;
-    font-weight: 800;
+  @media (min-width: 768px) {
+    text-decoration: none;
+    padding-bottom: 10%;
+    color: black;
+    margin-left: 3.5rem;
+    font-size: 1.2rem;
+    :hover {
+      font-weight: 800;
+      color: #277fe5;
+      transition: 0.3s;
+    }
+    &.active {
+      color: #277fe5;
+      font-weight: 800;
+    }
+    :nth-child(6) {
+    margin-top: 3rem;
+    }
   }
 `;
 
 export const Nav = styled.div`
   font-family: Montserrat;
   display: flex;
-  padding-top:10em;
+  padding-top: 10em;
   justify-content: center;
   flex-direction: column;
   color: #000;

@@ -6,10 +6,8 @@ import {
   CardContent,
   CardDescription,
   CardTitle,
-  Header,
   MainContent,
   MediaContent,
-  Title,
   WorkoutLength,
 } from "./style";
 import NavigationBar from "../../navigationbar/navigationbar";
