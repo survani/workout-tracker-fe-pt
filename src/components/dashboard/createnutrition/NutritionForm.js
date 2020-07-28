@@ -54,7 +54,7 @@ export const NutritionForm = () => {
       .post("https://frozen-hamlet-18508.herokuapp.com/api/diets", formValues)
       .then((res) => {
         console.log(res);
-        setWorkout(res.data);
+        setNutrition(res.data);
       })
       .catch((err) => {
         console.log(err);
