@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import FullCalendar from "@fullcalendar/react";
 import dayGridPlugin from "@fullcalendar/daygrid";
 import timeGridPlugin from "@fullcalendar/timegrid";
@@ -8,9 +8,12 @@ import "@fullcalendar/core/main.css";
 import "@fullcalendar/daygrid/main.css";
 import "@fullcalendar/timegrid/main.css";
 import { CalendarContainer } from "./style";
+import { axiosWithAuth } from "../authentication/axiosWithAuth";
 
 const Calendar = () => {
   const calendarComponentRef = React.createRef();
+
+  const [workoutEvent, setWorkoutEvent] = useState([]);
 
   const [calendarEvent, setCalendarEvent] = useState([
     {
@@ -18,6 +21,24 @@ const Calendar = () => {
       start: new Date(),
     },
   ]);
+
+  const getDates = () => {
+    const dates = axiosWithAuth()
+      .get(`https://frozen-hamlet-18508.herokuapp.com/api/workouts`)
+      .then((res) => {
+        const info = [];
+        res.data.message.forEach((v) => {
+          info.push({ title: v.workout_title, date: v.workout_date });
+        });
+        setWorkoutEvent(info);
+      })
+      .catch((err) => {
+        console.log("error in Calendar component", err);
+      });
+  };
+  useEffect(() => {
+    getDates();
+  }, []);
 
   const handleDateClick = (arg) => {
     if (
@@ -36,29 +57,31 @@ const Calendar = () => {
   };
 
   return (
-    <>
-      <NavigationBar />
+    <div>
+      <div>
+        <NavigationBar />
+      </div>
       <CalendarContainer>
         <div className="calendar_main">
-            <h1 className="calendar_headline">Schedule</h1>
+          <h1 className="calendar_headline">Schedule</h1>
+        </div>
 
-          <div className="calendar-container">
-            <FullCalendar
-              defaultView="dayGridMonth"
-              header={{
-                left: "prev,next today",
-                center: "title",
-                right: "dayGridMonth,timeGridWeek,timeGridDay,listWeek",
-              }}
-              plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
-              ref={calendarComponentRef}
-              events={calendarEvent}
-              dateClick={handleDateClick}
-            />
-          </div>
+        <div className="calendar-container">
+          <FullCalendar
+            defaultView="dayGridMonth"
+            header={{
+              left: "prev,next today",
+              center: "title",
+              right: "dayGridMonth,timeGridWeek,timeGridDay,listWeek",
+            }}
+            plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
+            ref={calendarComponentRef}
+            events={workoutEvent}
+            dateClick={handleDateClick}
+          />
         </div>
       </CalendarContainer>
-    </>
+    </div>
   );
 };
 

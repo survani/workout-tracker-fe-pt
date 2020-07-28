@@ -26,7 +26,6 @@ import Circle from "../../assets/loginpage/circle.svg";
 import CircleSmall from "../../assets/loginpage/circlesmall.svg";
 import PasswordImage from "../../assets/loginpage/password.svg";
 import SmFullCircle from "../../assets/loginpage/smfullsircle.svg";
-
 export default function Login() {
   const history = useHistory();
   const { register, handleSubmit, errors } = useForm();

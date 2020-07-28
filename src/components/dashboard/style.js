@@ -102,7 +102,7 @@ export const NavLinks = styled(NavLink)`
       font-weight: 800;
     }
     :nth-child(6) {
-    margin-top: 3rem;
+      margin-top: 3rem;
     }
   }
 `;

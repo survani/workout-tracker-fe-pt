@@ -79,8 +79,7 @@ margin-bottom: 40%;
   }
 `;
 
-export const ShareLabel = styled.label`
-`;
+export const ShareLabel = styled.label``;
 
 export const ButtonContainer = styled.div`
   display: flex;

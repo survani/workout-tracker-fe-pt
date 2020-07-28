@@ -9,7 +9,7 @@ import ProfileSidebar from "./profilesidebar/ProfileSidebar";
 const Profile = () => {
   const [userInfo, setUserInfo] = useState({});
 
- const getUserInfo = () => {
+  const getUserInfo = () => {
     //provides the info for the specific user that is logged in.
     const { subject } = decode(localStorage.getItem("token"));
     axiosWithAuth()
@@ -28,12 +28,12 @@ const Profile = () => {
   }, []);
 
   return (
-    <ProfileContext.Provider value={{ userInfo, setUserInfo}}>
+    <ProfileContext.Provider value={{ userInfo, setUserInfo }}>
       <NavigationBar />
       <ProfileNav />
       <ProfileSidebar />
     </ProfileContext.Provider>
   );
-}
+};
 
 export default Profile;

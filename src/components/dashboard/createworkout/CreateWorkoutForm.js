@@ -66,7 +66,7 @@ export const WorkoutForm = () => {
 
   return (
     <>
-        <NavigationBar />
+      <NavigationBar />
       <Form>
         <form onSubmit={onSubmit}>
           <TitleContainer>
