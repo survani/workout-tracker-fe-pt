@@ -41,6 +41,19 @@ export const InputContainer = styled.div`
   margin-bottom: 5%;
 `;
 
+export const Select = styled.select`
+  width: 102%;
+  height: 25px;
+`;
+export const SelectFont = styled.option`
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  color: #1d2026;
+  width: 100%;
+`;
 export const Input = styled.input`
   width: 100%;
   height: 25px;
