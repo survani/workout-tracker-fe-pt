@@ -12,6 +12,7 @@ import Profile from "./components/profile/Profile";
 import LandingPage from "./components/landingpage/LandingPage";
 import ViewableWorkouts from "./components/dashboard/workouts/ViewableWorkouts";
 import ProfileForm from "./components/profile/form/ProfileForm";
+import { NutritionForm } from "./components/dashboard/createnutrition/NutritionForm";
 
 function App() {
   return (
@@ -40,6 +41,10 @@ function App() {
 
           <ProtectedRoute path="/createworkout">
             <WorkoutForm />
+          </ProtectedRoute>
+
+          <ProtectedRoute path="/createnutrition">
+            <NutritionForm />
           </ProtectedRoute>
 
           <ProtectedRoute path="/profile">

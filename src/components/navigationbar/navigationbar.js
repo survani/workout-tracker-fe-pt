@@ -21,6 +21,7 @@ const NavigationBar = () => {
         <NavLinks to="/dashboard">Dashboard</NavLinks>
         <NavLinks to="/profile">Profile</NavLinks>
         <NavLinks to="/createworkout">Create a Workout</NavLinks>
+        <NavLinks to="/createnutrition">Create a Diet Plan</NavLinks>
         <NavLinks to="/public">View Workouts</NavLinks>
         <NavLinks to="/calendar">Calendar</NavLinks>
         <NavLinks onClick={Logout} to="/">

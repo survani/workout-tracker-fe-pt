@@ -9,6 +9,8 @@ import {
   Label,
   InputFont,
   Input,
+  Select,
+  SelectFont,
   TextArea,
   ShareBox,
   ButtonContainer,
@@ -74,17 +76,20 @@ export const WorkoutForm = () => {
           </TitleContainer>
 
           <InputContainer>
-            <Label>Category</Label>
-            <InputFont>
-              <Input
-                id="category"
-                type="text"
+            <Label>
+              <Select
                 name="workout_category"
-                placeholder="Category"
-                onChange={onChange}
                 value={formValues.workout_category}
-              />
-            </InputFont>
+                onChange={onChange}
+              >
+                <SelectFont value="">Please select an category</SelectFont>
+                <SelectFont value="arms">Arms</SelectFont>
+                <SelectFont value="abs">Abs</SelectFont>
+                <SelectFont value="glutes">Glutes</SelectFont>
+                <SelectFont value="legs">Legs</SelectFont>
+                <SelectFont value="cardio">Cardio</SelectFont>
+              </Select>
+            </Label>
           </InputContainer>
 
           <InputContainer>
@@ -146,12 +151,12 @@ export const WorkoutForm = () => {
           <br />
           <ShareBox>
             <input
-              className="share-input"
+              className="private-input"
               type="checkbox"
-              name="Share Workout"
+              name="Private Workout"
               onClick={() => console.log("Clicked!")}
             />
-            <ShareLabel>Share Workout</ShareLabel>
+            <ShareLabel>Private</ShareLabel>
           </ShareBox>
           <ButtonContainer>
             <Button type="submit">Submit</Button>
