@@ -60,3 +60,9 @@ export const UserName = styled.p`
 export const Bio = styled.p`
   font-size: 14px;
 `;
+
+export const Links = styled.a`
+  color: #277fe5;
+  text-decoration: none;
+  font-weight: 600;
+`;
