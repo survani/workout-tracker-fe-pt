@@ -13,6 +13,7 @@ import LandingPage from "./components/landingpage/LandingPage";
 import ViewableWorkouts from "./components/dashboard/workouts/ViewableWorkouts";
 import ProfileForm from "./components/profile/form/ProfileForm";
 import { NutritionForm } from "./components/dashboard/createnutrition/NutritionForm";
+import Feed from './components/feed/feed';
 
 function App() {
   return (
@@ -29,6 +30,10 @@ function App() {
 
           <Route path="/login">
             <Login />
+          </Route>
+
+          <Route path="/feed">
+            <Feed />
           </Route>
 
           <ProtectedRoute path="/dashboard">
