@@ -48,7 +48,7 @@ export const ChangePhotoButton = styled.button`
   font-weight: bold;
   color: white;
   font-family: Montserrat;
-  margin-top: 8rem;
+  margin: 5rem 0 1rem 0;
 `;
 
 export const UserName = styled.p`
@@ -59,4 +59,10 @@ export const UserName = styled.p`
 
 export const Bio = styled.p`
   font-size: 14px;
+`;
+
+export const Links = styled.a`
+  color: #277fe5;
+  text-decoration: none;
+  font-weight: 600;
 `;
