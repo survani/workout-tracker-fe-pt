@@ -13,7 +13,9 @@ import LandingPage from "./components/landingpage/LandingPage";
 import ViewableWorkouts from "./components/dashboard/workouts/ViewableWorkouts";
 import ProfileForm from "./components/profile/form/ProfileForm";
 import { NutritionForm } from "./components/dashboard/createnutrition/NutritionForm";
-import Diets from "./components/dashboard/diets/Diets";
+import Diets from "./components/dashboard/diets/diets";
+import Feed from './components/feed/feed';
+import HeadFeed from "./components/feed/feedcomponents/HeadFeed";
 
 function App() {
   return (
@@ -31,6 +33,12 @@ function App() {
           <Route path="/login">
             <Login />
           </Route>
+
+          <Route exact path="/feed">
+            <Feed />
+          </Route>
+
+          <Route exact path="/feed/:id" component={HeadFeed} />
 
           <ProtectedRoute path="/dashboard">
             <Dashboard />
