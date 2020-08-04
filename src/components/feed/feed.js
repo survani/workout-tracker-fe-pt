@@ -1,8 +1,10 @@
 import React, { Component } from 'react'
 import Axios from 'axios';
-import styled from "styled-components";
 import MainContainer from './feedcomponents/MainContainer';
 import CreateComment from './CreateComment';
+import NavigationBar from '../navigationbar/navigationbar';
+import {FeedBox, Wrapper} from './style';
+
 
 export default class feed extends Component {
     constructor(props){
@@ -13,8 +15,6 @@ export default class feed extends Component {
             showCreateComment: false,
             id: 0
         }
-
-        this.entity_id = React.createRef();
     }
 
     getFeed(){
@@ -40,7 +40,7 @@ export default class feed extends Component {
     produceFeed(){
         let buffer = [];
         this.state.feed.forEach(obj =>{
-            buffer.push(<MainContainer obj={obj} state={this.state} setState={this.setState.bind(this)} id={this.entity_id} />)
+            buffer.push(<MainContainer obj={obj} state={this.state} setState={this.setState.bind(this)} />)
         })
         return buffer;
     }
@@ -51,20 +51,13 @@ export default class feed extends Component {
     
     render() {
         return (
-            <>
+            <Wrapper>
+                <NavigationBar />
                 {this.state.showCreateComment ? <CreateComment state={this.state} setState={this.setState.bind(this)} id={this.state.id} /> : null }
                 <FeedBox>
                     {this.produceFeed()}
                 </FeedBox>
-            </>
+            </Wrapper>
         )
     }
 }
-
-const FeedBox = styled.div`
-    display: flex;
-    flex-wrap:wrap;
-    justify-content: space-around;
-    width: 50%;
-    margin: 0 auto;
-`

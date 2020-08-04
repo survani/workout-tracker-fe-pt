@@ -17,5 +17,5 @@ it("Checks if the text Sign up is present", () => {
   );
 
   const element = wrapper.getAllByText(/Sign Up/i);
-  expect(element.length).ToBe(2);
+  expect(element.length).toEqual(2);
 });

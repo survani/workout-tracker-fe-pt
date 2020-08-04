@@ -20,6 +20,7 @@ const NavigationBar = () => {
       <Nav>
         <NavLinks to="/dashboard">Dashboard</NavLinks>
         <NavLinks to="/profile">Profile</NavLinks>
+        <NavLinks to="/feed">Feed</NavLinks>
         <NavLinks to="/createworkout">Create a Workout</NavLinks>
         <NavLinks to="/createnutrition">Create a Diet Plan</NavLinks>
         <NavLinks to="/public">View Workouts</NavLinks>

@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect } from 'react'
 import Comments from './Comments';
 import { getComments } from './getComments';
@@ -5,11 +6,13 @@ import Workout from './workout';
 import Routine from './routine';
 import Diet from './diet';
 import Mealplan from './mealplan';
-import styled from "styled-components";
+import CommentHead from './CommentHead';
 import Axios from 'axios';
 import icon from '../../../assets/feed/icon.svg'
 import { axiosWithAuth } from '../../authentication/axiosWithAuth';
 import {decode} from 'jsonwebtoken'
+import {Ico, Name, Container, Title} from '../style';
+
 
 const types = {
     WORKOUT: 1,
@@ -28,7 +31,6 @@ export default function MainContainer(props) {
     const [likes, setLikes] = useState();
 
     useEffect(() => {
-        console.log(props.obj.entity_id);
         getCommentCount(props.obj.entity_id)
         getLikes();
     }, [])
@@ -43,6 +45,8 @@ export default function MainContainer(props) {
                 return(<Diet key={obj.entity_id} data={obj} />)
             case types.MEALPLAN:
                 return(<Mealplan key={obj.entity_id} data={obj} />)
+            case types.COMMENT:
+                return(<CommentHead key={obj.entity_id} data={obj} />)
             default:
                     console.log('problem with the displaying feeds')
                 break;
@@ -76,7 +80,6 @@ export default function MainContainer(props) {
 
     const getLikes = async() =>{
         axiosWithAuth().get(`api/likes/post/${props.obj.entity_id}`).then(res =>{
-            console.log(res);
             setLikes(res.data.message);
         })
         .catch(err =>{
@@ -87,6 +90,7 @@ export default function MainContainer(props) {
     const like = async() =>{
         console.log(likes);
         let isLiked = false;
+        // eslint-disable-next-line array-callback-return
         await likes.map(res =>{
             if(decode(localStorage.getItem('token')).id === res.id){
                 isLiked = true;
@@ -119,7 +123,9 @@ export default function MainContainer(props) {
                         <Ico src={icon} alt='icon' />
                         <Name>{props.obj.user.username}</Name>
                     </Title>
-                    {sort(props.obj)}
+                    <div>
+                        {sort(props.obj)}
+                    </div>
                 </div>
                 <button onClick={() => createComment()}> {`${count}`} Comment </button>
                 <button onClick={() => like()}> {likes === undefined ? "" : likes.length} Likes </button>
@@ -136,28 +142,3 @@ export default function MainContainer(props) {
         </Container>
     )
 }
-
-const Container = styled.div`
-    width: 100%;
-    cursor: pointer;
-    border: 1px solid black;
-    border-bottom: 0px;
-    h1 {
-            text-align:left;
-            text-transform:capitalize;
-    }
-`
-
-const Ico = styled.img`
-    width: 25px;
-    height: 25px;
-`
-
-const Name = styled.h1`
-    padding-left: .5em;
-`
-
-const Title = styled.div`
-    display: flex;
-    align-items:center;
-`

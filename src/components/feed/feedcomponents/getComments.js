@@ -4,7 +4,6 @@ export async function getComments(entity_id){
     let data;
     await axios.get(`https://frozen-hamlet-18508.herokuapp.com/api/comments/get/${entity_id}`)
     .then(response =>{
-        console.log(response);
         data = response;
     })
     .catch(err =>{

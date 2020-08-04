@@ -1,19 +1,22 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect } from 'react'
-import styled from 'styled-components';
 import icon from '../../../assets/feed/icon.svg'
 import Axios from 'axios';
 import {axiosWithAuth} from '../../authentication/axiosWithAuth';
 import {decode} from 'jsonwebtoken';
+import {Comment, Title, Ico, Name} from '../style';
 
 export default function Comments(props) {
 
     const [isopen, setIsOpen] = useState(false);
     const [count, setCount] = useState();
     const [likes, setLikes] = useState();
+    const [user, setUser] = useState('');
 
     useEffect(() => {
         getCommentCount(props.data.this_entity_id)
         getLikes();
+        getUserData(props.data.this_entity_id);
     }, [])
 
     const getCommentCount = async(entity_id) =>{
@@ -31,9 +34,17 @@ export default function Comments(props) {
     }
 
     const getLikes = async() =>{
-        axiosWithAuth().get(`api/likes/post/${props.obj.entity_id}`).then(res =>{
-            console.log(res);
+        axiosWithAuth().get(`api/likes/post/${props.data.this_entity_id}`).then(res =>{
             setLikes(res.data.message);
+        })
+        .catch(err =>{
+            console.log(err);
+        })
+    }
+    const getUserData = async(entity_id) =>{
+        axiosWithAuth().get(`/api/feed/user/entity/${entity_id}`)
+        .then(res =>{
+            setUser(res.data.message);
         })
         .catch(err =>{
             console.log(err);
@@ -41,15 +52,15 @@ export default function Comments(props) {
     }
 
     const like = async() =>{
-        console.log(likes);
         let isLiked = false;
+        // eslint-disable-next-line array-callback-return
         await likes.map(res =>{
             if(decode(localStorage.getItem('token')).id === res.id){
                 isLiked = true;
             }
         })
         if(isLiked){
-            axiosWithAuth().delete(`api/likes/${props.obj.entity_id}`)
+            axiosWithAuth().delete(`api/likes/${props.data.this_entity_id}`)
             .then(response =>{
                 getLikes();
             })
@@ -57,7 +68,7 @@ export default function Comments(props) {
                 console.log(err);
             })
         } else {
-            axiosWithAuth().post(`api/likes/${props.obj.entity_id}`)
+            axiosWithAuth().post(`api/likes/${props.data.this_entity_id}`)
                 .then(response =>{
                     getLikes();
                 })
@@ -68,12 +79,12 @@ export default function Comments(props) {
     }
     
     return (
-        <Comment> {console.log(props)}
+        <Comment>
             <div>
                 <div onClick={() => setIsOpen(!isopen)}>
                     <Title>
                         <Ico src={icon} alt='icon' />
-                        <Name>{props.data.user_id}</Name>
+                        <Name>{user !== '' ? user.username : ''}</Name>
                     </Title>
                     <p>{props.data.comment_data}</p>
                 </div>
@@ -91,23 +102,3 @@ export default function Comments(props) {
         </Comment>
     )
 }
-
-const Comment = styled.div`
-    padding-left: 1em;
-    border-left: 1px solid black;
-    margin-left: 10px;
-`
-
-const Ico = styled.img`
-    width: 25px;
-    height: 25px;
-`
-
-const Name = styled.h1`
-    padding-left: .5em;
-`
-
-const Title = styled.div`
-    display: flex;
-    align-items:center;
-`
