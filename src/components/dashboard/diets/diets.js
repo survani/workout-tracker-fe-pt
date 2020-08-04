@@ -18,9 +18,9 @@ const Diets = () => {
   useEffect(() => {
     axiosWithAuth()
       .get(`https://frozen-hamlet-18508.herokuapp.com/api/diets/public`)
-      .then((response) => {
-        console.log(response.data.message);
-        setDiet(response.data.message);
+      .then((res) => {
+        console.log(res.data);
+        setDiet(res.data);
       })
       .catch((err) => {
         console.log("Error in Diets", err);
@@ -42,7 +42,7 @@ const Diets = () => {
                 <CardDescription>
                   <p>{item.food_quantity}</p>
                   <p>{item.food_measure}</p>
-                  <WorkoutLength> {item.food_calories}</WorkoutLength>
+                  <WorkoutLength> {item.food_calories} cal</WorkoutLength>
                 </CardDescription>
               </CardBody>
             );
@@ -53,4 +53,4 @@ const Diets = () => {
   );
 };
 
-export default ViewableWorkouts;
+export default Diets;

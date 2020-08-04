@@ -14,6 +14,7 @@ const Calendar = () => {
   const calendarComponentRef = React.createRef();
 
   const [workoutEvent, setWorkoutEvent] = useState([]);
+  const [foodEvent, setFoodEvent] = useState([]);
 
   const [calendarEvent, setCalendarEvent] = useState([
     {
@@ -36,8 +37,25 @@ const Calendar = () => {
         console.log("error in Calendar component", err);
       });
   };
+
+  const getFoodDates = () => {
+    const foodDates = axiosWithAuth()
+      .get(`https://frozen-hamlet-18508.herokuapp.com/api/diets`)
+      .then((res) => {
+        console.log(res.data);
+        const foodInfo = [];
+        res.data.forEach((v) => {
+          foodInfo.push({ title: v.food_name, date: v.meal_date });
+        });
+        setFoodEvent(foodInfo);
+      })
+      .catch((err) => {
+        console.log("error in Calendar component", err);
+      });
+  };
   useEffect(() => {
     getDates();
+    getFoodDates();
   }, []);
 
   const handleDateClick = (arg) => {
@@ -76,7 +94,7 @@ const Calendar = () => {
             }}
             plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
             ref={calendarComponentRef}
-            events={workoutEvent}
+            events={(workoutEvent, foodEvent)}
             dateClick={handleDateClick}
           />
         </div>

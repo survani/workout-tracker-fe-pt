@@ -9,7 +9,8 @@ import {
   Container,
   FormContainer,
   ProfileAside,
-  UserName, UsernameContainer,
+  UserName,
+  UsernameContainer,
 } from "./style";
 import VerifiedUser from "../verifieduser/VerifiedUser";
 
