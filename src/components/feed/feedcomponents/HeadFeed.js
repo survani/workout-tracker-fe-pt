@@ -22,6 +22,7 @@ export default class HeadFeed extends Component {
     getFeed(){
         axiosWithAuth().get(`/api/comments/get/${this.props.match.params.id}`)
         .then(res =>{
+            console.log(res);
             this.setState({...this.state, feed: res.data.message})
             this.getHeadData();
         })

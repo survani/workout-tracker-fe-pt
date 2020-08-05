@@ -81,6 +81,7 @@ export default function MainContainer(props) {
     const getLikes = async() =>{
         axiosWithAuth().get(`api/likes/post/${props.obj.entity_id}`).then(res =>{
             setLikes(res.data.message);
+  
         })
         .catch(err =>{
             console.log(err);

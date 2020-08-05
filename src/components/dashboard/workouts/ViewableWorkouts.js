@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
+import { decode } from "jsonwebtoken";
 import { axiosWithAuth } from "../../authentication/axiosWithAuth";
 import {
   CardBody,
@@ -32,9 +33,9 @@ const ViewableWorkouts = () => {
       <NavigationBar />
       <MainContent>
         <CardContent>
-          {workout.map((item) => {
+          {workout.map((item, entity_id) => {
             return (
-              <CardBody key="id">
+              <CardBody key={item.entity_id}>
                 <CardTitle>{item.workout_title}</CardTitle>
                 <MediaContent>
                   <CardCategory>{item.workout_category}</CardCategory>

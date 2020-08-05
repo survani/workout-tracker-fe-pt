@@ -1,5 +1,5 @@
-import React from "react";
 import { Route, Switch } from "react-router-dom";
+import React from "react";
 
 //components
 import Register from "./components/register/register";
@@ -13,6 +13,7 @@ import LandingPage from "./components/landingpage/LandingPage";
 import ViewableWorkouts from "./components/dashboard/workouts/ViewableWorkouts";
 import ProfileForm from "./components/profile/form/ProfileForm";
 import { NutritionForm } from "./components/dashboard/createnutrition/NutritionForm";
+import Diets from "./components/dashboard/diets/diets";
 import Feed from './components/feed/feed';
 import HeadFeed from "./components/feed/feedcomponents/HeadFeed";
 import Routine from "./components/dashboard/createroutine/Routine";
@@ -47,12 +48,16 @@ function App() {
             <Dashboard />
           </ProtectedRoute>
 
-          <ProtectedRoute path="/public">
+          <ProtectedRoute path="/workouts">
             <ViewableWorkouts />
           </ProtectedRoute>
 
           <ProtectedRoute path="/createworkout">
             <WorkoutForm />
+          </ProtectedRoute>
+
+          <ProtectedRoute path="/diets">
+            <Diets />
           </ProtectedRoute>
 
           <ProtectedRoute path="/createnutrition">

@@ -83,7 +83,7 @@ export const NutritionForm = () => {
       <Form>
         <form onSubmit={onSubmit}>
           <TitleContainer>
-            <Title>Create Diet Plan</Title>
+            <Title>Create a Food Entry</Title>
           </TitleContainer>
 
           <InputContainer>
