@@ -90,6 +90,8 @@ export default function MainContainer(props) {
     const like = async() =>{
         console.log(likes);
         let isLiked = false;
+        console.log(props)
+        let number = Number(props.obj.entity_id)
         // eslint-disable-next-line array-callback-return
         await likes.map(res =>{
             if(decode(localStorage.getItem('token')).id === res.id){
@@ -97,16 +99,22 @@ export default function MainContainer(props) {
             }
         })
         if(isLiked){
-            axiosWithAuth().delete(`api/likes/${props.obj.entity_id}`)
+            axiosWithAuth().delete(`api/likes/${number}`)
             .then(response =>{
+
+                console.log(props.obj)
+                console.log('Remove: ');
+                console.log(response);
                 getLikes();
             })
             .catch(err =>{
                 console.log(err);
             })
         } else {
-            axiosWithAuth().post(`api/likes/${props.obj.entity_id}`)
+            axiosWithAuth().post(`api/likes/${number}`)
                 .then(response =>{
+                    console.log('Add: ');
+                    console.log(response);
                     getLikes();
                 })
                 .catch(err =>{

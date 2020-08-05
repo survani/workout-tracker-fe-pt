@@ -15,6 +15,7 @@ import ProfileForm from "./components/profile/form/ProfileForm";
 import { NutritionForm } from "./components/dashboard/createnutrition/NutritionForm";
 import Feed from './components/feed/feed';
 import HeadFeed from "./components/feed/feedcomponents/HeadFeed";
+import Routine from "./components/dashboard/createroutine/Routine";
 
 function App() {
   return (
@@ -36,6 +37,9 @@ function App() {
           <Route exact path="/feed">
             <Feed />
           </Route>
+
+          <ProtectedRoute exact path="/createroutine" component={Routine}>
+          </ProtectedRoute>
 
           <Route exact path="/feed/:id" component={HeadFeed} />
 
