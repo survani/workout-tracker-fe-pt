@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { axiosWithAuth } from "../../authentication/axiosWithAuth";
 import NavigationBar from "../../navigationbar/navigationbar";
+import MobileNav from "../../mobilenav/MobileNav";
 import {
   Form,
   Title,
@@ -69,6 +70,7 @@ export const WorkoutForm = () => {
   return (
     <>
       <NavigationBar />
+      <MobileNav/>
       <Form>
         <form onSubmit={onSubmit}>
           <TitleContainer>

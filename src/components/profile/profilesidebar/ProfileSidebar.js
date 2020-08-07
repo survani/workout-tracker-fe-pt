@@ -1,5 +1,6 @@
 import React, { useContext, useState, useEffect } from "react";
-import {axiosWithAuth} from "../../authentication/axiosWithAuth";
+import axios from "axios";
+import { decode } from "jsonwebtoken";
 import ProfilePic from "../../../assets/profilepage/profilepic.svg";
 import ProfileContext from "../../../contexts/ProfileContext";
 import ProfileForm from "../form/ProfileForm";
@@ -16,32 +17,26 @@ import {
 import VerifiedUser from "../verifieduser/VerifiedUser";
 
 const ProfileSidebar = () => {
-  console.log();
   const { userInfo } = useContext(ProfileContext);
-  // const [userLikes, setUserLikes] = useState([])
+  const [userLikes, setUserLikes] = useState();
 
-  // let data;
-  //   axios.get(`https://frozen-hamlet-18508.herokuapp.com/api/comments/get/${entity_id}`)
-  //   .then(response =>{
-  //       data = response;
-  //   })
-  //   .catch(err =>{
-  //       console.log(err);
-  //   })
-    
-  //   return data;
+  const getLikes = () => {
+    const { subject } = decode(localStorage.getItem("token"));
+    axios
+    .get(`https://frozen-hamlet-18508.herokuapp.com/api/likes/user/${subject}`)
+    .then((res) => {
+      setUserLikes(res.data.message.length);
+    })
+    .catch((err) => {
+      console.log('Error in the ProfileSidebar', err);
+    })
+  }
+
+  useEffect(() => {
+    getLikes()
+  }, []);
 
 
-  // useEffect(() => {
-  //   axiosWithAuth()
-  //     .get(`https://frozen-hamlet-18508.herokuapp.com/api/likes/post/${data.this_entity_id}`)
-  //     .then((response) => {
-  //       console.log(response.data.message);
-  //     })
-  //     .catch((err) => {
-  //       console.log("Error in ViewableWorkouts", err);
-  //     });
-  // }, []);
 
   return (
     <>
@@ -53,6 +48,9 @@ const ProfileSidebar = () => {
             <UserName>{userInfo.username}</UserName>
             <VerifiedUser />
           </UsernameContainer>
+          <div>
+            <p>{userLikes} Likes</p>
+          </div>
           <Bio>{userInfo.bio}</Bio>
           <ChangePhotoButton> Change Photo </ChangePhotoButton>
           <p> Are you verified? <Links href="mailto: verifyuser@fittracker.com">Apply</Links></p>
