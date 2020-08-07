@@ -36,7 +36,7 @@ const ProfileSidebar = () => {
     getLikes()
   }, []);
 
-
+  
 
   return (
     <>
@@ -49,7 +49,7 @@ const ProfileSidebar = () => {
             <VerifiedUser />
           </UsernameContainer>
           <div>
-            <p>{userLikes} Likes</p>
+          <p>{userLikes} Likes</p>
           </div>
           <Bio>{userInfo.bio}</Bio>
           <ChangePhotoButton> Change Photo </ChangePhotoButton>
