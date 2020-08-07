@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-// All form styles
+// All profileform styles
 
 export const FormContainer = styled.div`
   @media (min-width: 768px) {

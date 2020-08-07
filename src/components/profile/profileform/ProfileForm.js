@@ -48,7 +48,7 @@ const ProfileForm = () => {
     e.preventDefault();
     setEditProfile({ ...editProfile, [e.target.name]: e.target.value });
   };
-  const onSubmit = (e) => {
+  const onSubmit = () => {
     editProfileInfo();
   };
 
