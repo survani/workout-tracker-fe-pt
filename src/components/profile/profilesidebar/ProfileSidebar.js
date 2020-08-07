@@ -17,6 +17,7 @@ import {
 import VerifiedUser from "../verifieduser/VerifiedUser";
 
 const ProfileSidebar = () => {
+  console.log();
   const { userInfo } = useContext(ProfileContext);
   const [userLikes, setUserLikes] = useState();
 
