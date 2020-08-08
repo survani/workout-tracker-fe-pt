@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, {useContext, useEffect, useState} from "react";
 import ProfilePic from "../../../assets/profilepage/profilepic.svg";
 import ProfileContext from "../../../contexts/ProfileContext";
 import ProfileForm from "../profileform/ProfileForm";
@@ -13,10 +13,30 @@ import {
   UsernameContainer,
 } from "./style";
 import VerifiedUser from "../verifieduser/VerifiedUser";
+import {decode} from "jsonwebtoken";
+import axios from "axios";
 
 const ProfileSidebar = () => {
   const { userInfo } = useContext(ProfileContext);
-  
+  const [userLikes, setUserLikes] = useState();
+
+  const getLikes = () => {
+    const { subject } = decode(localStorage.getItem("token"));
+    axios
+        .get(`https://frozen-hamlet-18508.herokuapp.com/api/likes/user/${subject}`)
+        .then((res) => {
+          setUserLikes(res.data.message.length);
+        })
+        .catch((err) => {
+          console.log('Error in the ProfileSidebar', err);
+        })
+  }
+
+  useEffect(() => {
+    getLikes()
+  }, []);
+
+
   return (
     <>
       <Container>
