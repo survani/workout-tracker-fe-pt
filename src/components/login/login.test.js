@@ -7,12 +7,41 @@ import * as rtl from "@testing-library/react";
 import MutationObserver from "mutation-observer";
 global.MutationObserver = MutationObserver;
 
-it("Checks if the text Email is present", () => {
+it("Checks if the text email is present", () => {
   const wrapper = rtl.render(
     <BrowserRouter>
       <Login />
     </BrowserRouter>
   );
-  const element = wrapper.getByText(/Email/i);
-  expect(element).toBeInTheDocument();
+  const email = wrapper.getByText(/Email/i);
+  expect(email).toBeInTheDocument();
+});
+
+it("Checks if the text password is present", () => {
+  const wrapper = rtl.render(
+    <BrowserRouter>
+      <Login />
+    </BrowserRouter>
+  );
+  const password = wrapper.getByText(/Password/i);
+  expect(password).toBeInTheDocument();
+});
+
+it("Checks if the text Login is present", () => {
+  const wrapper = rtl.render(
+    <BrowserRouter>
+      <Login />
+    </BrowserRouter>
+  );
+  const password = wrapper.getByText(/Login/i);
+});
+
+
+it("Checks if the text Sign In is present", () => {
+  const wrapper = rtl.render(
+    <BrowserRouter>
+      <Login />
+    </BrowserRouter>
+  );
+  const password = wrapper.getByText(/Sign In/i);
 });
