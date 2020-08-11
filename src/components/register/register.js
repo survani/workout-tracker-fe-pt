@@ -61,7 +61,7 @@ export default function Register() {
         <SignUpImage src={Activity} />
         <Form onSubmit={handleSubmit(onSubmit)}>
           <Title> Sign Up </Title>
-          <Label htmlFor="password"> Username </Label>
+          <Label htmlFor="password" data-testid="test"> Username </Label>
           <Input
             type="text"
             name="username"

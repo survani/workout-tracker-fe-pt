@@ -37,7 +37,7 @@ const Diets = () => {
               <CardBody key="id">
                 <CardTitle>{item.food_name}</CardTitle>
                 <MediaContent>
-                  <CardCategory>{item.meal_category}</CardCategory>
+                  <CardCategory data-testid="test">{item.meal_category}</CardCategory>
                 </MediaContent>
                 <CardDescription>
                   <p>{item.food_quantity}</p>

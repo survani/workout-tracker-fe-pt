@@ -1,6 +1,7 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
 import NavigationBar from "../navigationbar/navigationbar";
+import MobileNav from "../mobilenav/MobileNav";
 import {
   DashboardAlignment,
   DashboardButtonText,
@@ -16,7 +17,8 @@ const Dashboard = () => {
 
   return (
     <div>
-      <div>
+      <MobileNav />
+       <div>
         <NavigationBar />
         <WelcomeDashboard />
       </div>
@@ -27,7 +29,7 @@ const Dashboard = () => {
             Fit<LogoText>Tracker</LogoText>
           </Logo>
         </LogoContainer>
-        <MobileButton>
+        {/* <MobileButton>
           <DashboardButtonText
             type="submit"
             className="dashboard_btn"
@@ -70,10 +72,10 @@ const Dashboard = () => {
           >
             Change settings
           </DashboardButtonText>
-        </MobileButton>
+        </MobileButton> */}
       </DashboardAlignment>
-    </div>
+      </div>
   );
-};
+}; 
 
 export default Dashboard;

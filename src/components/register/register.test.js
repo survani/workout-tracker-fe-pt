@@ -19,3 +19,24 @@ it("Checks if the text Sign up is present", () => {
   const element = wrapper.getAllByText(/Sign Up/i);
   expect(element.length).toEqual(2);
 });
+
+test("Render the Username label", async() => {
+  const wrapper = rtl.render(<BrowserRouter><Register /></BrowserRouter>);
+
+  const username = await wrapper.getByText(/username/i);
+  expect(username).toBeVisible();
+});
+
+test("Render the Email label", async() => {
+  const wrapper = rtl.render(<BrowserRouter><Register /></BrowserRouter>);
+
+  const email = await wrapper.getByText(/email/i);
+  expect(email).toBeVisible();
+});
+
+test("Render the Password label", async() => {
+  const wrapper = rtl.render(<BrowserRouter><Register /></BrowserRouter>);
+
+  const password = await wrapper.getByText(/password/i);
+  expect(password).toBeVisible();
+});
