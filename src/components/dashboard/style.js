@@ -101,7 +101,7 @@ export const NavLinks = styled(NavLink)`
       color: #277fe5;
       font-weight: 800;
     }
-    :nth-child(6) {
+    :nth-child(7) {
       margin-top: 3rem;
     }
   }
