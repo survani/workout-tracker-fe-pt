@@ -5,6 +5,7 @@ import ProfileSidebar from "./profilesidebar/ProfileSidebar";
 import { decode } from "jsonwebtoken";
 import { axiosWithAuth } from "../authentication/axiosWithAuth";
 import ProfileContext from "../../contexts/ProfileContext";
+import MobileNav from "../mobilenav/MobileNav";
 
 const Profile = () => {
   const [userInfo, setUserInfo] = useState({});
@@ -30,6 +31,7 @@ const Profile = () => {
   return (
     <>
       <ProfileContext.Provider value={{ userInfo, setUserInfo }}>
+        <MobileNav />
         <NavigationBar />
         <ProfileNav />
         <ProfileSidebar />

@@ -1,4 +1,4 @@
-import React, {useContext, useEffect, useState} from "react";
+import React, { useContext, useEffect, useState } from "react";
 import ProfilePic from "../../../assets/profilepage/profilepic.svg";
 import ProfileContext from "../../../contexts/ProfileContext";
 import ProfileForm from "../profileform/ProfileForm";
@@ -13,7 +13,7 @@ import {
   UsernameContainer,
 } from "./style";
 import VerifiedUser from "../verifieduser/VerifiedUser";
-import {decode} from "jsonwebtoken";
+import { decode } from "jsonwebtoken";
 import axios from "axios";
 
 const ProfileSidebar = () => {
@@ -23,19 +23,20 @@ const ProfileSidebar = () => {
   const getLikes = () => {
     const { subject } = decode(localStorage.getItem("token"));
     axios
-        .get(`https://frozen-hamlet-18508.herokuapp.com/api/likes/user/${subject}`)
-        .then((res) => {
-          setUserLikes(res.data.message.length);
-        })
-        .catch((err) => {
-          console.log('Error in the ProfileSidebar', err);
-        })
-  }
+      .get(
+        `https://frozen-hamlet-18508.herokuapp.com/api/likes/user/${subject}`
+      )
+      .then((res) => {
+        setUserLikes(res.data.message.length);
+      })
+      .catch((err) => {
+        console.log("Error in the ProfileSidebar", err);
+      });
+  };
 
   useEffect(() => {
-    getLikes()
+    getLikes();
   }, []);
-
 
   return (
     <>
@@ -48,7 +49,7 @@ const ProfileSidebar = () => {
             <VerifiedUser />
           </UsernameContainer>
           <div>
-          <p>{userLikes} Likes</p>
+            <p>{userLikes} Likes</p>
           </div>
           <Bio>{userInfo.bio}</Bio>
           <ChangePhotoButton> Change Photo </ChangePhotoButton>
