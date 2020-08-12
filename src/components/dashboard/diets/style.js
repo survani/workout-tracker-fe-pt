@@ -1,7 +1,9 @@
 import styled from "styled-components";
 
 //Main Styles
-export const MainContent = styled.div``;
+export const MainContent = styled.div`
+
+`;
 
 // Header styles
 export const Header = styled.div`
@@ -20,21 +22,24 @@ export const CardContent = styled.section`
   flex-direction: column;
   align-items: center;
   @media (min-width: 768px) {
-    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     padding: 2rem;
   }
 `;
 
+
 export const CardBody = styled.div`
   background: white;
   width: 300px;
-  margin-bottom: 15px;
+  margin-top: 30%;
+  // margin-bottom: 15px;
   border-radius: 5px;
   @media (min-width: 768px) {
     margin-right: 10px;
     align-self: normal;
+    margin-top: 0%;
+    margin-bottom: 2%;
   }
 `;
 export const MediaContent = styled.div`
@@ -74,4 +79,11 @@ export const WorkoutLength = styled.p`
   padding: 5px;
   margin-left: 30px;
   color: white;
+`;
+
+//MobileNav
+export const NavCircle =styled.div`
+@media (min-width: 768px) {
+  display: none;
+}
 `;

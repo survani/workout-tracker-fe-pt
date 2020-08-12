@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 // Upper Navigation
 
@@ -47,12 +48,20 @@ export const SubNav = styled.nav`
   }
 `;
 
-export const Links = styled.a`
+export const Links = styled(Link)`
   @media (min-width: 768px) {
     margin-left: 3rem;
     line-height: 50px;
     font-size: 18px;
     font-weight: 500;
+    color: black;
+    text-decoration: none;
+    &:hover {
+      color: #277fe5;
+      border-bottom: 2px solid #277fe5;
+      padding-bottom: 0.9rem;
+    }
+
   }
 `;
 

@@ -1,14 +1,15 @@
-import React, { useState, useEffect } from "react";
-import ProfileContext from "../../contexts/ProfileContext";
-import { axiosWithAuth } from "../authentication/axiosWithAuth";
-import { decode } from "jsonwebtoken";
+import React, { useEffect, useState } from "react";
 import NavigationBar from "../navigationbar/navigationbar";
 import ProfileNav from "./profilenav/ProfileNav";
 import ProfileSidebar from "./profilesidebar/ProfileSidebar";
+import { decode } from "jsonwebtoken";
+import { axiosWithAuth } from "../authentication/axiosWithAuth";
+import ProfileContext from "../../contexts/ProfileContext";
 
 const Profile = () => {
   const [userInfo, setUserInfo] = useState({});
 
+  console.log("this run next");
   const getUserInfo = () => {
     //provides the info for the specific user that is logged in.
     const { subject } = decode(localStorage.getItem("token"));
@@ -26,13 +27,14 @@ const Profile = () => {
   useEffect(() => {
     getUserInfo();
   }, []);
-
   return (
-    <ProfileContext.Provider value={{ userInfo, setUserInfo }}>
-      <NavigationBar />
-      <ProfileNav />
-      <ProfileSidebar />
-    </ProfileContext.Provider>
+    <>
+      <ProfileContext.Provider value={{ userInfo, setUserInfo }}>
+        <NavigationBar />
+        <ProfileNav />
+        <ProfileSidebar />
+      </ProfileContext.Provider>
+    </>
   );
 };
 

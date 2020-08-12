@@ -1,43 +1,41 @@
-import React, { useContext, useState, useEffect } from "react";
-import axios from "axios";
-import { decode } from "jsonwebtoken";
+import React, {useContext, useEffect, useState} from "react";
 import ProfilePic from "../../../assets/profilepage/profilepic.svg";
 import ProfileContext from "../../../contexts/ProfileContext";
-import ProfileForm from "../form/ProfileForm";
+import ProfileForm from "../profileform/ProfileForm";
 import {
   AsideTitle,
   Bio,
   ChangePhotoButton,
   Container,
-  FormContainer, Links,
+  FormContainer,
   ProfileAside,
   UserName,
   UsernameContainer,
 } from "./style";
 import VerifiedUser from "../verifieduser/VerifiedUser";
+import {decode} from "jsonwebtoken";
+import axios from "axios";
 
 const ProfileSidebar = () => {
-  console.log();
   const { userInfo } = useContext(ProfileContext);
   const [userLikes, setUserLikes] = useState();
 
   const getLikes = () => {
     const { subject } = decode(localStorage.getItem("token"));
     axios
-    .get(`https://frozen-hamlet-18508.herokuapp.com/api/likes/user/${subject}`)
-    .then((res) => {
-      setUserLikes(res.data.message.length);
-    })
-    .catch((err) => {
-      console.log('Error in the ProfileSidebar', err);
-    })
+        .get(`https://frozen-hamlet-18508.herokuapp.com/api/likes/user/${subject}`)
+        .then((res) => {
+          setUserLikes(res.data.message.length);
+        })
+        .catch((err) => {
+          console.log('Error in the ProfileSidebar', err);
+        })
   }
 
   useEffect(() => {
     getLikes()
   }, []);
 
-  
 
   return (
     <>
@@ -54,7 +52,6 @@ const ProfileSidebar = () => {
           </div>
           <Bio>{userInfo.bio}</Bio>
           <ChangePhotoButton> Change Photo </ChangePhotoButton>
-          <p> Are you verified? <Links href="mailto: verifyuser@fittracker.com">Apply</Links></p>
         </ProfileAside>
         <FormContainer>
           <ProfileForm />

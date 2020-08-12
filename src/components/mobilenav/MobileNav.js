@@ -14,6 +14,7 @@ import { NavLink } from "react-router-dom";
 const MobileNav = () => {
   
   return (
+    <div class="container">
     <section class="menu menu--circle">
   <input type="checkbox" id="menu__active"/>
   <label for="menu__active" class="menu__active">
@@ -31,7 +32,6 @@ const MobileNav = () => {
           <div class="placeholder">
             <div class="upside">
                 <NavLink to="/dashboard"><img src={Dashboard} class="button"/></NavLink>
-              {/* <a href="https://codepen.io/logrithumn" class="button"><i class="fa fa-user"></i></a> */}
             </div>
           </div>
         </li>
@@ -39,7 +39,6 @@ const MobileNav = () => {
           <div class="placeholder">
             <div class="upside">
             <NavLink to="/diets"><img src={Food} class="button"/></NavLink>
-              {/* <a href="#" class="button"><i class="fa fa-cog"></i></a> */}
             </div>
           </div>
         </li>
@@ -54,7 +53,6 @@ const MobileNav = () => {
           <div class="placeholder">
             <div class="upside">
             <NavLink to="/logout"><img src={Logout} class="button"/></NavLink>
-              {/* <a href="#" class="button"><i class="fa fa-commenting"></i></a> */}
             </div>
           </div>
         </li>
@@ -62,7 +60,6 @@ const MobileNav = () => {
           <div class="placeholder">
             <div class="upside">
             <NavLink to="/createworkout"><img src={WorkoutForm} class="button"/></NavLink>
-              {/* <a href="#" class="button"><i class="fa fa-trash" aria-hidden="true"></i></a> */}
             </div>
           </div>
         </li>
@@ -70,7 +67,6 @@ const MobileNav = () => {
           <div class="placeholder">
             <div class="upside">
             <NavLink to="/createnutrition"><img src={NutritionForm} class="button"/></NavLink>
-              {/* <a href="#" class="button"><i class="fa fa-battery-4"></i></a> */}
             </div>
           </div>
         </li>
@@ -78,7 +74,6 @@ const MobileNav = () => {
           <div class="placeholder">
             <div class="upside">
             <NavLink to="/calendar"><img src={Calendar} class="button"/></NavLink>
-              {/* <a href="#" class="button"><i class="fa fa-calendar"></i></a> */}
             </div>
           </div>
         </li>
@@ -86,7 +81,6 @@ const MobileNav = () => {
           <div class="placeholder">
             <div class="upside">
             <NavLink to="/feed"><img src={Feed} class="button"/></NavLink>
-              {/* <a href="#" class="button"><i class="fa fa-cloud"></i></a> */}
             </div>
           </div>
         </li>
@@ -94,7 +88,6 @@ const MobileNav = () => {
           <div class="placeholder">
             <div class="upside">
             <NavLink to="/workouts"><img src={Workout} class="button"/></NavLink>
-              {/* <a href="#" class="button"><i class="fa fa-wifi"></i></a> */}
             </div>
           </div>
         </li>
@@ -102,7 +95,6 @@ const MobileNav = () => {
           <div class="placeholder">
             <div class="upside">
             <NavLink to="/profile"><img src={Profile} class="button"/></NavLink>
-              {/* <a href="#" class="button"><i class="fa fa-envelope-o"></i></a> */}
             </div>
           </div>
         </li>
@@ -119,6 +111,7 @@ const MobileNav = () => {
     </div>
   </label>
 </section>
+</div>
 
   );
 };

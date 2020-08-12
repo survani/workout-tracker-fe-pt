@@ -32,6 +32,7 @@ export const DashboardButtonText = styled.button`
 export const LogoContainer = styled.div`
   margin-bottom: 10%;
   font-size: 3rem;
+  }
 `;
 
 export const Logo = styled.h1`
@@ -47,7 +48,19 @@ export const LogoText = styled.h1`
   color: #277fe5;
 `;
 
+export const MobileLogo = styled.div`
+@media (min-width: 768px) {
+  border: 1px solid blue;
+}
+`
+
 // --------------  Desktop  --------------
+
+export const NavCircle =styled.div`
+@media (min-width: 768px) {
+  display: none;
+}
+`;
 
 export const Dashboard = styled.section`
   display: none;

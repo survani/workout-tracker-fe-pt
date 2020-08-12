@@ -11,12 +11,14 @@ import Calendar from "./components/calendar/Calendar";
 import Profile from "./components/profile/Profile";
 import LandingPage from "./components/landingpage/LandingPage";
 import ViewableWorkouts from "./components/dashboard/workouts/ViewableWorkouts";
-import ProfileForm from "./components/profile/form/ProfileForm";
 import { NutritionForm } from "./components/dashboard/createnutrition/NutritionForm";
 import Diets from "./components/dashboard/diets/diets";
-import Feed from './components/feed/feed';
+import Feed from "./components/feed/feed";
 import HeadFeed from "./components/feed/feedcomponents/HeadFeed";
 import Routine from "./components/dashboard/createroutine/Routine";
+import AccountInformation from "./components/accountinfo/AccountInformation";
+import VerifyForm from "./components/profile/verifieduser/verifiedform/VerifyForm";
+import Review from "./components/profile/verifieduser/verifiedform/confirmation/Review";
 
 function App() {
   return (
@@ -39,8 +41,7 @@ function App() {
             <Feed />
           </Route>
 
-          <ProtectedRoute exact path="/createroutine" component={Routine}>
-          </ProtectedRoute>
+          <ProtectedRoute exact path="/createroutine" component={Routine} />
 
           <Route exact path="/feed/:id" component={HeadFeed} />
 
@@ -68,8 +69,16 @@ function App() {
             <Profile />
           </ProtectedRoute>
 
-          <ProtectedRoute path="/editprofile">
-            <ProfileForm />
+          <ProtectedRoute path="/accountinformation">
+            <AccountInformation />
+          </ProtectedRoute>
+
+          <ProtectedRoute path="/verify">
+            <VerifyForm />
+          </ProtectedRoute>
+
+          <ProtectedRoute path="/confirmation">
+            <Review />
           </ProtectedRoute>
 
           <ProtectedRoute path="/calendar">

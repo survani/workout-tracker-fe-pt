@@ -1,4 +1,4 @@
-
+  
   .icon {
     position: absolute;
     top: 70%;
@@ -33,7 +33,7 @@
   }
   .menu {
     pointer-events: none;
-    @media (min-width: 370px) {
+    @media (min-width: 768px) {
         display: none;
     }
   }
@@ -44,6 +44,9 @@
     height: 243.33333333333334px;
     /* background-color: #392338; */
     overflow: hidden;
+    @media (min-width: 768px) {
+      display: none;
+    }
   }
   .menu__active {
     position: relative;
@@ -265,4 +268,6 @@
   #menu__active:checked ~ label #degree--up-1:checked ~ .menu__listings ~ .menu__arrow--top label[for="degree--up-2"] {
     display: block;
   }
+
+
   
