@@ -33,10 +33,8 @@
   }
   .menu {
     pointer-events: none;
-    @media (min-width: 370px) {
-        display: none;
-    }
   }
+
   .menu--circle {
     position: absolute;
     z-index: 13;
@@ -45,6 +43,13 @@
     /* background-color: #392338; */
     overflow: hidden;
   }
+
+  @media (min-width: 768px) {
+    .menu--circle {
+      display: none;
+    }
+  }
+
   .menu__active {
     position: relative;
   }

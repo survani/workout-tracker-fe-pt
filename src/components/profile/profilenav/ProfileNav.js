@@ -1,9 +1,18 @@
 import React from "react";
-import {Input, Links, Logo, LogoText, Navigation, RightSide, SearchIcons, SubNav} from "./style";
+import {
+  Avatar,
+  Input,
+  Links,
+  Logo,
+  LogoText,
+  Navigation,
+  RightSide,
+  SearchIcons,
+  SubNav,
+} from "./style";
 import DefaultAvatar from "../../../assets/profilepage/defaultavatar.svg";
 import SearchIcon from "../../../assets/profilepage/searchicon.svg";
 const ProfileNav = () => {
-
   return (
     <>
       <Navigation>
@@ -11,10 +20,10 @@ const ProfileNav = () => {
           <LogoText>Profile</LogoText>
         </Logo>
         <RightSide>
-          <Input type="text" placeholder="Type something..."/>
-            <SearchIcons src={SearchIcon}/>
+          <Input type="text" placeholder="Type something..." />
+          <SearchIcons src={SearchIcon} />
 
-          <img src={DefaultAvatar} alt="Profile Avatar" />
+          <Avatar src={DefaultAvatar} alt="Profile Avatar" />
         </RightSide>
       </Navigation>
       <SubNav>

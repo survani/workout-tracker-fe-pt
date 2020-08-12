@@ -8,7 +8,7 @@ export const FormContainer = styled.div`
   }
 `;
 
-export const FormHeader = styled.form`
+export const FormHeader = styled.div`
   @media (min-width: 768px) {
     display: flex;
     align-items: baseline;
@@ -29,22 +29,32 @@ export const InnerForm = styled.div`
 `;
 
 export const PageTitle = styled.h1`
+  font-size: 20px;
+  font-weight: 500;
+  margin: 3rem 0rem 3.5rem 0rem;
+  text-align: center;
+  :nth-child(3) {
+    margin-bottom: 2rem;
+  }
   @media (min-width: 768px) {
     font-size: 24px;
-    font-weight: 500;
-    margin: 3rem 0rem 3.5rem 0rem;
+    text-align: start;
+    :nth-child(3) {
+      margin-bottom: 3.5rem;
+    }
   }
 `;
 
 export const Input = styled.input`
   border: none;
+  width: 100%;
+  height: 40px;
+  margin-top: 10px;
+  border-radius: 5px;
+  :nth-child(5) {
+    margin-bottom: 10rem;
+  }
   @media (min-width: 768px) {
-    width: 100%;
-    height: 40px;
-    margin-top: 10px;
-    border-radius: 5px;
-    }
-    
   }
 `;
 
@@ -55,29 +65,29 @@ export const Label = styled.label`
 `;
 
 export const ButtonMobileIntro = styled.button`
+  border: none;
+  background: #277fe5;
+  color: white;
+  font-size: 16px;
+  font-family: Montserrat;
+  font-weight: bold;
+  border-radius: 16px;
+  width: 121px;
+  height: 51px;
+  margin-right: 1rem;
+  :nth-child(1) {
+    background: white;
+    border: 2px solid #277fe5;
+    color: #277fe5;
+  }
   @media (min-width: 768px) {
-    border: none;
-    background: #277fe5;
-    color: white;
-    font-size: 16px;
-    font-family: Montserrat;
-    font-weight: bold;
-    border-radius: 16px;
-    width: 121px;
-    height: 51px;
-    margin-right: 1rem;
-    :nth-child(1) {
-      background: white;
-      border: 2px solid #277fe5;
-      color: #277fe5;
-    }
   }
 `;
 
 export const ButtonMobileContainer = styled.div`
+  margin: 1rem 0rem 3rem 0rem;
+  display: flex;
+  justify-content: center;
   @media (min-width: 768px) {
-    margin-top: 1rem;
-    display: flex;
-    justify-content: center;
   }
 `;

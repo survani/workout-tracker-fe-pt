@@ -3,30 +3,42 @@ import styled from "styled-components";
 // Profile Info Section
 
 export const Container = styled.section`
-  display: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   @media (min-width: 768px) {
     display: flex;
+    align-items: flex-start;
+    flex-direction: row;
   }
 `;
 
 export const FormContainer = styled.div`
-  width: 50%;
-  margin: 0 auto;
-  margin-top: 1.5rem;
+  display: block;
+  @media (min-width: 768px) {
+    display: block;
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 1.5rem;
+  }
 `;
 
 export const UsernameContainer = styled.div`
-display: flex;
-align-items: baseline;
+  display: flex;
+  align-items: baseline;
 `;
 
 export const ProfileAside = styled.aside`
-  border-right: 2px solid #dddddd;
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100vh;
-  padding: 1rem;
+  @media (min-width: 768px) {
+    border-right: 2px solid #dddddd;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    padding: 1rem;
+  }
 `;
 
 export const AsideTitle = styled.h3`
@@ -55,6 +67,8 @@ export const UserName = styled.p`
   font-size: 18px;
   font-weight: 500;
   margin: 1rem 0.5rem 0.7rem 0;
+  @media (min-width: 768px) {
+  }
 `;
 
 export const Bio = styled.p`
