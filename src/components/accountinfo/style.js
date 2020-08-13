@@ -5,10 +5,11 @@ export const ButtonSection = styled.section`
   flex-direction: column;
   align-items: center;
   margin-top: 10rem;
+
   @media (min-width: 768px) {
     margin-top: 5rem;
-
-      align-items: start;
+    align-items: start;
+    margin-left: 20rem;
   }
 `;
 
@@ -32,12 +33,12 @@ export const InfoButtons = styled.button`
 `;
 
 export const ApplyTextAnchor = styled.a`
-    color: #277fe5;
-    margin-top: 45px;
-    text-decoration: none;
-    &:hover {
-      font-weight: bold;
-    }
+  color: #277fe5;
+  margin-top: 45px;
+  text-decoration: none;
+  &:hover {
+    font-weight: bold;
+  }
   @media (min-width: 768px) {
   }
 `;
