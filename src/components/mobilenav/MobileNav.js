@@ -12,11 +12,15 @@ import Logout from "../../assets/mobilenav/logout.svg";
 import { NavLink } from "react-router-dom";
 
 const MobileNav = () => {
+  const Signout = () => {
+    localStorage.clear();
+  };
   
   return (
+    <div class="container">
     <section class="menu menu--circle">
   <input type="checkbox" id="menu__active"/>
-  <label for="menu__active" class="menu__active">
+  <label htmlFor="menu__active" class="menu__active">
     <div class="menu__toggle">
       <div class="icon">
         <div class="hamburger"></div>
@@ -31,7 +35,6 @@ const MobileNav = () => {
           <div class="placeholder">
             <div class="upside">
                 <NavLink to="/dashboard"><img src={Dashboard} class="button"/></NavLink>
-              {/* <a href="https://codepen.io/logrithumn" class="button"><i class="fa fa-user"></i></a> */}
             </div>
           </div>
         </li>
@@ -39,7 +42,6 @@ const MobileNav = () => {
           <div class="placeholder">
             <div class="upside">
             <NavLink to="/diets"><img src={Food} class="button"/></NavLink>
-              {/* <a href="#" class="button"><i class="fa fa-cog"></i></a> */}
             </div>
           </div>
         </li>
@@ -53,8 +55,7 @@ const MobileNav = () => {
         <li>
           <div class="placeholder">
             <div class="upside">
-            <NavLink to="/logout"><img src={Logout} class="button"/></NavLink>
-              {/* <a href="#" class="button"><i class="fa fa-commenting"></i></a> */}
+            <NavLink onClick={Signout}to="/"><img src={Logout} class="button"/></NavLink>
             </div>
           </div>
         </li>
@@ -62,7 +63,6 @@ const MobileNav = () => {
           <div class="placeholder">
             <div class="upside">
             <NavLink to="/createworkout"><img src={WorkoutForm} class="button"/></NavLink>
-              {/* <a href="#" class="button"><i class="fa fa-trash" aria-hidden="true"></i></a> */}
             </div>
           </div>
         </li>
@@ -70,7 +70,6 @@ const MobileNav = () => {
           <div class="placeholder">
             <div class="upside">
             <NavLink to="/createnutrition"><img src={NutritionForm} class="button"/></NavLink>
-              {/* <a href="#" class="button"><i class="fa fa-battery-4"></i></a> */}
             </div>
           </div>
         </li>
@@ -78,7 +77,6 @@ const MobileNav = () => {
           <div class="placeholder">
             <div class="upside">
             <NavLink to="/calendar"><img src={Calendar} class="button"/></NavLink>
-              {/* <a href="#" class="button"><i class="fa fa-calendar"></i></a> */}
             </div>
           </div>
         </li>
@@ -86,7 +84,6 @@ const MobileNav = () => {
           <div class="placeholder">
             <div class="upside">
             <NavLink to="/feed"><img src={Feed} class="button"/></NavLink>
-              {/* <a href="#" class="button"><i class="fa fa-cloud"></i></a> */}
             </div>
           </div>
         </li>
@@ -94,7 +91,6 @@ const MobileNav = () => {
           <div class="placeholder">
             <div class="upside">
             <NavLink to="/workouts"><img src={Workout} class="button"/></NavLink>
-              {/* <a href="#" class="button"><i class="fa fa-wifi"></i></a> */}
             </div>
           </div>
         </li>
@@ -102,7 +98,6 @@ const MobileNav = () => {
           <div class="placeholder">
             <div class="upside">
             <NavLink to="/profile"><img src={Profile} class="button"/></NavLink>
-              {/* <a href="#" class="button"><i class="fa fa-envelope-o"></i></a> */}
             </div>
           </div>
         </li>
@@ -111,14 +106,15 @@ const MobileNav = () => {
     <div class="menu__arrow menu__arrow--top">
       <ul>
         <li>
-          <label for="degree--up-0"><div class="arrow"></div></label>
-          <label for="degree--up-1"><div class="arrow"></div></label>
-          <label for="degree--up-2"><div class="arrow"></div></label>
+          <label htmlFor="degree--up-0"><div class="arrow"></div></label>
+          <label htmlFor="degree--up-1"><div class="arrow"></div></label>
+          <label htmlFor="degree--up-2"><div class="arrow"></div></label>
         </li>
       </ul>
     </div>
   </label>
 </section>
+</div>
 
   );
 };

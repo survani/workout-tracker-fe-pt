@@ -4,6 +4,7 @@ import NavigationBar from "../../navigationbar/navigationbar";
 import MobileNav from "../../mobilenav/MobileNav";
 import {
   Form,
+  InnerForm,
   Title,
   TitleContainer,
   InputContainer,
@@ -17,6 +18,7 @@ import {
   ButtonContainer,
   Button,
   ShareLabel,
+  NavCircle,
 } from "./style";
 
 const initialFormValue = {
@@ -69,10 +71,12 @@ export const WorkoutForm = () => {
 
   return (
     <>
+    <NavCircle>
+       <MobileNav />
+      </NavCircle>
       <NavigationBar />
-      <MobileNav/>
       <Form>
-        <form onSubmit={onSubmit}>
+        <InnerForm onSubmit={onSubmit}>
           <TitleContainer>
             <Title>Create Workout Form</Title>
           </TitleContainer>
@@ -163,7 +167,7 @@ export const WorkoutForm = () => {
           <ButtonContainer>
             <Button type="submit">Submit</Button>
           </ButtonContainer>
-        </form>
+        </InnerForm>
       </Form>
     </>
   );

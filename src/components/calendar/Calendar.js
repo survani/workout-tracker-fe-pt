@@ -4,10 +4,11 @@ import dayGridPlugin from "@fullcalendar/daygrid";
 import timeGridPlugin from "@fullcalendar/timegrid";
 import interactionPlugin from "@fullcalendar/interaction";
 import NavigationBar from "../navigationbar/navigationbar";
+import MobileNav from "../mobilenav/MobileNav";
 import "@fullcalendar/core/main.css";
 import "@fullcalendar/daygrid/main.css";
 import "@fullcalendar/timegrid/main.css";
-import { CalendarContainer } from "./style";
+import { CalendarContainer, NavCircle} from "./style";
 import { axiosWithAuth } from "../authentication/axiosWithAuth";
 
 const Calendar = () => {
@@ -76,13 +77,13 @@ const Calendar = () => {
 
   return (
     <div>
+      <NavCircle>
+       <MobileNav />
+      </NavCircle>
       <div>
         <NavigationBar />
       </div>
       <CalendarContainer>
-        <div className="calendar_main">
-          <h1 className="calendar_headline">Schedule</h1>
-        </div>
 
         <div className="calendar-container">
           <FullCalendar
