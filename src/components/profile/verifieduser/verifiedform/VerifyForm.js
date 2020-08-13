@@ -3,13 +3,13 @@ import ProfileNav from "../../profilenav/ProfileNav";
 import NavigationBar from "../../../navigationbar/navigationbar";
 import { useForm } from "react-hook-form";
 import {
-  Badge,
-  ImageContainer,
-  InformationContent,
-  InfoText,
-  InfoTitle,
-  IntroSection,
-  LeftArrowNavigate,
+    Badge, ButtonContainer,
+    ImageContainer, InfoImage,
+    InformationContent,
+    InfoText,
+    InfoTitle,
+    IntroSection,
+    LeftArrowNavigate, MainContainer,
 } from "./style";
 import LeftArrow from "../../../../assets/profilepage/leftarrow.svg";
 import CheckMark from "../../../../assets/profilepage/checkmark.svg";
@@ -25,14 +25,21 @@ import {
   PageTitle,
 } from "./style";
 import { useHistory } from "react-router-dom";
+import MobileNav from "../../../mobilenav/MobileNav";
+
 
 const VerifyForm = () => {
   const { register, errors, handleSubmit } = useForm();
   const history = useHistory();
   return (
     <>
+
+
+
+      <MobileNav/>
       <NavigationBar />
       <ProfileNav />
+      <MainContainer>
       <a href="/accountinformation">
         <LeftArrowNavigate src={LeftArrow} alt="Left Arrow" />
       </a>
@@ -54,7 +61,7 @@ const VerifyForm = () => {
           </InfoText>
         </InformationContent>
         <ImageContainer>
-          <img src={WorkoutTrainer} alt="workout trainer" />
+          <InfoImage src={WorkoutTrainer} alt="workout trainer" />
         </ImageContainer>
       </IntroSection>
       <FormContainer>
@@ -164,14 +171,19 @@ const VerifyForm = () => {
         </Form>
       </FormContainer>
       {/* Only pushes to the confirmation page... Needs further work */}
-      <ButtonMobileIntro
-        type="submit"
-        onClick={() => {
-          history.push("/confirmation");
-        }}
-      >
-        Submit Application
-      </ButtonMobileIntro>
+      <ButtonContainer>
+
+
+        <ButtonMobileIntro
+            type="submit"
+            onClick={() => {
+              history.push("/confirmation");
+            }}
+        >
+          Submit Application
+        </ButtonMobileIntro>
+      </ButtonContainer>
+      </MainContainer>
     </>
   );
 };
