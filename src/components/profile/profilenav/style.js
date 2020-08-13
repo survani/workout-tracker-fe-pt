@@ -4,12 +4,21 @@ import { Link } from "react-router-dom";
 // Upper Navigation
 
 export const Navigation = styled.nav`
-  display: none;
+  display: flex;
+  padding: 2rem;
+  justify-content: space-between;
   @media (min-width: 768px) {
     background: #277fe5;
-    display: flex;
     padding: 2rem;
-    justify-content: space-between;
+  }
+`;
+
+export const Avatar = styled.img`
+  background: #277fe5;
+  border-radius: 3rem;
+  @media (min-width: 768px) {
+    background: none;
+    border-radius: none;
   }
 `;
 
@@ -24,17 +33,19 @@ export const Logo = styled.div`
 `;
 
 export const LogoText = styled.h1`
+  display: none;
   @media (min-width: 768px) {
     font-size: 24px;
     font-weight: bold;
     color: #f6f6f6;
     margin-left: 0.5rem;
+    display: block;
   }
 `;
 
 export const RightSide = styled.div`
+  display: flex;
   @media (min-width: 768px) {
-    display: flex;
   }
 `;
 
@@ -61,13 +72,14 @@ export const Links = styled(Link)`
       border-bottom: 2px solid #277fe5;
       padding-bottom: 0.9rem;
     }
-
   }
 `;
 
 // Search Bar
 export const Input = styled.input`
+  display: none;
   @media (min-width: 768px) {
+    display: block;
     width: 414px;
     border-radius: 29px;
     background: #f6f6f6;
@@ -77,8 +89,10 @@ export const Input = styled.input`
 `;
 
 export const SearchIcons = styled.img`
+  position: relative;
+  margin-right: 1rem;
   @media (min-width: 768px) {
-    position: relative;
     right: 3rem;
+    margin-right: 0rem;
   }
 `;

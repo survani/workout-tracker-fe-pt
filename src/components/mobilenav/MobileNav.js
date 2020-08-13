@@ -12,6 +12,9 @@ import Logout from "../../assets/mobilenav/logout.svg";
 import { NavLink } from "react-router-dom";
 
 const MobileNav = () => {
+  const Signout = () => {
+    localStorage.clear();
+  };
   
   return (
     <div class="container">
@@ -52,7 +55,7 @@ const MobileNav = () => {
         <li>
           <div class="placeholder">
             <div class="upside">
-            <NavLink to="/logout"><img src={Logout} class="button"/></NavLink>
+            <NavLink onClick={Signout}to="/"><img src={Logout} class="button"/></NavLink>
             </div>
           </div>
         </li>
