@@ -11,12 +11,14 @@ import {
 import ComputerImage from "../../../../../assets/profilepage/weboncomputer.svg";
 import { ButtonContainer } from "../../../../dashboard/createnutrition/style";
 import { useHistory } from "react-router-dom";
+import MobileNav from "../../../../mobilenav/MobileNav";
 
 const Review = () => {
   const history = useHistory();
 
   return (
     <>
+      <MobileNav/>
       <NavigationBar />
       <ProfileNav />
       <ContentContainer>
