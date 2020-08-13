@@ -28,6 +28,14 @@ export const UsernameContainer = styled.div`
   align-items: baseline;
 `;
 
+export const StatContainer = styled.div`
+display: flex;
+justify-content: space-between;
+  @media (min-width: 768px) {
+
+  }
+`;
+
 export const ProfileAside = styled.aside`
   display: flex;
   flex-direction: column;

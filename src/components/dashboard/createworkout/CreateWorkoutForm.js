@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { axiosWithAuth } from "../../authentication/axiosWithAuth";
 import NavigationBar from "../../navigationbar/navigationbar";
 import MobileNav from "../../mobilenav/MobileNav";
+import House from "../../../assets/forms/house.svg";
 import {
   Form,
   InnerForm,
@@ -18,7 +19,8 @@ import {
   ButtonContainer,
   Button,
   ShareLabel,
-  NavCircle,
+  HouseImage,
+  HouseImg,
 } from "./style";
 
 const initialFormValue = {
@@ -71,11 +73,10 @@ export const WorkoutForm = () => {
 
   return (
     <>
-    <NavCircle>
-       <MobileNav />
-      </NavCircle>
+      <MobileNav />
       <NavigationBar />
       <Form>
+        <HouseImg src={House} alt="girl working out" />
         <InnerForm onSubmit={onSubmit}>
           <TitleContainer>
             <Title>Create Workout Form</Title>

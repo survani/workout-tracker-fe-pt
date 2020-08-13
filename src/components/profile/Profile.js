@@ -9,8 +9,8 @@ import MobileNav from "../mobilenav/MobileNav";
 
 const Profile = () => {
   const [userInfo, setUserInfo] = useState({});
+  const [followerCount, setFollowerCount] = useState({});
 
-  console.log("this run next");
   const getUserInfo = () => {
     //provides the info for the specific user that is logged in.
     const { subject } = decode(localStorage.getItem("token"));
@@ -25,12 +25,31 @@ const Profile = () => {
       });
   };
 
+  const getFollowerCount = () => {
+    const { subject } = decode(localStorage.getItem("token"));
+    axiosWithAuth()
+      .get(
+        `https://frozen-hamlet-18508.herokuapp.com/api/follow/following/number/${subject}`
+      )
+      .then((res) => {
+        setFollowerCount(res.data);
+        console.log("follower count: ", res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
   useEffect(() => {
     getUserInfo();
   }, []);
+
+  useEffect(() => {
+    getFollowerCount();
+  }, []);
   return (
     <>
-      <ProfileContext.Provider value={{ userInfo, setUserInfo }}>
+      <ProfileContext.Provider value={{ userInfo, setUserInfo, followerCount, setFollowerCount }}>
         <MobileNav />
         <NavigationBar />
         <ProfileNav />

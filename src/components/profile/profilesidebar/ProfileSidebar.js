@@ -8,16 +8,17 @@ import {
   ChangePhotoButton,
   Container,
   FormContainer,
-  ProfileAside,
+  ProfileAside, StatContainer,
   UserName,
   UsernameContainer,
 } from "./style";
 import VerifiedUser from "../verifieduser/VerifiedUser";
 import { decode } from "jsonwebtoken";
 import axios from "axios";
+import { CardContent } from "../../dashboard/workouts/style";
 
 const ProfileSidebar = () => {
-  const { userInfo } = useContext(ProfileContext);
+  const { userInfo, followerCount } = useContext(ProfileContext);
   const [userLikes, setUserLikes] = useState();
 
   const getLikes = () => {
@@ -48,9 +49,10 @@ const ProfileSidebar = () => {
             <UserName>{userInfo.username}</UserName>
             <VerifiedUser />
           </UsernameContainer>
-          <div>
+          <StatContainer>
             <p>{userLikes} Likes</p>
-          </div>
+            <p> {followerCount.count} Followers</p>
+          </StatContainer>
           <Bio>{userInfo.bio}</Bio>
           <ChangePhotoButton> Change Photo </ChangePhotoButton>
         </ProfileAside>

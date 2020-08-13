@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { axiosWithAuth } from "../../authentication/axiosWithAuth";
 import NavigationBar from "../../navigationbar/navigationbar";
 import MobileNav from "../../mobilenav/MobileNav";
+import Food from "../../../assets/forms/food.svg";
 import {
   Form,
   InnerForm,
@@ -17,8 +18,7 @@ import {
   ShareBox,
   ButtonContainer,
   Button,
-  ShareLabel,
-  NavCircle,
+  ShareLabel, FoodImg,
 } from "./style";
 
 const initialFormValue = {
@@ -37,7 +37,7 @@ const initialFormValue = {
 };
 
 export const NutritionForm = () => {
-  const [nutrition, setNutrition] = useState([]);
+  const [setNutrition] = useState([]);
   const [formValues, setFormValues] = useState(initialFormValue);
 
   const onChange = (e) => {
@@ -82,11 +82,10 @@ export const NutritionForm = () => {
 
   return (
     <>
-    <NavCircle>
-       <MobileNav />
-      </NavCircle>
+      <MobileNav />
       <NavigationBar />
       <Form>
+        <FoodImg src={Food}/>
         <InnerForm onSubmit={onSubmit}>
           <TitleContainer>
             <Title>Create a Food Entry</Title>
