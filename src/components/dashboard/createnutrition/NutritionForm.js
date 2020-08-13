@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { axiosWithAuth } from "../../authentication/axiosWithAuth";
 import NavigationBar from "../../navigationbar/navigationbar";
+import MobileNav from "../../mobilenav/MobileNav";
 import {
   Form,
+  InnerForm,
   Title,
   TitleContainer,
   InputContainer,
@@ -16,6 +18,7 @@ import {
   ButtonContainer,
   Button,
   ShareLabel,
+  NavCircle,
 } from "./style";
 
 const initialFormValue = {
@@ -79,9 +82,12 @@ export const NutritionForm = () => {
 
   return (
     <>
+    <NavCircle>
+       <MobileNav />
+      </NavCircle>
       <NavigationBar />
       <Form>
-        <form onSubmit={onSubmit}>
+        <InnerForm onSubmit={onSubmit}>
           <TitleContainer>
             <Title>Create a Food Entry</Title>
           </TitleContainer>
@@ -269,7 +275,7 @@ export const NutritionForm = () => {
           <ButtonContainer>
             <Button type="submit">Submit</Button>
           </ButtonContainer>
-        </form>
+        </InnerForm>
       </Form>
     </>
   );

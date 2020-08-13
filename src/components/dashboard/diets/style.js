@@ -35,6 +35,9 @@ export const CardBody = styled.div`
   margin-top: 30%;
   // margin-bottom: 15px;
   border-radius: 5px;
+  @media (min-width: 600px) {
+    margin-top: 20%;
+  }
   @media (min-width: 768px) {
     margin-right: 10px;
     align-self: normal;

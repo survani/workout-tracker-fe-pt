@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Form = styled.form`
+export const Form = styled.div`
   width: 100%;
   height: 750px;
   display: flex;
@@ -12,6 +12,16 @@ export const Form = styled.form`
     margin: 0 auto;
   }
 `;
+
+export const InnerForm = styled.form`
+  margin-top: 30%;
+  @media (min-width: 600px) {
+    margin-top: 25%;
+  }
+  @media (min-width: 768px) {
+    margin-top: 0%;
+  }
+`
 
 export const NavBar = styled.div`
   display: none;
@@ -39,11 +49,14 @@ export const InputContainer = styled.div`
   display: flex;
   flex-direction: column;
   margin-bottom: 5%;
+  width: 100%;
 `;
 
 export const Select = styled.select`
-  width: 102%;
+  width: 100%;
   height: 25px;
+  padding: 0%;
+  border: none;
 `;
 export const SelectFont = styled.option`
   font-family: Montserrat;
@@ -57,11 +70,15 @@ export const SelectFont = styled.option`
 export const Input = styled.input`
   width: 100%;
   height: 25px;
+  padding: 0%;
+  border: none;
 `;
 
 export const TextArea = styled.textarea`
   width: 100%;
   height: 50px;
+  padding: 0%;
+  border: none;
 `;
 
 export const Label = styled.label`
@@ -115,4 +132,11 @@ export const Button = styled.button`
     height: 35px;
     text-align: center;
   }
+`;
+
+//MobileNav
+export const NavCircle =styled.div`
+@media (min-width: 768px) {
+  display: none;
+}
 `;

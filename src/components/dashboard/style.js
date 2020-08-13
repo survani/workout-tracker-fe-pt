@@ -36,10 +36,13 @@ export const LogoContainer = styled.div`
 `;
 
 export const Logo = styled.h1`
-  display: flex;
-  justify-content: center;
+display: flex;
+justify-content: center;
+margin-top: 90%;
+@media (min-width: 768px) {
   font-weight: 800;
   color: #000;
+}
 `;
 
 export const LogoText = styled.h1`
@@ -57,6 +60,7 @@ export const MobileLogo = styled.div`
 // --------------  Desktop  --------------
 
 export const NavCircle =styled.div`
+display: flex;
 @media (min-width: 768px) {
   display: none;
 }

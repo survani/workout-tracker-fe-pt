@@ -17,7 +17,7 @@ const MobileNav = () => {
     <div class="container">
     <section class="menu menu--circle">
   <input type="checkbox" id="menu__active"/>
-  <label for="menu__active" class="menu__active">
+  <label htmlFor="menu__active" class="menu__active">
     <div class="menu__toggle">
       <div class="icon">
         <div class="hamburger"></div>
@@ -103,9 +103,9 @@ const MobileNav = () => {
     <div class="menu__arrow menu__arrow--top">
       <ul>
         <li>
-          <label for="degree--up-0"><div class="arrow"></div></label>
-          <label for="degree--up-1"><div class="arrow"></div></label>
-          <label for="degree--up-2"><div class="arrow"></div></label>
+          <label htmlFor="degree--up-0"><div class="arrow"></div></label>
+          <label htmlFor="degree--up-1"><div class="arrow"></div></label>
+          <label htmlFor="degree--up-2"><div class="arrow"></div></label>
         </li>
       </ul>
     </div>

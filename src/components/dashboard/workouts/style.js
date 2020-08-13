@@ -31,11 +31,17 @@ export const CardContent = styled.section`
 export const CardBody = styled.div`
   background: white;
   width: 300px;
-  margin-bottom: 15px;
+  // margin-bottom: 15px;
+  margin-top: 30%;
   border-radius: 5px;
+  @media (min-width: 600px) {
+    margin-top: 20%;
+  }
   @media (min-width: 768px) {
     margin-right: 10px;
     align-self: normal;
+    margin-top: 0%;
+    margin-bottom: 2%;
   }
 `;
 export const MediaContent = styled.div`
@@ -75,4 +81,11 @@ export const WorkoutLength = styled.p`
   padding: 5px;
   margin-left: 30px;
   color: white;
+`;
+
+//MobileNav
+export const NavCircle =styled.div`
+@media (min-width: 768px) {
+  display: none;
+}
 `;

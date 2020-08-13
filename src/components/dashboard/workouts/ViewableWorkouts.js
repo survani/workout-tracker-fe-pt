@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useContext } from "react";
 import { decode } from "jsonwebtoken";
 import { axiosWithAuth } from "../../authentication/axiosWithAuth";
+import MobileNav from "../../mobilenav/MobileNav";
 import {
   CardBody,
   CardCategory,
@@ -10,6 +11,7 @@ import {
   MainContent,
   MediaContent,
   WorkoutLength,
+  NavCircle,
 } from "./style";
 import NavigationBar from "../../navigationbar/navigationbar";
 
@@ -30,6 +32,9 @@ const ViewableWorkouts = () => {
 
   return (
     <>
+    <NavCircle>
+       <MobileNav />
+      </NavCircle>
       <NavigationBar />
       <MainContent>
         <CardContent>
