@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import NavigationBar from '../../navigationbar/navigationbar';
+import MobileNav from "../../mobilenav/MobileNav";
 import {Container, FlexBox, Form, Submit, Add} from './style'
 import {MainContent, CardContent, CardBody, CardTitle, CardDescription, WorkoutLength} from '../workouts/style';
 import {axiosWithAuth} from '../../authentication/axiosWithAuth';
@@ -94,6 +95,7 @@ export default class Routine extends Component {
     render() {
         return (
             <FlexBox>
+                <MobileNav />
                 <NavigationBar />
                 <Container >
                     <Form onSubmit={(e) => this.handleSubmit(e)}>

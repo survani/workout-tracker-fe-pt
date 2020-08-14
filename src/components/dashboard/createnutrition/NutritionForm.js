@@ -254,7 +254,7 @@ export const NutritionForm = () => {
               <TextArea
                 id="notes"
                 type="text"
-                name="workout_notes"
+                name="meal_notes"
                 placeholder="Notes"
                 onChange={onChange}
                 value={formValues.meal_notes}
