@@ -95,7 +95,7 @@ const Calendar = () => {
             }}
             plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
             ref={calendarComponentRef}
-            events={(workoutEvent, foodEvent)}
+            events={[...workoutEvent, ...foodEvent, ...calendarEvent]}
             dateClick={handleDateClick}
           />
         </div>

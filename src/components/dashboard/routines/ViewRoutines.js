@@ -2,8 +2,8 @@ import React, { Component } from 'react'
 import { axiosWithAuth } from '../../authentication/axiosWithAuth';
 import {MainContent, CardContent, CardBody, CardTitle, CardDescription, WorkoutLength} from '../workouts/style';
 import NavigationBar from '../../navigationbar/navigationbar';
-import styled from 'styled-components';
 import MobileNav from "../../mobilenav/MobileNav";
+import styled from 'styled-components';
 
 export default class ViewRoutines extends Component {
     constructor(props){
@@ -176,3 +176,4 @@ const Change = styled.div`
     height: 100vh;
     top: 0;
 `
+

@@ -51,7 +51,6 @@ const ProfileSidebar = () => {
           </UsernameContainer>
           <StatContainer>
             <p>{userLikes} Likes</p>
-            <p> {followerCount.count} Followers</p>
           </StatContainer>
           <Bio>{userInfo.bio}</Bio>
           <ChangePhotoButton> Change Photo </ChangePhotoButton>
