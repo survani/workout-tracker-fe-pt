@@ -5,7 +5,6 @@ import NavigationBar from '../../navigationbar/navigationbar';
 import MobileNav from "../../mobilenav/MobileNav";
 import styled from 'styled-components';
 
-
 export default class ViewRoutines extends Component {
     constructor(props){
         super(props);
@@ -71,6 +70,7 @@ export default class ViewRoutines extends Component {
         return (
             <>
             <Background />
+
             <Change>
                 <div style={{display: 'flex', width: '100%', justifyContent: 'center', flexWrap: 'wrap'}}>
                     <span style={{textAlign: 'center', width: '100%'}}></span>

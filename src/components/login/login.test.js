@@ -45,3 +45,12 @@ it("Checks if the text Sign In is present", () => {
   );
   const password = wrapper.getByText(/Sign In/i);
 });
+
+it("Checks if the text Sign In is present", () => {
+  const wrapper = rtl.render(
+      <BrowserRouter>
+        <Login />
+      </BrowserRouter>
+  );
+  const password = wrapper.getByText(/Don't have an account?/i);
+});
