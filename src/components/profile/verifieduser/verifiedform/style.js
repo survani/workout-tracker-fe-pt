@@ -4,6 +4,7 @@ export const IntroSection = styled.section`
   display: flex;
   border-bottom: 2px solid #dddddd;
   flex-direction: column;
+  flex-wrap: wrap;
   justify-content: center;
   @media (min-width: 768px) {
     flex-direction: row;
@@ -66,8 +67,13 @@ export const Form = styled.form`
 `;
 
 export const MainContainer = styled.div`
-  width: 90%;
+  padding: 1rem;
   margin: 3rem auto;
+  display: flex;
+  flex-direction: column;
+  @media (min-width: 768px) {
+  padding: 0;
+  }
 `;
 
 // ----- Page Text -----
