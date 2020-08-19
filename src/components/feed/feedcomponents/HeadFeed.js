@@ -43,8 +43,8 @@ export default class HeadFeed extends Component {
     produceFeed(){
         let buffer = [];
         this.state.feed.forEach(obj =>{
-            obj.entity_id = this.state.feed[0].id;
             obj = {...obj, ...this.state.data};
+            obj.entity_id = this.state.feed[0].id;
             buffer.push(<MainContainer obj={obj} state={this.state} setState={this.setState.bind(this)} id={this.entity_id} />)
         })
         return buffer;
@@ -56,7 +56,7 @@ export default class HeadFeed extends Component {
     
     render() {
         return (
-            <Wrapper>  
+            <Wrapper>  {console.log(this.state)}
                 <NavigationBar />
                 {this.state.showCreateComment ? <CreateComment state={this.state} setState={this.setState.bind(this)} id={this.state.data.entity_id} /> : null }
                 <FeedBox>
