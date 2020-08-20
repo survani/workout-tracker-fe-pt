@@ -1,17 +1,19 @@
 import styled from "styled-components";
 
 export const ButtonSection = styled.section`
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: 5rem auto;
   @media (min-width: 768px) {
-    display: flex;
-    flex-direction: column;
-    margin-top: 5%;
+    margin-top: 5rem;
     margin-left: 20rem;
   }
 `;
 
 export const InfoButtons = styled.button`
-  @media (min-width: 768px) {
     display: flex;
+    align-items: center;
     width: 21rem;
     height: 2.2rem;
     font-size: 16px;
@@ -23,16 +25,19 @@ export const InfoButtons = styled.button`
     &:hover {
       background: #d5d5d5;
     }
+  @media (min-width: 768px) {
+
   }
 `;
 
 export const ApplyTextAnchor = styled.a`
-  @media (min-width: 768px) {
     color: #277fe5;
     margin-top: 45px;
     text-decoration: none;
     &:hover {
       font-weight: bold;
     }
+  @media (min-width: 768px) {
+
   }
 `;

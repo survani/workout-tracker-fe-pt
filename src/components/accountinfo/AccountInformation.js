@@ -3,10 +3,12 @@ import ProfileNav from "../profile/profilenav/ProfileNav";
 import { ApplyTextAnchor, ButtonSection, InfoButtons } from "./style";
 import RightArrow from "../../assets/profilepage/rightarrow.svg";
 import NavigationBar from "../navigationbar/navigationbar";
+import MobileNav from "../mobilenav/MobileNav";
 
 const AccountInformation = () => {
   return (
     <>
+      <MobileNav/>
       <NavigationBar />
       <ProfileNav />
       <ButtonSection>
