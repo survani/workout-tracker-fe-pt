@@ -11,7 +11,7 @@ import Axios from 'axios';
 import icon from '../../../assets/feed/icon.svg'
 import { axiosWithAuth } from '../../authentication/axiosWithAuth';
 import {decode} from 'jsonwebtoken'
-import {Ico, Name, Container, Title} from '../style';
+import {Ico, Name, Container, Title, Buttons} from '../style';
 
 
 const types = {
@@ -137,9 +137,9 @@ export default function MainContainer(props) {
                         {sort(props.obj)}
                     </div>
                 </div>
-                <button onClick={() => createComment()}> {`${count}`} Comment </button>
-                <button onClick={() => like()}> {likes === undefined ? "" : likes.length} Likes </button>
-                <button> Share </button>
+                <Buttons onClick={() => createComment()}> {`${count}`} Comment </Buttons>
+                <Buttons onClick={() => like()}> {likes === undefined ? "" : likes.length} Likes </Buttons>
+                <Buttons> Share </Buttons>
             </div>
             <div>
                 {showComments ? commentData.data.message[0].comments.map(data =>(

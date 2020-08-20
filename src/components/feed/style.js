@@ -155,6 +155,16 @@ font-size: 24px;
 margin-bottom: 1.5rem;
 `
 
+export const Buttons = styled.button `
+border: none;
+background: #277fe5;
+color: white;
+border-radius: .2rem;
+margin: .5rem .3rem 0rem 0rem;
+padding: .5rem;
+
+`
+
 //MobileNav
 export const NavCircle = styled.div`
   @media (min-width: 768px) {
