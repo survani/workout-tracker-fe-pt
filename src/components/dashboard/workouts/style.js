@@ -44,9 +44,9 @@ export const CardBody = styled.div`
     margin-bottom: 2%;
   }
 `;
-export const MediaContent = styled.div`
+export const MediaContent = styled.img`
   height: 250px;
-  background: gray;
+  width: 100%;
 `;
 
 export const CardDescription = styled.div`
