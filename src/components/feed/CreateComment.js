@@ -32,7 +32,8 @@ export default function CreateComment(props) {
     let location = useLocation();
 
     useEffect(() => {
-        axiosWithAuth().get(`/api/feed/entity/${props.id}`)
+        console.log(props);
+        axiosWithAuth().get(`/api/feed/entity/${props.state.id}`)
         .then(res =>{
             setPostData(res.data.message);
         })
@@ -74,15 +75,16 @@ export default function CreateComment(props) {
 
     const submitComment = () =>{
         axiosWithAuth()
-        .post(`api/comments/${props.id}`, {
+        .post(`api/comments/${props.state.id}`, {
             comment_data: text
         })
         .then(res =>{
             removeComment();
-            if(location.pathname === `/feed/${props.id}`){
+            if(location.pathname === `/feed/${props.state.id}`){
                 window.location.reload(false);
             }else {
-                history.push(`/feed/${props.id}`);
+                history.push(`/feed/${props.state.id}`);
+                window.location.reload(false);
             }
         })
         .catch(err =>{

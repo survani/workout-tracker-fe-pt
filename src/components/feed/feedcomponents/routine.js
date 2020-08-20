@@ -5,7 +5,7 @@ export default function routine(props) {
 
     return (
         <>
-            <h2>{props.data.routine_title}</h2>
+            <h2>Routine Title: {props.data.routine_title}</h2>
         </>
     )
 }

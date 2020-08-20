@@ -50,9 +50,9 @@ export default class feed extends Component {
         this.getFeed();
     }
     
-    render() {
-        return (
-            <Wrapper>
+    render() { 
+        return ( 
+            <Wrapper> {console.log(this.state.feed)}
                 <NavCircle>
                     <MobileNav />
                 </NavCircle>

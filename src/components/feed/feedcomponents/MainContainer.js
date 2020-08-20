@@ -75,6 +75,7 @@ export default function MainContainer(props) {
     }
 
     const createComment = () =>{
+        console.log(props);
         props.setState({...props.state, showCreateComment: !props.state.showCreateComment, id: props.obj.entity_id})
     }
 
