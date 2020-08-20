@@ -153,6 +153,9 @@ export const FeedBox = styled.div`
 export const PageTitle = styled.h2 `
 font-size: 24px;
 margin-bottom: 1.5rem;
+@media (min-width: 768px) {
+margin-top: 2.5rem;
+}
 `
 
 export const Buttons = styled.button `
