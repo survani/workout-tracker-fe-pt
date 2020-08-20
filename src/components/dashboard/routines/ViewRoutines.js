@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { axiosWithAuth } from '../../authentication/axiosWithAuth';
 import {MainContent, CardContent, CardBody, CardTitle, CardDescription, WorkoutLength} from '../workouts/style';
 import NavigationBar from '../../navigationbar/navigationbar';
+import MobileNav from "../../mobilenav/MobileNav";
 import styled from 'styled-components';
 
 export default class ViewRoutines extends Component {
@@ -69,6 +70,7 @@ export default class ViewRoutines extends Component {
         return (
             <>
             <Background />
+
             <Change>
                 <div style={{display: 'flex', width: '100%', justifyContent: 'center', flexWrap: 'wrap'}}>
                     <span style={{textAlign: 'center', width: '100%'}}></span>
@@ -103,6 +105,7 @@ export default class ViewRoutines extends Component {
     render() {
         return (
             <div>
+                <MobileNav/>
                 <NavigationBar />
                 <div style={{paddingTop: '1em', display: 'flex', justifyContent: 'center', flexWrap: 'wrap'}}>
                     {this.state.routines.map(data =>(
@@ -173,3 +176,4 @@ const Change = styled.div`
     height: 100vh;
     top: 0;
 `
+

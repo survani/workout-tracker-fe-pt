@@ -1,6 +1,7 @@
 import React from "react";
 import {
   NavigationContainer,
+  MobileLogo,
   Nav,
   NavLinks,
   LogoText2,
@@ -16,6 +17,7 @@ const NavigationBar = () => {
       <Logo2 href="/dashboard">
         Fit<LogoText2>Tracker</LogoText2>
       </Logo2>
+      
 
       <Nav>
         <NavLinks to="/dashboard">Dashboard</NavLinks>
@@ -31,7 +33,6 @@ const NavigationBar = () => {
         <NavLinks onClick={Logout} to="/">
           Logout
         </NavLinks>
-        {/* <NavLinks to="/diets">Meals</NavLinks> */}
       </Nav>
     </NavigationContainer>
   );

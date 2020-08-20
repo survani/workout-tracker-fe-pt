@@ -3,12 +3,11 @@ import { useHistory } from "react-router-dom";
 import NavigationBar from "../navigationbar/navigationbar";
 import MobileNav from "../mobilenav/MobileNav";
 import {
+  NavCircle,
   DashboardAlignment,
-  DashboardButtonText,
   LogoContainer,
   Logo,
-  LogoText,
-  MobileButton,
+  LogoText
 } from "./style";
 import WelcomeDashboard from "./WelcomeDashboard";
 
@@ -17,7 +16,9 @@ const Dashboard = () => {
 
   return (
     <div>
+      <NavCircle className="container">
       <MobileNav />
+      </NavCircle>
        <div>
         <NavigationBar />
         <WelcomeDashboard />
@@ -29,50 +30,6 @@ const Dashboard = () => {
             Fit<LogoText>Tracker</LogoText>
           </Logo>
         </LogoContainer>
-        {/* <MobileButton>
-          <DashboardButtonText
-            type="submit"
-            className="dashboard_btn"
-            onClick={() => history.push("/createworkout")}
-          >
-            Create a workout plan
-          </DashboardButtonText>
-          <DashboardButtonText
-            type="submit"
-            className="dashboard_btn"
-            onClick={() => history.push("/public")}
-          >
-            Find a workout plan
-          </DashboardButtonText>
-          <DashboardButtonText
-            type="submit"
-            className="dashboard_btn"
-            onClick={() => history.push("/")}
-          >
-            Create a meal plan
-          </DashboardButtonText>
-          <DashboardButtonText
-            type="submit"
-            className="dashboard_btn"
-            onClick={() => history.push("/")}
-          >
-            Find a meal plan
-          </DashboardButtonText>
-          <DashboardButtonText
-            type="submit"
-            className="dashboard_btn"
-            onClick={() => history.push("/profile")}
-          >
-            Create your Profile
-          </DashboardButtonText>
-          <DashboardButtonText
-            type="submit"
-            className="dashboard_btn"
-            onClick={() => history.push("/")}
-          >
-            Change settings
-          </DashboardButtonText>
-        </MobileButton> */}
       </DashboardAlignment>
       </div>
   );

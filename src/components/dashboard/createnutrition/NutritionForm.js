@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import { axiosWithAuth } from "../../authentication/axiosWithAuth";
 import NavigationBar from "../../navigationbar/navigationbar";
+import MobileNav from "../../mobilenav/MobileNav";
+import Food from "../../../assets/forms/food.svg";
 import {
   Form,
+  InnerForm,
   Title,
   TitleContainer,
   InputContainer,
@@ -15,7 +18,8 @@ import {
   ShareBox,
   ButtonContainer,
   Button,
-  ShareLabel,
+  ShareLabel, 
+  FoodImg,
 } from "./style";
 
 const initialFormValue = {
@@ -34,7 +38,7 @@ const initialFormValue = {
 };
 
 export const NutritionForm = () => {
-  const [nutrition, setNutrition] = useState([]);
+  const [setNutrition] = useState([]);
   const [formValues, setFormValues] = useState(initialFormValue);
 
   const onChange = (e) => {
@@ -79,9 +83,11 @@ export const NutritionForm = () => {
 
   return (
     <>
+      <MobileNav />
       <NavigationBar />
       <Form>
-        <form onSubmit={onSubmit}>
+        <FoodImg src={Food}/>
+        <InnerForm onSubmit={onSubmit}>
           <TitleContainer>
             <Title>Create a Food Entry</Title>
           </TitleContainer>
@@ -248,7 +254,7 @@ export const NutritionForm = () => {
               <TextArea
                 id="notes"
                 type="text"
-                name="workout_notes"
+                name="meal_notes"
                 placeholder="Notes"
                 onChange={onChange}
                 value={formValues.meal_notes}
@@ -269,7 +275,7 @@ export const NutritionForm = () => {
           <ButtonContainer>
             <Button type="submit">Submit</Button>
           </ButtonContainer>
-        </form>
+        </InnerForm>
       </Form>
     </>
   );

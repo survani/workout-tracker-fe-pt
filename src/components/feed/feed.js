@@ -3,7 +3,8 @@ import Axios from 'axios';
 import MainContainer from './feedcomponents/MainContainer';
 import CreateComment from './CreateComment';
 import NavigationBar from '../navigationbar/navigationbar';
-import {FeedBox, Wrapper} from './style';
+import MobileNav from "../../components/mobilenav/MobileNav";
+import {FeedBox, Wrapper, NavCircle} from './style';
 
 
 export default class feed extends Component {
@@ -49,9 +50,12 @@ export default class feed extends Component {
         this.getFeed();
     }
     
-    render() {
-        return (
-            <Wrapper>
+    render() { 
+        return ( 
+            <Wrapper> {console.log(this.state.feed)}
+                <NavCircle>
+                    <MobileNav />
+                </NavCircle>
                 <NavigationBar />
                 {this.state.showCreateComment ? <CreateComment state={this.state} setState={this.setState.bind(this)} id={this.state.id} /> : null }
                 <FeedBox>

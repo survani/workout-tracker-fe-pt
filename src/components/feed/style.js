@@ -140,4 +140,18 @@ export const FeedBox = styled.div`
     justify-content: space-around;
     width: 75%;
     margin: 0 auto;
+    margin-top: 25%;
+    @media (min-width: 600px) {
+        margin-top: 20%;
+    }
+    @media (min-width: 768px) {
+        margin-top: 0%;
+    }
 `
+
+//MobileNav
+export const NavCircle =styled.div`
+@media (min-width: 768px) {
+  display: none;
+}
+`;
