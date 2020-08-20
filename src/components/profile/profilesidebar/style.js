@@ -7,6 +7,8 @@ export const Container = styled.section`
   flex-direction: column;
   align-items: center;
   @media (min-width: 768px) {
+  }
+  @media (min-width: 1350px) {
     display: flex;
     align-items: flex-start;
     flex-direction: row;
@@ -16,6 +18,12 @@ export const Container = styled.section`
 export const FormContainer = styled.div`
   display: block;
   @media (min-width: 768px) {
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 1.5rem;
+  }
+    @media (min-width: 1350px) {
     display: block;
     width: 50%;
     margin: 0 auto;
@@ -41,6 +49,8 @@ export const ProfileAside = styled.aside`
   flex-direction: column;
   align-items: center;
   @media (min-width: 768px) {
+  }
+  @media (min-width: 1350px) {
     border-right: 2px solid #dddddd;
     display: flex;
     flex-direction: column;

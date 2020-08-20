@@ -52,10 +52,17 @@ export const RightSide = styled.div`
 // Sub Navigation
 export const SubNav = styled.nav`
   display: none;
+  border-bottom: 2px solid #dddddd;
+  margin-top: 8rem;
   @media (min-width: 768px) {
-    display: block;
-    border-bottom: 2px solid #dddddd;
-    margin-top: 8rem;
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    align-items: center;
+  }
+  @media (min-width: 1350px) {
+  display: block;
+  margin-top: 8rem;
   }
 `;
 
@@ -79,6 +86,8 @@ export const Links = styled(Link)`
 export const Input = styled.input`
   display: none;
   @media (min-width: 768px) {
+  }
+  @media (min-width: 1350px) {
     display: block;
     width: 414px;
     border-radius: 29px;
