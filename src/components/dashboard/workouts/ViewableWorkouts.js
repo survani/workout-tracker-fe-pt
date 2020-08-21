@@ -3,6 +3,7 @@ import { decode } from "jsonwebtoken";
 import { axiosWithAuth } from "../../authentication/axiosWithAuth";
 import MobileNav from "../../mobilenav/MobileNav";
 import {
+  Body,
   CardBody,
   CardCategory,
   CardContent,
@@ -72,9 +73,7 @@ const ViewableWorkouts = () => {
               <CardBody key={item.entity_id}>
                 <CardTitle>{item.workout_title}</CardTitle>
                 <CardCategory>{item.workout_category}</CardCategory>
-                <MediaContent
-                  src={images[Math.floor(Math.random() * 15)]}
-                />
+                <MediaContent src={images[Math.floor(Math.random() * 15)]} />
 
                 <CardDescription>
                   <p>{item.workout_description}</p>

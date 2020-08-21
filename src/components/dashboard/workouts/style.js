@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
 //Main Styles
-export const MainContent = styled.div``;
+export const MainContent = styled.div`
+`;
 
 // Header styles
 export const Header = styled.div`
@@ -16,9 +17,9 @@ export const Title = styled.h1`
 // Card styles
 
 export const CardContent = styled.section`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 6rem;
   @media (min-width: 768px) {
     display: flex;
     flex-direction: row;
@@ -31,12 +32,9 @@ export const CardBody = styled.div`
   background: white;
   width: 300px;
   // margin-bottom: 15px;
-  margin-top: 30%;
   border-radius: 5px;
   box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.1), 0 3px 20px 0 rgba(0, 0, 0, 0.1);
-  @media (min-width: 600px) {
-    margin-top: 20%;
-  }
+      margin-top: 5%;
   @media (min-width: 768px) {
     margin-right: 10px;
     align-self: normal;
