@@ -259,4 +259,9 @@ body {
   }
 }
 
+@media (min-width: 768px) {
+  .window .header {
+    display: none;
+  }
+}
   
