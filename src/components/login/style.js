@@ -124,9 +124,10 @@ export const SignInButtonText = styled.button`
 `;
 
 export const ErrorMessages = styled.div`
-  margin-top: 1rem;
+  margin-bottom: 2rem;
   display: flex;
   justify-content: center;
+  color: red;
 `;
 
 export const RegisterText = styled.p`

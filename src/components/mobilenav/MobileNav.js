@@ -17,98 +17,98 @@ const MobileNav = () => {
   };
   
   return (
-    <div class="container">
-    <section class="menu menu--circle">
+    <div className="container">
+    <section className="menu menu--circle">
   <input type="checkbox" id="menu__active"/>
-  <label htmlFor="menu__active" class="menu__active">
-    <div class="menu__toggle">
-      <div class="icon">
-        <div class="hamburger"></div>
+  <label htmlFor="menu__active" className="menu__active">
+    <div className="menu__toggle">
+      <div className="icon">
+        <div className="hamburger"></div>
       </div>
     </div>
     <input type="radio" name="arrow--up" id="degree--up-0"/>
     <input type="radio" name="arrow--up" id="degree--up-1" />
     <input type="radio" name="arrow--up" id="degree--up-2" />
-    <div class="menu__listings">
-      <ul class="circle">
+    <div className="menu__listings">
+      <ul className="circle">
         <li>
-          <div class="placeholder">
-            <div class="upside">
-                <NavLink to="/dashboard"><img src={Dashboard} class="button"/></NavLink>
+          <div className="placeholder">
+            <div className="upside">
+                <NavLink to="/dashboard"><img src={Dashboard} className="button"/></NavLink>
             </div>
           </div>
         </li>
         <li>
-          <div class="placeholder">
-            <div class="upside">
-            <NavLink to="/diets"><img src={Food} class="button"/></NavLink>
+          <div className="placeholder">
+            <div className="upside">
+            <NavLink to="/diets"><img src={Food} className="button"/></NavLink>
             </div>
           </div>
         </li>
         <li>
-          <div class="placeholder">
-            <div class="upside">
+          <div className="placeholder">
+            <div className="upside">
               <a href="#">&nbsp</a>
             </div>
           </div>
         </li>
         <li>
-          <div class="placeholder">
-            <div class="upside">
-            <NavLink onClick={Signout}to="/"><img src={Logout} class="button"/></NavLink>
+          <div className="placeholder">
+            <div className="upside">
+            <NavLink onClick={Signout}to="/"><img src={Logout} className="button"/></NavLink>
             </div>
           </div>
         </li>
         <li>
-          <div class="placeholder">
-            <div class="upside">
-            <NavLink to="/createworkout"><img src={WorkoutForm} class="button"/></NavLink>
+          <div className="placeholder">
+            <div className="upside">
+            <NavLink to="/createworkout"><img src={WorkoutForm} className="button"/></NavLink>
             </div>
           </div>
         </li>
         <li>
-          <div class="placeholder">
-            <div class="upside">
-            <NavLink to="/createnutrition"><img src={NutritionForm} class="button"/></NavLink>
+          <div className="placeholder">
+            <div className="upside">
+            <NavLink to="/createnutrition"><img src={NutritionForm} className="button"/></NavLink>
             </div>
           </div>
         </li>
         <li>
-          <div class="placeholder">
-            <div class="upside">
-            <NavLink to="/calendar"><img src={Calendar} class="button"/></NavLink>
+          <div className="placeholder">
+            <div className="upside">
+            <NavLink to="/calendar"><img src={Calendar} className="button"/></NavLink>
             </div>
           </div>
         </li>
         <li>
-          <div class="placeholder">
-            <div class="upside">
-            <NavLink to="/feed"><img src={Feed} class="button"/></NavLink>
+          <div className="placeholder">
+            <div className="upside">
+            <NavLink to="/feed"><img src={Feed} className="button"/></NavLink>
             </div>
           </div>
         </li>
         <li>
-          <div class="placeholder">
-            <div class="upside">
-            <NavLink to="/workouts"><img src={Workout} class="button"/></NavLink>
+          <div className="placeholder">
+            <div className="upside">
+            <NavLink to="/workouts"><img src={Workout} className="button"/></NavLink>
             </div>
           </div>
         </li>
         <li>
-          <div class="placeholder">
-            <div class="upside">
-            <NavLink to="/profile"><img src={Profile} class="button"/></NavLink>
+          <div className="placeholder">
+            <div className="upside">
+            <NavLink to="/profile"><img src={Profile} className="button"/></NavLink>
             </div>
           </div>
         </li>
       </ul>
     </div>
-    <div class="menu__arrow menu__arrow--top">
+    <div className="menu__arrow menu__arrow--top">
       <ul>
         <li>
-          <label htmlFor="degree--up-0"><div class="arrow"></div></label>
-          <label htmlFor="degree--up-1"><div class="arrow"></div></label>
-          <label htmlFor="degree--up-2"><div class="arrow"></div></label>
+          <label htmlFor="degree--up-0"><div className="arrow"></div></label>
+          <label htmlFor="degree--up-1"><div className="arrow"></div></label>
+          <label htmlFor="degree--up-2"><div className="arrow"></div></label>
         </li>
       </ul>
     </div>
