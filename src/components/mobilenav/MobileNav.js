@@ -38,23 +38,19 @@ useEffect(() => {
         <div className="bar btmBar"></div>
       </div>
     </div>
-    {/* <div className="icon icon-apple"></div> */}
     <ul className="menu">
-      <li className="menu-item"><NavLink to="/workouts">Workouts</NavLink></li>
       <li className="menu-item"><NavLink to="/dashboard">Dashboard</NavLink></li>
-      <li className="menu-item"><a href="#">iPhone</a></li>
-      <li className="menu-item"><a href="#">Watch</a></li>
-      <li className="menu-item"><a href="#">TV</a></li>
-      <li className="menu-item"><a href="#">Music</a></li>
-      <li className="menu-item"><a href="#">Support</a></li>
-      <li className="menu-item"><a href="#">Watch</a></li>
-      <li className="menu-item"><a href="#">TV</a></li>
-      <li className="menu-item"><a href="#">Music</a></li>
-      <li className="menu-item"><a href="#">Support</a></li>
+      <li className="menu-item"><NavLink to="/profile">Profile</NavLink></li>
+      <li className="menu-item"><NavLink to="/feed">Feed</NavLink></li>
+      <li className="menu-item"><NavLink to="/createworkout">Create a Workout</NavLink></li>
+      <li className="menu-item"><NavLink to="/createroutine">Create a Routine</NavLink></li>
+      <li className="menu-item"><NavLink to="/createnutrition">Create a Food Entry</NavLink></li>
+      <li className="menu-item"><NavLink to="/workouts">View Workouts</NavLink></li>
+      <li className="menu-item"><NavLink to="/routines">View Routines</NavLink></li>
+      <li className="menu-item"><NavLink to="/diets">View Food Diary</NavLink></li>
+      <li className="menu-item"><NavLink to="/calendar">Calendar</NavLink></li>
+      <li className="menu-item"><NavLink onClick={Logout} to="/">Logout</NavLink></li>
     </ul>
-    {/* <div className="shop icon icon-bag"></div>
-  </div>
-  <div className="content"> <img src="https://images.apple.com/v/ipad-air-2/c/images/overview/performance_large.png" alt=""/> */}
 </div>
 </div>
 
