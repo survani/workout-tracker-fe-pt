@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { axiosWithAuth } from "../../authentication/axiosWithAuth";
+import { useForm } from "react-hook-form";
 import NavigationBar from "../../navigationbar/navigationbar";
 import MobileNav from "../../mobilenav/MobileNav";
 import House from "../../../assets/forms/house.svg";
@@ -21,6 +22,7 @@ import {
   ShareLabel,
   HouseImage,
   HouseImg,
+  ErrorMessages,
 } from "./style";
 
 const initialFormValue = {
@@ -35,6 +37,10 @@ export const WorkoutForm = () => {
   const [workout, setWorkout] = useState([]);
   const [formValues, setFormValues] = useState(initialFormValue);
 
+  const { register, handleSubmit, errors, formState } = useForm({
+    mode: "onBlur",
+  });
+
   const onChange = (e) => {
     const { name } = e.target;
     const { value } = e.target;
@@ -46,7 +52,6 @@ export const WorkoutForm = () => {
   };
 
   const onSubmit = (e) => {
-    e.preventDefault();
     console.log(formValues);
     axiosWithAuth()
       .post(
@@ -77,7 +82,7 @@ export const WorkoutForm = () => {
       <NavigationBar />
       <Form>
         <HouseImg src={House} alt="girl working out" />
-        <InnerForm onSubmit={onSubmit}>
+        <InnerForm onSubmit={handleSubmit(onSubmit)}>
           <TitleContainer>
             <Title>Create Workout Form</Title>
           </TitleContainer>
@@ -88,8 +93,11 @@ export const WorkoutForm = () => {
                 name="workout_category"
                 value={formValues.workout_category}
                 onChange={onChange}
+                ref={register({
+                  required: "A category is required",
+                })}
               >
-                <SelectFont value="">Please select an category</SelectFont>
+                <SelectFont value="">Please select a category</SelectFont>
                 <SelectFont value="arms">Arms</SelectFont>
                 <SelectFont value="abs">Abs</SelectFont>
                 <SelectFont value="glutes">Glutes</SelectFont>
@@ -99,6 +107,10 @@ export const WorkoutForm = () => {
             </Label>
           </InputContainer>
 
+          <ErrorMessages>
+            {errors.workout_category && errors.workout_category.message}
+          </ErrorMessages>
+
           <InputContainer>
             <Label>Title</Label>
             <InputFont>
@@ -106,12 +118,27 @@ export const WorkoutForm = () => {
                 id="title"
                 type="text"
                 name="workout_title"
-                placeholder="Title"
+                placeholder="Workout Title"
                 onChange={onChange}
                 value={formValues.workout_title}
+                ref={register({
+                  required: "A title for your workout is required",
+                  maxLength: {
+                    value: 25,
+                    message: "Maximum of 25 characters"
+                  },
+                  minLength: {
+                    value: 3,
+                    message: "Minimum of 3 characters"
+                  }
+                })}
               />
             </InputFont>
           </InputContainer>
+
+          <ErrorMessages>
+          {errors.workout_title && errors.workout_title.message}
+          </ErrorMessages>
 
           <InputContainer>
             <Label>Date</Label>
@@ -123,9 +150,16 @@ export const WorkoutForm = () => {
                 placeholder="Date"
                 onChange={onChange}
                 value={formValues.workout_date}
+                ref={register({
+                  required: "A valid date is required"
+                })}
               />
             </InputFont>
           </InputContainer>
+
+          <ErrorMessages>
+            {errors.workout_date && errors.workout_date.message}
+          </ErrorMessages>
 
           <InputContainer>
             <Label>Duration</Label>
@@ -134,12 +168,19 @@ export const WorkoutForm = () => {
                 id="length"
                 type="text"
                 name="workout_length"
-                placeholder="Duration"
+                placeholder="(minutes or hours) Example: 30m or 1hr"
                 onChange={onChange}
                 value={formValues.workout_length}
+                ref={register({
+                  required: "A workout duration is required"
+                })}
               />
             </InputFont>
           </InputContainer>
+
+          <ErrorMessages>
+            {errors.workout_length && errors.workout_length.message}
+          </ErrorMessages>
 
           <InputContainer>
             <Label>Description</Label>
@@ -151,10 +192,16 @@ export const WorkoutForm = () => {
                 placeholder="Description"
                 onChange={onChange}
                 value={formValues.workout_description}
+                ref={register({
+                  required: "A short description is required"
+                })}
               />
             </InputFont>
           </InputContainer>
-
+          <ErrorMessages>
+            {errors.workout_description && errors.workout_description.message}
+          </ErrorMessages>
+              
           <br />
           <ShareBox>
             <input
@@ -166,7 +213,7 @@ export const WorkoutForm = () => {
             <ShareLabel>Private</ShareLabel>
           </ShareBox>
           <ButtonContainer>
-            <Button type="submit">Submit</Button>
+            <Button type="submit" disabled={formState.isSubmitting}>Submit</Button>
           </ButtonContainer>
         </InnerForm>
       </Form>

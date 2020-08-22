@@ -8,15 +8,17 @@ export const ContentContainer = styled.div`
   align-items: center;
   margin-top: 5rem;
   @media (min-width: 768px) {
+  flex-direction: column;
+  }
+  @media (min-width: 1350px) {
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-around;
     margin-top: 0rem;
   }
 `;
 
 export const LeftSideContent = styled.div`
   @media (min-width: 768px) {
-    margin: 8rem 23rem 0rem 0rem;
   }
 `;
 
@@ -52,6 +54,6 @@ export const Button = styled.button`
     color: white;
   }
   @media (min-width: 768px) {
-  margin: 10rem 0rem 0rem 0rem;
+    margin: 2rem 0rem 0rem 0rem;
   }
 `;

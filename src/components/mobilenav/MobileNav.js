@@ -1,14 +1,5 @@
 import React, { useEffect } from "react";
 import "./style.css";
-import Dashboard from "../../assets/mobilenav/dashboard.svg";
-import Food from "../../assets/mobilenav/food.svg";
-import Workout from "../../assets/mobilenav/workout.svg";
-import Profile from "../../assets/mobilenav/profile.svg";
-import Feed from "../../assets/mobilenav/feed.svg";
-import Calendar from "../../assets/mobilenav/calendar.svg";
-import NutritionForm from "../../assets/mobilenav/nutritionform.svg";
-import WorkoutForm from "../../assets/mobilenav/workoutform.svg";
-import Logout from "../../assets/mobilenav/logout.svg";
 import { NavLink } from "react-router-dom";
 
 const MobileNav = () => {

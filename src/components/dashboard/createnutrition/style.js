@@ -104,9 +104,15 @@ export const InputFont = styled.h3`
   width: 100%;
 `;
 
+export const ErrorMessages = styled.div`
+  display: flex;
+  justify-content: center;
+  color: red;
+`;
+
 export const ShareBox = styled.div`
 display: flex;
-align items: center;
+align-items: center;
 margin-bottom: 40%;
 @media (min-width: 768px) {
     margin-bottom: 20%;
