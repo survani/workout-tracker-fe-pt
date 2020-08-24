@@ -28,8 +28,12 @@ import PasswordImage from "../../assets/loginpage/password.svg";
 import SmFullCircle from "../../assets/loginpage/smfullsircle.svg";
 export default function Login() {
   const history = useHistory();
-  const { register, handleSubmit, errors } = useForm();
+  const { register, handleSubmit, errors, formState } = useForm({
+    mode: "onBlur",
+  });
+  
   const onSubmit = (user, e) => {
+    console.log("User details", user)
     e.preventDefault();
     axiosWithAuth()
       .post("/api/login", {
@@ -64,13 +68,17 @@ export default function Login() {
             type="text"
             name="email"
             ref={register({
-              required: "Required",
+              required: true,
               pattern: {
                 value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
-                message: "invalid email address",
+                message: "The email address you've entered is invalid",
               },
             })}
           />
+          <ErrorMessages>
+            {errors.email && errors.email.message}
+          </ErrorMessages>
+
           <Label htmlFor="password"> Password </Label>
           <Input
             type="password"
@@ -79,12 +87,15 @@ export default function Login() {
               required: true,
               minLength: {
                 value: 6,
-                message: "Minimum length is 6",
+                message: "The password you've entered is incorrect",
               },
             })}
           />
+          <ErrorMessages>
+          {errors.password && errors.password.message}
+          </ErrorMessages>
           <SignInButton>
-            <SignInButtonText type="submit"> Sign In </SignInButtonText>
+            <SignInButtonText type="submit" disabled={formState.isSubmitting}> Sign In </SignInButtonText>
           </SignInButton>
           <RegisterText>
             Don't have an account?
@@ -92,11 +103,8 @@ export default function Login() {
               <Span>Sign up</Span>
             </StyledLink>
           </RegisterText>
-          <ErrorMessages>
-            {errors.password && errors.password.message}
-            <br />
-            {errors.email && errors.email.message}
-          </ErrorMessages>
+
+
         </Form>
       </FormContainer>
     </>
