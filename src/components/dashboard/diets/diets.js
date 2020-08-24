@@ -38,7 +38,7 @@ const Diets = () => {
     axiosWithAuth()
       .get(`https://frozen-hamlet-18508.herokuapp.com/api/diets/public`)
       .then((res) => {
-        console.log(res.data);
+        console.log("diet data", res.data);
         setDiet(res.data);
       })
       .catch((err) => {
@@ -57,7 +57,7 @@ const Diets = () => {
           {diet.map((item) => {
             const images = [image1, image2, image3, image4, image5, image6, image7, image8, image9, image10, image11, image12, image13, image14, image15];
             return (
-              <CardBody key="id">
+              <CardBody key={item.id}>
                 <CardTitle>{item.food_name}</CardTitle>
                 <MediaContent src={images[Math.floor((Math.random() * 15) - 1)]} />
                   <CardCategory data-testid="test">{item.meal_category}</CardCategory>
