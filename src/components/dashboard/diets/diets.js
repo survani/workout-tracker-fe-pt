@@ -13,26 +13,24 @@ import {
   NavCircle,
 } from "./style";
 import NavigationBar from "../../navigationbar/navigationbar";
-import image1 from "../../../assets/images/diets/bacon.jpg";
-import image2 from "../../../assets/images/diets/beets.jpg";
-import image3 from "../../../assets/images/diets/brisket.jpg";
-import image4 from "../../../assets/images/diets/brocolli.jpg";
-import image5 from "../../../assets/images/diets/bulgogi.jpg";
-import image6 from "../../../assets/images/diets/carrots.jpg";
-import image7 from "../../../assets/images/diets/corn.jpg";
-import image8 from "../../../assets/images/diets/eggs.jpg";
-import image9 from "../../../assets/images/diets/granola.jpg";
-import image10 from "../../../assets/images/diets/greenbeans.jpg";
-import image11 from "../../../assets/images/diets/ranch.jpg";
-import image12 from "../../../assets/images/diets/salad.jpg";
-import image13 from "../../../assets/images/diets/salmon.jpg";
-import image14 from "../../../assets/images/diets/steak.jpg";
-import image15 from "../../../assets/images/diets/yogurt.jpg";
-
+import image1 from "../../../assets/images/diets/diet1.jpeg";
+import image2 from "../../../assets/images/diets/diet2.jpeg";
+import image3 from "../../../assets/images/diets/diet3.jpeg";
+import image4 from "../../../assets/images/diets/diet4.jpeg";
+import image5 from "../../../assets/images/diets/diet5.jpeg";
+import image6 from "../../../assets/images/diets/diet6.jpeg";
+import image7 from "../../../assets/images/diets/diet7.jpeg";
+import image8 from "../../../assets/images/diets/diet8.jpeg";
+import image9 from "../../../assets/images/diets/diet9.jpeg";
+import image10 from "../../../assets/images/diets/diet10.jpeg";
+import image11 from "../../../assets/images/diets/diet11.jpeg";
+import image12 from "../../../assets/images/diets/diet12.jpeg";
+import image13 from "../../../assets/images/diets/diet13.jpeg";
+import image14 from "../../../assets/images/diets/diet14.jpeg";
+import image15 from "../../../assets/images/diets/diet15.jpeg";
 
 const Diets = () => {
   const [diet, setDiet] = useState([]);
-
 
   useEffect(() => {
     axiosWithAuth()
@@ -48,19 +46,38 @@ const Diets = () => {
 
   return (
     <>
-    <NavCircle>
-    <MobileNav />
-    </NavCircle>
+      <NavCircle>
+        <MobileNav />
+      </NavCircle>
       <NavigationBar />
       <MainContent>
         <CardContent>
           {diet.map((item) => {
-            const images = [image1, image2, image3, image4, image5, image6, image7, image8, image9, image10, image11, image12, image13, image14, image15];
+            const images = [
+              image1,
+              image2,
+              image3,
+              image4,
+              image5,
+              image6,
+              image7,
+              image8,
+              image9,
+              image10,
+              image11,
+              image12,
+              image13,
+              image14,
+              image15,
+            ];
             return (
               <CardBody key="id">
                 <CardTitle>{item.food_name}</CardTitle>
-                <MediaContent src={images[Math.floor((Math.random() * 15) - 1)]} />
-                  <CardCategory data-testid="test">{item.meal_category}</CardCategory>
+                <CardCategory data-testid="test">
+                  {item.meal_category}
+                </CardCategory>
+                <MediaContent src={images[Math.floor(Math.random() * 15)]} />
+
                 <CardDescription>
                   <p>{item.food_quantity}</p>
                   <p>{item.food_measure}</p>

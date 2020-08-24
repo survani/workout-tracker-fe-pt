@@ -31,7 +31,6 @@ export const CardContent = styled.section`
 export const CardBody = styled.div`
   background: white;
   width: 300px;
-  // margin-bottom: 15px;
   border-radius: 5px;
   box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.1), 0 3px 20px 0 rgba(0, 0, 0, 0.1);
       margin-top: 5%;
@@ -45,8 +44,6 @@ export const CardBody = styled.div`
 export const MediaContent = styled.img`
   height: 200px;
   width: 100%;
-  border-top: 1px solid #00000024;
-  border-bottom: 1px solid #00000024;
 `;
 
 export const CardDescription = styled.div`
