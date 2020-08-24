@@ -47,7 +47,7 @@ const Calendar = () => {
         console.log(res.data);
         const foodInfo = [];
         res.data.forEach((v) => {
-          foodInfo.push({ title: v.food_name, date: v.meal_date, timeText: v.meal_time });
+          foodInfo.push({ title: v.food_name, date: v.meal_date });
         });
         setFoodEvent(foodInfo);
       })

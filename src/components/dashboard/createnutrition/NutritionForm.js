@@ -93,7 +93,7 @@ export const NutritionForm = () => {
       <NavigationBar />
       <Form>
         <FoodImg src={Food}/>
-        <InnerForm onSubmit={onSubmit}>
+        <InnerForm onSubmit={handleSubmit(onSubmit)}>
           <TitleContainer>
             <Title>Create a Food Entry</Title>
           </TitleContainer>
