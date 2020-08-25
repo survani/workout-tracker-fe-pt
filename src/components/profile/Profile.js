@@ -52,7 +52,7 @@ const Profile = () => {
       <ProfileContext.Provider value={{ userInfo, setUserInfo, followerCount, setFollowerCount }}>
         <MobileNav />
         <NavigationBar />
-        <ProfileNav />
+        <ProfileNav style={{paddingTop: '1em'}} />
         <ProfileSidebar />
       </ProfileContext.Provider>
     </>

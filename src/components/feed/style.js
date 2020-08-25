@@ -165,7 +165,10 @@ color: white;
 border-radius: .2rem;
 margin: .5rem .3rem 0rem 0rem;
 padding: .5rem;
-
+cursor: pointer;
+:hover {
+  opacity: .7;
+}
 `
 
 //MobileNav
