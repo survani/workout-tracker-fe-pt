@@ -28,6 +28,7 @@ const Calendar = () => {
     const dates = axiosWithAuth()
       .get(`https://frozen-hamlet-18508.herokuapp.com/api/workouts`)
       .then((res) => {
+        console.log(res);
         const info = [];
         res.data.message.forEach((v) => {
           info.push({ title: v.workout_title, date: v.workout_date });

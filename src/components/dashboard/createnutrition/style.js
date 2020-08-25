@@ -141,6 +141,9 @@ export const Button = styled.button`
   border: none;
   @media (min-width: 768px) {
     text-align: center;
+    &:hover {
+      cursor: pointer;
+    }
   }
 `;
 

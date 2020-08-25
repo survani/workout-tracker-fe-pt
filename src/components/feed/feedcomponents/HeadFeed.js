@@ -3,6 +3,7 @@ import {axiosWithAuth} from '../../authentication/axiosWithAuth'
 import MainContainer from '../feedcomponents/MainContainer';
 import CreateComment from '../CreateComment';
 import NavigationBar from '../../navigationbar/navigationbar';
+import MobileNav from "../../mobilenav/MobileNav";
 import {FeedBox, Wrapper} from '../style';
 
 export default class HeadFeed extends Component {
@@ -57,6 +58,7 @@ export default class HeadFeed extends Component {
     render() {
         return (
             <Wrapper>  {console.log(this.state)}
+                <MobileNav />
                 <NavigationBar />
                 {this.state.showCreateComment ? <CreateComment state={this.state} setState={this.setState.bind(this)} id={this.state.data.entity_id} /> : null }
                 <FeedBox>

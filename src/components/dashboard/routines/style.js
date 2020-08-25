@@ -5,7 +5,7 @@ export const MainContainer = styled.div`
   margin: 0 auto;
   float: none;
   @media (min-width: 768px) {
-    width: 83%;
+    width: 76%;
     float: right;
   }
 `;
@@ -40,6 +40,11 @@ export const RoutineTitle = styled.div`
   padding: 10px;
   color: white;
   border-radius: 15px;
+  @media (min-width: 768px) {
+    &:hover {
+      cursor: pointer;
+    }
+  }
 `;
 
 export const EditButton = styled.button`
@@ -47,6 +52,11 @@ export const EditButton = styled.button`
   border: none;
   margin: 0.5rem 0rem 0rem 15.7rem;
   position: absolute;
+  @media (min-width: 768px) {
+    &:hover {
+      cursor: pointer;
+    }
+  }
 `;
 
 export const RemoveButton = styled.button`
@@ -54,6 +64,11 @@ export const RemoveButton = styled.button`
   border: none;
   margin: -6.4rem 0rem 0rem 15.7rem;
   position: absolute;
+  @media (min-width: 768px) {
+    &:hover {
+      cursor: pointer;
+    }
+  }
 `;
 
 export const BigDelButton = styled.button`
@@ -63,6 +78,11 @@ export const BigDelButton = styled.button`
   color: white;
   padding: 1rem;
   margin-left: 10rem;
+  @media (min-width: 768px) {
+    &:hover {
+      cursor: pointer;
+    }
+  }
 `;
 
 export const EditIcon = styled.img`

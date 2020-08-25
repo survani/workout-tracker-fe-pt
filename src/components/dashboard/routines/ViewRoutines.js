@@ -12,6 +12,7 @@ import styled from "styled-components";
 import {
   EditButton,
   EditIcon,
+  ExitButton,
   Header,
   MainContainer,
   MainContent,
@@ -101,7 +102,7 @@ export default class ViewRoutines extends Component {
                 <CardContent>
                   <button
                     onClick={() => this.exitEdit()}
-                    style={{ width: "100%",marginRight: "90%", marginBottom: "1rem", border: "none", background: "#277fe5", padding: "0.5rem", color: "white", borderRadius: "0.5rem" }}
+                    style={{ width: "100%",marginRight: "90%", marginBottom: "1rem", border: "none", background: "#277fe5", padding: "0.5rem", color: "white", borderRadius: "0.5rem", cursor: "pointer"}}
                   >
                     Close
                   </button>

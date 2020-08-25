@@ -18,10 +18,14 @@ export const Title = styled.h1`
 export const CardContent = styled.section`
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   padding: 6rem;
   @media (min-width: 768px) {
     display: flex;
     flex-direction: row;
+    justify-content: start;
+    align-items: start;
     flex-wrap: wrap;
     padding: 2rem;
   }

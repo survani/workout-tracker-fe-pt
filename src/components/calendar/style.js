@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const CalendarContainer = styled.div`
-  margin-top: 50%;
+  margin-top: 20%;
   @media (min-width: 768px) {
     margin-top: 0;
     display: flex;
