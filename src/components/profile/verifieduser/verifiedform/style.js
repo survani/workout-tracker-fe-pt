@@ -134,6 +134,9 @@ export const ButtonMobileIntro = styled.button`
   width: 300px;
   height: 51px;
   @media (min-width: 768px) {
+    &:hover {
+      cursor: pointer;
+    }
   }
 `;
 

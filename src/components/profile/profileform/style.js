@@ -81,6 +81,9 @@ export const ButtonMobileIntro = styled.button`
     color: #277fe5;
   }
   @media (min-width: 768px) {
+    &:hover {
+      cursor: pointer;
+    }
   }
 `;
 

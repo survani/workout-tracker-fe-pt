@@ -55,5 +55,8 @@ export const Button = styled.button`
   }
   @media (min-width: 768px) {
     margin: 2rem 0rem 0rem 0rem;
+    &:hover {
+      cursor: pointer;
+    }
   }
 `;
