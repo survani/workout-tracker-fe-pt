@@ -54,6 +54,11 @@ export default class Routine extends Component {
         .catch(err =>{
             console.log(err);
         })
+        .finally(() => {
+            this.setState({
+                title: ""
+            })
+        })
     }
 
     addWorkout(item, index){
