@@ -42,8 +42,16 @@ const ProfileForm = () => {
       })
       .catch((err) => {
         console.log("Profile error", err);
-      });
-  };
+      })
+      .finally(() => {
+        setEditProfile({
+          username: "",
+          email: "",
+          bio: ""
+        })
+  });
+};
+
   const handleChange = (e) => {
     e.preventDefault();
     setEditProfile({ ...editProfile, [e.target.name]: e.target.value });

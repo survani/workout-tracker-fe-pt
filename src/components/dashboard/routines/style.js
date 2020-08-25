@@ -5,7 +5,7 @@ export const MainContainer = styled.div`
   margin: 0 auto;
   float: none;
   @media (min-width: 768px) {
-    width: 83%;
+    width: 76%;
     float: right;
   }
 `;
