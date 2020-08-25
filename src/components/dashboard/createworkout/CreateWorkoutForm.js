@@ -79,6 +79,7 @@ export const WorkoutForm = () => {
   return (
     <>
       <MobileNav />
+      <div style={{display: 'flex'}}>
       <NavigationBar />
       <Form>
         <HouseImg src={House} alt="girl working out" />
@@ -217,6 +218,7 @@ export const WorkoutForm = () => {
           </ButtonContainer>
         </InnerForm>
       </Form>
+      </div>
     </>
   );
 };

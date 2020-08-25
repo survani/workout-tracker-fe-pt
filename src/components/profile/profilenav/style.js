@@ -6,10 +6,12 @@ import { Link } from "react-router-dom";
 export const Navigation = styled.nav`
   display: flex;
   padding: 2rem;
+  margin-top: 2em;
   justify-content: space-between;
   @media (min-width: 768px) {
     background: #277fe5;
     padding: 2rem;
+    margin-top: 0em;
   }
 `;
 

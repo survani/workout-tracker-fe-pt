@@ -1,9 +1,7 @@
 import styled from "styled-components";
 
 //Main Styles
-export const MainContent = styled.div`
-
-`;
+export const MainContent = styled.div``;
 
 // Header styles
 export const Header = styled.div`
@@ -20,24 +18,21 @@ export const Title = styled.h1`
 export const CardContent = styled.section`
   display: flex;
   flex-direction: column;
-  align-items: center;
+  padding: 6rem;
   @media (min-width: 768px) {
+    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     padding: 2rem;
   }
 `;
 
-
 export const CardBody = styled.div`
   background: white;
   width: 300px;
-  margin-top: 30%;
-  // margin-bottom: 15px;
   border-radius: 5px;
-  @media (min-width: 600px) {
-    margin-top: 20%;
-  }
+  box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.1), 0 3px 20px 0 rgba(0, 0, 0, 0.1);
+  margin-top: 5%;
   @media (min-width: 768px) {
     margin-right: 10px;
     align-self: normal;
@@ -46,7 +41,7 @@ export const CardBody = styled.div`
   }
 `;
 export const MediaContent = styled.img`
-  height: 250px;
+  height: 200px;
   width: 100%;
 `;
 
@@ -61,8 +56,8 @@ export const CardCategory = styled.p`
   background: white;
   padding: 0.5rem;
   position: relative;
-  top: 1rem;
-  left: 12.8rem;
+  top: 4rem;
+  left: 12.75rem;
   width: 80px;
   text-align: center;
 `;
@@ -85,8 +80,8 @@ export const WorkoutLength = styled.p`
 `;
 
 //MobileNav
-export const NavCircle =styled.div`
-@media (min-width: 768px) {
-  display: none;
-}
+export const NavCircle = styled.div`
+  @media (min-width: 768px) {
+    display: none;
+  }
 `;
