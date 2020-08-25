@@ -39,6 +39,8 @@ export const UsernameContainer = styled.div`
 export const StatContainer = styled.div`
 display: flex;
 justify-content: space-between;
+flex-direction: column;
+align-items: center;
   @media (min-width: 768px) {
 
   }

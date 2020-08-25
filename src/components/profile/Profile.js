@@ -9,7 +9,7 @@ import MobileNav from "../mobilenav/MobileNav";
 
 const Profile = () => {
   const [userInfo, setUserInfo] = useState({});
-  const [followerCount, setFollowerCount] = useState({});
+  const [followerCount, setFollowerCount] = useState();
 
   const getUserInfo = () => {
     //provides the info for the specific user that is logged in.
@@ -32,8 +32,8 @@ const Profile = () => {
         `https://frozen-hamlet-18508.herokuapp.com/api/follow/following/number/${subject}`
       )
       .then((res) => {
-        setFollowerCount(res.data);
-        console.log("follower count: ", res.data);
+        setFollowerCount(res.data.message.length);
+        console.log("follower count: ", res.data.message.length);
       })
       .catch((err) => {
         console.log(err);
