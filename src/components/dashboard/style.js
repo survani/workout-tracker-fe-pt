@@ -92,7 +92,6 @@ export const NavigationContainer = styled.aside`
   @media (min-width: 768px) {
     padding-top: 4em;
     float: left;
-    height: 100vh;
     background: #e8e8e8;
     width: 18em;
     display: flex;
