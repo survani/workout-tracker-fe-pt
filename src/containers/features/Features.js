@@ -29,7 +29,8 @@ const Features = () => {
           <MainImage src={WomanExercise} alt="woman excersise"></MainImage>
           <FeatureTextContainer>
             <SubText>
-              Find the exercises you need to make your own workout plans
+              Choose from a variety of exercises, edit the intensity level and
+              set goals to track your progress{" "}
             </SubText>
             <TextDesktop>Create your own workout plans</TextDesktop>
             <TextSubDesktop>
@@ -42,7 +43,8 @@ const Features = () => {
           <MainImage src={Schedule} alt="Schedule"></MainImage>
           <FeatureTextContainer>
             <SubText>
-              Find the exercises you need to make your own workout plans
+              Set up a schedule to be consistent and workout at the best time
+              for you
             </SubText>
             <TextDesktop>Schedule your workouts</TextDesktop>
             <TextSubDesktop>
@@ -55,7 +57,8 @@ const Features = () => {
           <MainImage src={GuyCooking} alt="Cooking"></MainImage>
           <FeatureTextContainer>
             <SubText>
-              Find the exercises you need to make your own workout plans
+              Keep track of your calories and make a meal plan that helps
+              achieve your health goals
             </SubText>
             <TextDesktop>Set a meal plan</TextDesktop>
             <TextSubDesktop>
@@ -68,7 +71,9 @@ const Features = () => {
           <MainImage src={CloudSync} alt="Share"></MainImage>
           <FeatureTextContainer>
             <SubText>
-              Find the exercises you need to make your own workout plans
+              Once you create a plan you can share it, making it available for
+              other user to take advantage of it and help each other achieve
+              goals.
             </SubText>
             <TextDesktop>Share your workout plans</TextDesktop>
             <TextSubDesktop>
