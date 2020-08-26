@@ -94,6 +94,7 @@ export const NavigationContainer = styled.aside`
     float: left;
     background: #e8e8e8;
     width: 18em;
+    height: 100vh;
     display: flex;
     position: sticky;
     top: 0;

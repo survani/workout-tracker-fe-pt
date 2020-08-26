@@ -166,6 +166,7 @@ body {
   transition: all 0.3s ease-in, background 0.5s ease-in;
   -webkit-transition-delay: 0.25s;
           transition-delay: 0.25s;
+  z-index: 999;
 }
 .window .header.menu-opened .burger-container {
   -webkit-transform: rotate(90deg);

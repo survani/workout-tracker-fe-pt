@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
 export const MainContainer = styled.div`
-  width: 95%;
-  margin: 0 auto;
-  float: none;
+  width: 100%;
+  display: flex;
+  justify-content: center;
   @media (min-width: 768px) {
     width: 76%;
     float: right;
@@ -18,9 +18,6 @@ export const Header = styled.div`
   font-weight: 600;
   border-bottom: 4px solid;
   line-height: 3.5rem;
-  @media (min-width: 768px) {
-    width: 26%;
-  }
 `;
 
 export const MainContent = styled.div`
