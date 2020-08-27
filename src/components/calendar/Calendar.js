@@ -47,7 +47,14 @@ const Calendar = () => {
         console.log(res.data);
         const foodInfo = [];
         res.data.forEach((v) => {
-          foodInfo.push({ title: v.food_name, date: v.meal_date });
+          //2020-08-25:14:30:00
+          let year = v.meal_date.slice(0,4);
+          let month = v.meal_date.slice(5, 7);
+          let day = v.meal_date.slice(8,10);
+          let hour = v.meal_time.slice(0,2);
+          let minutes = v.meal_time.slice(3,5);
+          let date = new Date(year, month - 1, day, hour, minutes);
+          foodInfo.push({ title: v.food_name, date: date });
         });
         setFoodEvent(foodInfo);
       })
