@@ -31,7 +31,14 @@ const Calendar = () => {
         console.log(res);
         const info = [];
         res.data.message.forEach((v) => {
-          info.push({ title: v.workout_title, date: v.workout_date });
+          let year = v.workout_date.slice(0,4);
+          let month = v.workout_date.slice(5, 7);
+          let day = v.workout_date.slice(8,10);
+          let hour = v.workout_time.slice(0,2);
+          let minutes = v.workout_time.slice(3,5);
+          let date = new Date(year, month - 1, day, hour, minutes);
+          info.push({ title: v.workout_title, date: date });
+          // info.push({ title: v.workout_title, date: v.workout_date });
         });
         setWorkoutEvent(info);
       })

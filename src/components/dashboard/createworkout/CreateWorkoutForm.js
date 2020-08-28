@@ -29,6 +29,7 @@ const initialFormValue = {
   workout_category: "",
   workout_title: "",
   workout_date: "",
+  workout_time: "",
   workout_length: "",
   workout_description: "",
 };
@@ -69,6 +70,7 @@ export const WorkoutForm = () => {
         setFormValues({
           workout_category: "",
           workout_title: "",
+          workout_time: "",
           workout_date: "",
           workout_length: "",
           workout_description: "",
@@ -157,6 +159,26 @@ export const WorkoutForm = () => {
               />
             </InputFont>
           </InputContainer>
+
+          <InputContainer>
+            <Label>Time</Label>
+            <InputFont>
+              <Input
+                id="time"
+                type="time"
+                name="workout_time"
+                placeholder="Example: 2:00 pm"
+                onChange={onChange}
+                value={formValues.workout_time}
+                ref={register({
+                  required: "A valid time is required"
+                })}
+              />
+            </InputFont>
+          </InputContainer>
+          <ErrorMessages>
+            {errors.workout_time && errors.workout_time.message}
+          </ErrorMessages>
 
           <ErrorMessages>
             {errors.workout_date && errors.workout_date.message}
