@@ -56,17 +56,12 @@ export const Form = styled.form`
   }
 `;
 export const Input = styled.input`
-  margin-bottom: 3rem;
-  border: 0;
-  width: 100%;
-  padding: 1rem;
-  border-bottom: 1px solid black;
-  background: none;
-  &:hover {
-    background: #dde8f4;
-    border-radius: 3px;
-    border: none;
-  }
+         margin-bottom: 0.5rem;
+         border-radius: 0.5rem;
+         border: 0;
+         width: 100%;
+         padding: 1rem;
+         background: #dde8f4;
 `;
 
 export const Label = styled.label`
@@ -90,6 +85,7 @@ export const Circles = styled.img`
   position: absolute;
   left: -21px;
   top: -39px;
+  z-index: -1;
   @media (min-width: 768px) {
     width: 805px;
     height: 805px;
@@ -100,6 +96,7 @@ export const Circles2 = styled.img`
   position: absolute;
   top: -1px;
   right: 0px;
+  z-index: -1;
   @media (min-width: 768px) {
     display: none;
   }
