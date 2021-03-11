@@ -19,7 +19,7 @@ import Routine from "./components/dashboard/createroutine/Routine";
 import AccountInformation from "./components/accountinfo/AccountInformation";
 import VerifyForm from "./components/profile/verifieduser/verifiedform/VerifyForm";
 import Review from "./components/profile/verifieduser/verifiedform/confirmation/Review";
-import ViewRoutine from './components/dashboard/routines/ViewRoutines';
+import ViewRoutine from "./components/dashboard/routines/ViewRoutines";
 
 function App() {
   return (
@@ -44,12 +44,17 @@ function App() {
 
           <Route exact path="/feed/:id" component={HeadFeed} />
 
-          
-          <ProtectedRoute exact path="/createroutine" component={Routine}>
-          </ProtectedRoute>
-          
-          <ProtectedRoute exact path="/routines" component={ViewRoutine}>
-          </ProtectedRoute>
+          <ProtectedRoute
+            exact
+            path="/createroutine"
+            component={Routine}
+          ></ProtectedRoute>
+
+          <ProtectedRoute
+            exact
+            path="/routines"
+            component={ViewRoutine}
+          ></ProtectedRoute>
 
           <ProtectedRoute path="/dashboard">
             <Dashboard />

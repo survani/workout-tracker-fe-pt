@@ -6,7 +6,7 @@ const LandingNav = () => {
   return (
     <>
       <NavSection>
-        <Logo>
+        <Logo href="/">
           Fit<LogoText>Tracker</LogoText>
         </Logo>
         <Link to="/login">

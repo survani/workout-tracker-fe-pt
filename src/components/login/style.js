@@ -6,15 +6,18 @@ import { Link } from "react-router-dom";
 export const LogoContainer = styled.section`
   text-align: center;
   margin: 2rem 0 7.5rem 0;
-  z-index: 0;
+  z-index: 1;
   @media (min-width: 768px) {
     text-align: start;
     margin: 5rem;
   }
 `;
-export const Logo = styled.h2`
+export const Logo = styled.a`
   font-size: 48px;
   font-weight: 800;
+  color: black;
+  text-decoration: none;
+  z-index: 5;
   @media (min-width: 768px) {
     font-weight: 800;
     font-size: 48px;
@@ -57,18 +60,13 @@ export const Form = styled.form`
   }
 `;
 export const Input = styled.input`
-  margin-bottom: 3rem;
-  border: 0;
-  width: 100%;
-  padding: 1rem;
-  border-bottom: 1px solid black;
-  background: none;
-  &:hover {
-    background: #dde8f4;
-    border-radius: 3px;
-    border: none;
-  }
-`;
+         margin-bottom: 3rem;
+         border-radius: 0.5rem;
+         border: 0;
+         width: 100%;
+         padding: 1rem;
+         background: #dde8f4;
+       `;
 
 export const Label = styled.label`
   font-size: 14px;
@@ -87,10 +85,15 @@ export const LoginImage = styled.img`
 
 //Background
 
+export const BackgroundElements = styled.div`
+
+`;
+
 export const Circles = styled.img`
   position: absolute;
   left: -21px;
   top: -39px;
+  z-index: -1;
   @media (min-width: 768px) {
     width: 805px;
     height: 805px;
@@ -101,6 +104,7 @@ export const Circles2 = styled.img`
   position: absolute;
   top: -1px;
   right: 0px;
+  z-index: -1;
   @media (min-width: 768px) {
     display: none;
   }

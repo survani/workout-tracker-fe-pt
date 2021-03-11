@@ -10,10 +10,12 @@ export const NavSection = styled.section`
   padding: 10px;
 `;
 
-export const Logo = styled.h2`
+export const Logo = styled.a`
   @media (min-width: 768px) {
     font-weight: 800;
     font-size: 32px;
+    text-decoration: none;
+    color: black;
   }
 `;
 

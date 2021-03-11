@@ -21,6 +21,7 @@ import {
   LoginImage,
   Form,
   SmallCircle,
+  BackgroundElements,
 } from "./style";
 import Circle from "../../assets/loginpage/circle.svg";
 import CircleSmall from "../../assets/loginpage/circlesmall.svg";
@@ -49,13 +50,13 @@ export default function Login() {
   };
   return (
     <>
-      <div>
+      <BackgroundElements>
         <Circles src={Circle} />
         <Circles2 src={CircleSmall} />
         <SmallCircle src={SmFullCircle} />
-      </div>
+      </BackgroundElements>
       <LogoContainer>
-        <Logo>
+        <Logo href="/">
           Fit<LogoText>Tracker</LogoText>
         </Logo>
       </LogoContainer>
