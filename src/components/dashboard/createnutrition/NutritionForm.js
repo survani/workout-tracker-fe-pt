@@ -60,7 +60,7 @@ export const NutritionForm = () => {
   const onSubmit = (e) => {
     console.log(formValues);
     axiosWithAuth()
-      .post("https://frozen-hamlet-18508.herokuapp.com/api/diets", formValues)
+      .post("https://serverfit.herokuapp.com/api/diets", formValues)
       .then((res) => {
         console.log(res);
         setNutrition(res.data);

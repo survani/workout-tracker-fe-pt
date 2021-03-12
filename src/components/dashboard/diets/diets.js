@@ -34,7 +34,7 @@ const Diets = () => {
 
   useEffect(() => {
     axiosWithAuth()
-      .get(`https://frozen-hamlet-18508.herokuapp.com/api/diets/public`)
+      .get(`https://serverfit.herokuapp.com/api/diets/public`)
       .then((res) => {
         console.log("diet data", res.data);
         setDiet(res.data);
