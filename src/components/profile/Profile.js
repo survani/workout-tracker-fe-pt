@@ -15,7 +15,7 @@ const Profile = () => {
     //provides the info for the specific user that is logged in.
     const { subject } = decode(localStorage.getItem("token"));
     axiosWithAuth()
-      .get(`https://frozen-hamlet-18508.herokuapp.com/api/users/${subject}`)
+      .get(`https://serverfit.herokuapp.com/api/users/${subject}`)
       .then((res) => {
         setUserInfo(res.data);
         console.log("res.data", res.data);
@@ -29,7 +29,7 @@ const Profile = () => {
     const { subject } = decode(localStorage.getItem("token"));
     axiosWithAuth()
       .get(
-        `https://frozen-hamlet-18508.herokuapp.com/api/follow/following/number/${subject}`
+        `https://serverfit.herokuapp.com/api/follow/following/number/${subject}`
       )
       .then((res) => {
         setFollowerCount(res.data.message.length);

@@ -24,9 +24,7 @@ const ProfileSidebar = () => {
   const getLikes = () => {
     const { subject } = decode(localStorage.getItem("token"));
     axios
-      .get(
-        `https://frozen-hamlet-18508.herokuapp.com/api/likes/user/${subject}`
-      )
+      .get(`https://serverfit.herokuapp.com/api/likes/user/${subject}`)
       .then((res) => {
         setUserLikes(res.data.message.length);
       })

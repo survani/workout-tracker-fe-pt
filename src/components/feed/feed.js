@@ -19,7 +19,7 @@ export default class feed extends Component {
 
   getFeed() {
     if (localStorage.getItem("token") !== undefined) {
-      Axios.get("https://frozen-hamlet-18508.herokuapp.com/api/feed") //eventually change this to followers driven feed
+      Axios.get("https://serverfit.herokuapp.com/api/feed") //eventually change this to followers driven feed
         .then((res) => {
           this.setState({ ...this.state, feed: res.data.message });
         })
@@ -27,7 +27,7 @@ export default class feed extends Component {
           console.log(err);
         });
     } else {
-      Axios.get("https://frozen-hamlet-18508.herokuapp.com/api/feed")
+      Axios.get("https://serverfit.herokuapp.com/api/feed")
         .then((res) => {
           this.setState({ ...this.state, feed: res.data.message });
         })

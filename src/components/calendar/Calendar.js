@@ -26,16 +26,16 @@ const Calendar = () => {
 
   const getDates = () => {
     const dates = axiosWithAuth()
-      .get(`https://frozen-hamlet-18508.herokuapp.com/api/workouts`)
+      .get(`https://serverfit.herokuapp.com/api/workouts`)
       .then((res) => {
         console.log(res);
         const info = [];
         res.data.message.forEach((v) => {
-          let year = v.workout_date.slice(0,4);
+          let year = v.workout_date.slice(0, 4);
           let month = v.workout_date.slice(5, 7);
-          let day = v.workout_date.slice(8,10);
-          let hour = v.workout_time.slice(0,2);
-          let minutes = v.workout_time.slice(3,5);
+          let day = v.workout_date.slice(8, 10);
+          let hour = v.workout_time.slice(0, 2);
+          let minutes = v.workout_time.slice(3, 5);
           let date = new Date(year, month - 1, day, hour, minutes);
           info.push({ title: v.workout_title, date: date });
           // info.push({ title: v.workout_title, date: v.workout_date });
@@ -49,17 +49,17 @@ const Calendar = () => {
 
   const getFoodDates = () => {
     const foodDates = axiosWithAuth()
-      .get(`https://frozen-hamlet-18508.herokuapp.com/api/diets`)
+      .get(`https://serverfit.herokuapp.com/api/diets`)
       .then((res) => {
         console.log(res.data);
         const foodInfo = [];
         res.data.forEach((v) => {
           //2020-08-25:14:30:00
-          let year = v.meal_date.slice(0,4);
+          let year = v.meal_date.slice(0, 4);
           let month = v.meal_date.slice(5, 7);
-          let day = v.meal_date.slice(8,10);
-          let hour = v.meal_time.slice(0,2);
-          let minutes = v.meal_time.slice(3,5);
+          let day = v.meal_date.slice(8, 10);
+          let hour = v.meal_time.slice(0, 2);
+          let minutes = v.meal_time.slice(3, 5);
           let date = new Date(year, month - 1, day, hour, minutes);
           foodInfo.push({ title: v.food_name, date: date });
         });

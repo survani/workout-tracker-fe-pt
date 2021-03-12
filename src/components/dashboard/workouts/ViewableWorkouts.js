@@ -35,7 +35,7 @@ const ViewableWorkouts = () => {
 
   useEffect(() => {
     axiosWithAuth()
-      .get(`https://frozen-hamlet-18508.herokuapp.com/api/workouts/public`)
+      .get(`https://serverfit.herokuapp.com/api/workouts/public`)
       .then((response) => {
         console.log(response.data.message);
         setWorkout(response.data.message);
